@@ -8,22 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		1968283C1E58207F001F3FB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968283B1E58207F001F3FB6 /* AppDelegate.swift */; };
-		1968283E1E58207F001F3FB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968283D1E58207F001F3FB6 /* ViewController.swift */; };
 		196828411E58207F001F3FB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1968283F1E58207F001F3FB6 /* Main.storyboard */; };
 		196828441E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 196828421E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld */; };
 		196828461E58207F001F3FB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 196828451E58207F001F3FB6 /* Assets.xcassets */; };
 		196828491E58207F001F3FB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196828471E58207F001F3FB6 /* LaunchScreen.storyboard */; };
+		1968286F1E582A40001F3FB6 /* Solution+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828691E582A40001F3FB6 /* Solution+CoreDataClass.swift */; };
+		196828701E582A40001F3FB6 /* Solution+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968286A1E582A40001F3FB6 /* Solution+CoreDataProperties.swift */; };
+		196828711E582A40001F3FB6 /* Compound+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968286B1E582A40001F3FB6 /* Compound+CoreDataClass.swift */; };
+		196828731E582A40001F3FB6 /* Group+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968286D1E582A40001F3FB6 /* Group+CoreDataClass.swift */; };
+		196828741E582A40001F3FB6 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968286E1E582A40001F3FB6 /* Group+CoreDataProperties.swift */; };
+		196828761E582B18001F3FB6 /* compound.plist in Resources */ = {isa = PBXBuildFile; fileRef = 196828751E582B18001F3FB6 /* compound.plist */; };
+		196828781E582CB7001F3FB6 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828771E582CB7001F3FB6 /* SearchTableViewController.swift */; };
+		1968287D1E597DC1001F3FB6 /* Compound+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968287C1E597DC1001F3FB6 /* Compound+CoreDataProperties.swift */; };
+		1968287F1E5A3003001F3FB6 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */; };
+		196828811E5BA53A001F3FB6 /* NewCompoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828801E5BA53A001F3FB6 /* NewCompoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		196828381E58207F001F3FB6 /* ChemicalCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChemicalCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1968283B1E58207F001F3FB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1968283D1E58207F001F3FB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		196828401E58207F001F3FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		196828431E58207F001F3FB6 /* ChemicalCalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChemicalCalculator.xcdatamodel; sourceTree = "<group>"; };
 		196828451E58207F001F3FB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		196828481E58207F001F3FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1968284A1E58207F001F3FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		196828691E582A40001F3FB6 /* Solution+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Solution+CoreDataClass.swift"; path = "../Solution+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1968286A1E582A40001F3FB6 /* Solution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Solution+CoreDataProperties.swift"; path = "../Solution+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1968286B1E582A40001F3FB6 /* Compound+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Compound+CoreDataClass.swift"; path = "../Compound+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1968286D1E582A40001F3FB6 /* Group+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Group+CoreDataClass.swift"; path = "../Group+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1968286E1E582A40001F3FB6 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Group+CoreDataProperties.swift"; path = "../Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		196828751E582B18001F3FB6 /* compound.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = compound.plist; sourceTree = "<group>"; };
+		196828771E582CB7001F3FB6 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		1968287C1E597DC1001F3FB6 /* Compound+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Compound+CoreDataProperties.swift"; path = "../Compound+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
+		196828801E5BA53A001F3FB6 /* NewCompoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCompoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,40 @@
 		1968283A1E58207F001F3FB6 /* ChemicalCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				1968283B1E58207F001F3FB6 /* AppDelegate.swift */,
-				1968283D1E58207F001F3FB6 /* ViewController.swift */,
+				196828681E582954001F3FB6 /* Core Data */,
+				196828771E582CB7001F3FB6 /* SearchTableViewController.swift */,
+				196828801E5BA53A001F3FB6 /* NewCompoundViewController.swift */,
+				1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */,
 				1968283F1E58207F001F3FB6 /* Main.storyboard */,
-				196828451E58207F001F3FB6 /* Assets.xcassets */,
-				196828471E58207F001F3FB6 /* LaunchScreen.storyboard */,
-				1968284A1E58207F001F3FB6 /* Info.plist */,
-				196828421E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld */,
+				196828791E582D42001F3FB6 /* Supporting Files */,
 			);
 			path = ChemicalCalculator;
+			sourceTree = "<group>";
+		};
+		196828681E582954001F3FB6 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				196828421E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld */,
+				196828691E582A40001F3FB6 /* Solution+CoreDataClass.swift */,
+				1968286A1E582A40001F3FB6 /* Solution+CoreDataProperties.swift */,
+				1968286B1E582A40001F3FB6 /* Compound+CoreDataClass.swift */,
+				1968287C1E597DC1001F3FB6 /* Compound+CoreDataProperties.swift */,
+				1968286D1E582A40001F3FB6 /* Group+CoreDataClass.swift */,
+				1968286E1E582A40001F3FB6 /* Group+CoreDataProperties.swift */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		196828791E582D42001F3FB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1968283B1E58207F001F3FB6 /* AppDelegate.swift */,
+				196828451E58207F001F3FB6 /* Assets.xcassets */,
+				196828751E582B18001F3FB6 /* compound.plist */,
+				196828471E58207F001F3FB6 /* LaunchScreen.storyboard */,
+				1968284A1E58207F001F3FB6 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				196828491E58207F001F3FB6 /* LaunchScreen.storyboard in Resources */,
+				196828761E582B18001F3FB6 /* compound.plist in Resources */,
 				196828461E58207F001F3FB6 /* Assets.xcassets in Resources */,
 				196828411E58207F001F3FB6 /* Main.storyboard in Resources */,
 			);
@@ -140,8 +184,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1968283E1E58207F001F3FB6 /* ViewController.swift in Sources */,
+				1968287D1E597DC1001F3FB6 /* Compound+CoreDataProperties.swift in Sources */,
+				1968286F1E582A40001F3FB6 /* Solution+CoreDataClass.swift in Sources */,
+				196828811E5BA53A001F3FB6 /* NewCompoundViewController.swift in Sources */,
 				1968283C1E58207F001F3FB6 /* AppDelegate.swift in Sources */,
+				196828701E582A40001F3FB6 /* Solution+CoreDataProperties.swift in Sources */,
+				196828731E582A40001F3FB6 /* Group+CoreDataClass.swift in Sources */,
+				196828711E582A40001F3FB6 /* Compound+CoreDataClass.swift in Sources */,
+				196828781E582CB7001F3FB6 /* SearchTableViewController.swift in Sources */,
+				196828741E582A40001F3FB6 /* Group+CoreDataProperties.swift in Sources */,
+				1968287F1E5A3003001F3FB6 /* CoreDataTableViewController.swift in Sources */,
 				196828441E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

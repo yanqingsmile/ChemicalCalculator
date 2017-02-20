@@ -1,0 +1,2118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Compound name</key>
+		<string>Acetaldehyde</string>
+		<key>Molar mass</key>
+		<string>44.053</string>
+		<key>Molecular formula</key>
+		<string>C2H4O</string>
+		<key>No.</key>
+		<string>1</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Acetamide</string>
+		<key>Molar mass</key>
+		<string>59.068</string>
+		<key>Molecular formula</key>
+		<string>C2H5NO</string>
+		<key>No.</key>
+		<string>2</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Acetic acid</string>
+		<key>Molar mass</key>
+		<string>60.052</string>
+		<key>Molecular formula</key>
+		<string>CH3COOH</string>
+		<key>No.</key>
+		<string>3</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Acetone</string>
+		<key>Molar mass</key>
+		<string>58.08</string>
+		<key>Molecular formula</key>
+		<string>C3H6O</string>
+		<key>No.</key>
+		<string>4</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Acetonitrile</string>
+		<key>Molar mass</key>
+		<string>41.053</string>
+		<key>Molecular formula</key>
+		<string>C2H3N</string>
+		<key>No.</key>
+		<string>5</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Aluminium chloride</string>
+		<key>Molar mass</key>
+		<string>133.33</string>
+		<key>Molecular formula</key>
+		<string>AlCl3</string>
+		<key>No.</key>
+		<string>6</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Aluminium nitrate</string>
+		<key>Molar mass</key>
+		<string>212.994</string>
+		<key>Molecular formula</key>
+		<string>Al(NO3)3</string>
+		<key>No.</key>
+		<string>7</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Aluminium sulfate</string>
+		<key>Molar mass</key>
+		<string>342.132</string>
+		<key>Molecular formula</key>
+		<string>Al2(SO4)3</string>
+		<key>No.</key>
+		<string>8</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Ammonia</string>
+		<key>Molar mass</key>
+		<string>17.031</string>
+		<key>Molecular formula</key>
+		<string>NH3</string>
+		<key>No.</key>
+		<string>9</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Ammonium acetate</string>
+		<key>Molar mass</key>
+		<string>77.083</string>
+		<key>Molecular formula</key>
+		<string>CH3COONH4</string>
+		<key>No.</key>
+		<string>10</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Ammonium carbonate</string>
+		<key>Molar mass</key>
+		<string>96.086</string>
+		<key>Molecular formula</key>
+		<string>(NH4)2CO3</string>
+		<key>No.</key>
+		<string>11</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Ammonium chloride</string>
+		<key>Molar mass</key>
+		<string>53.49</string>
+		<key>Molecular formula</key>
+		<string>NH4Cl</string>
+		<key>No.</key>
+		<string>12</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Ammonium dichromate</string>
+		<key>Molar mass</key>
+		<string>252.063</string>
+		<key>Molecular formula</key>
+		<string>(NH4)2Cr2O7</string>
+		<key>No.</key>
+		<string>13</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Ammonium hydroxide</string>
+		<key>Molar mass</key>
+		<string>35.046</string>
+		<key>Molecular formula</key>
+		<string>NH4OH</string>
+		<key>No.</key>
+		<string>14</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Ammonium nitrate</string>
+		<key>Molar mass</key>
+		<string>80.043</string>
+		<key>Molecular formula</key>
+		<string>NH4NO3</string>
+		<key>No.</key>
+		<string>15</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Ammonium oxalate</string>
+		<key>Molar mass</key>
+		<string>124.096</string>
+		<key>Molecular formula</key>
+		<string>(NH4)2C2O4</string>
+		<key>No.</key>
+		<string>16</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Ammonium sulfate</string>
+		<key>Molar mass</key>
+		<string>132.13</string>
+		<key>Molecular formula</key>
+		<string>(NH4)2SO4</string>
+		<key>No.</key>
+		<string>17</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Antimony(III) chloride</string>
+		<key>Molar mass</key>
+		<string>228.11</string>
+		<key>Molecular formula</key>
+		<string>SbCl3</string>
+		<key>No.</key>
+		<string>18</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Antimony(V) chloride</string>
+		<key>Molar mass</key>
+		<string>299.01</string>
+		<key>Molecular formula</key>
+		<string>SbCl5</string>
+		<key>No.</key>
+		<string>19</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Barium chloride</string>
+		<key>Molar mass</key>
+		<string>208.23</string>
+		<key>Molecular formula</key>
+		<string>BaCl2</string>
+		<key>No.</key>
+		<string>20</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Barium hydroxide</string>
+		<key>Molar mass</key>
+		<string>171.34</string>
+		<key>Molecular formula</key>
+		<string>Ba(OH)2</string>
+		<key>No.</key>
+		<string>21</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Barium nitrate</string>
+		<key>Molar mass</key>
+		<string>261.34</string>
+		<key>Molecular formula</key>
+		<string>Ba(NO3)2</string>
+		<key>No.</key>
+		<string>22</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Bismuth(III) chloride</string>
+		<key>Molar mass</key>
+		<string>315.33</string>
+		<key>Molecular formula</key>
+		<string>BiCl3</string>
+		<key>No.</key>
+		<string>23</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Bismuth(III) nitrate</string>
+		<key>Molar mass</key>
+		<string>394.99</string>
+		<key>Molecular formula</key>
+		<string>Bi(NO3)3</string>
+		<key>No.</key>
+		<string>24</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Butan-1-ol</string>
+		<key>Molar mass</key>
+		<string>74.123</string>
+		<key>Molecular formula</key>
+		<string>C4H10O</string>
+		<key>No.</key>
+		<string>25</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Butyric acid</string>
+		<key>Molar mass</key>
+		<string>88.106</string>
+		<key>Molecular formula</key>
+		<string>C4H8O2</string>
+		<key>No.</key>
+		<string>26</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Cadmium nitrate</string>
+		<key>Molar mass</key>
+		<string>236.42</string>
+		<key>Molecular formula</key>
+		<string>Cd(NO3)2</string>
+		<key>No.</key>
+		<string>27</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Cadmium sulfate</string>
+		<key>Molar mass</key>
+		<string>208.47</string>
+		<key>Molecular formula</key>
+		<string>CdSO4</string>
+		<key>No.</key>
+		<string>28</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Calcium chloride</string>
+		<key>Molar mass</key>
+		<string>110.98</string>
+		<key>Molecular formula</key>
+		<string>CaCl2</string>
+		<key>No.</key>
+		<string>29</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Calcium hydroxide</string>
+		<key>Molar mass</key>
+		<string>74.092</string>
+		<key>Molecular formula</key>
+		<string>Ca(OH)2</string>
+		<key>No.</key>
+		<string>30</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Calcium nitrate</string>
+		<key>Molar mass</key>
+		<string>164.086</string>
+		<key>Molecular formula</key>
+		<string>Ca(NO3)2</string>
+		<key>No.</key>
+		<string>31</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Calcium sulfate</string>
+		<key>Molar mass</key>
+		<string>136.13</string>
+		<key>Molecular formula</key>
+		<string>CaSO4</string>
+		<key>No.</key>
+		<string>32</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Carbon disulfide</string>
+		<key>Molar mass</key>
+		<string>76.13</string>
+		<key>Molecular formula</key>
+		<string>CS2</string>
+		<key>No.</key>
+		<string>33</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Chloroacetic acid</string>
+		<key>Molar mass</key>
+		<string>94.49</string>
+		<key>Molecular formula</key>
+		<string>C2H3ClO2</string>
+		<key>No.</key>
+		<string>34</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Chloroauric acid</string>
+		<key>Molar mass</key>
+		<string>339.78</string>
+		<key>Molecular formula</key>
+		<string>HAuCl4</string>
+		<key>No.</key>
+		<string>35</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Chloroform</string>
+		<key>Molar mass</key>
+		<string>119.37</string>
+		<key>Molecular formula</key>
+		<string>CHCl3</string>
+		<key>No.</key>
+		<string>36</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Chloroplatinic acid</string>
+		<key>Molar mass</key>
+		<string>409.8</string>
+		<key>Molecular formula</key>
+		<string>H2PtCl6</string>
+		<key>No.</key>
+		<string>37</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Chromium(III) chloride</string>
+		<key>Molar mass</key>
+		<string>158.35</string>
+		<key>Molecular formula</key>
+		<string>CrCl3</string>
+		<key>No.</key>
+		<string>38</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Chromium(III) nitrate</string>
+		<key>Molar mass</key>
+		<string>238.008</string>
+		<key>Molecular formula</key>
+		<string>Cr(NO3)3</string>
+		<key>No.</key>
+		<string>39</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Chromium(III) sulfate</string>
+		<key>Molar mass</key>
+		<string>392.16</string>
+		<key>Molecular formula</key>
+		<string>Cr2(SO4)3</string>
+		<key>No.</key>
+		<string>40</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Chromium(VI) oxide</string>
+		<key>Molar mass</key>
+		<string>99.993</string>
+		<key>Molecular formula</key>
+		<string>CrO3</string>
+		<key>No.</key>
+		<string>41</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Citric acid</string>
+		<key>Molar mass</key>
+		<string>192.123</string>
+		<key>Molecular formula</key>
+		<string>C6H8O7</string>
+		<key>No.</key>
+		<string>42</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Cobalt(II) nitrate</string>
+		<key>Molar mass</key>
+		<string>182.941</string>
+		<key>Molecular formula</key>
+		<string>Co(NO3)2</string>
+		<key>No.</key>
+		<string>43</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Cobalt(II) sulfate</string>
+		<key>Molar mass</key>
+		<string>154.99</string>
+		<key>Molecular formula</key>
+		<string>CoSO4</string>
+		<key>No.</key>
+		<string>44</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Copper(I) chloride</string>
+		<key>Molar mass</key>
+		<string>197.99</string>
+		<key>Molecular formula</key>
+		<string>Cu2Cl2</string>
+		<key>No.</key>
+		<string>45</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Copper(II) chloride</string>
+		<key>Molar mass</key>
+		<string>134.45</string>
+		<key>Molecular formula</key>
+		<string>CuCl2</string>
+		<key>No.</key>
+		<string>46</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Copper(II) nitrate</string>
+		<key>Molar mass</key>
+		<string>187.554</string>
+		<key>Molecular formula</key>
+		<string>Cu(NO3)2</string>
+		<key>No.</key>
+		<string>47</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Copper(II) sulfate</string>
+		<key>Molar mass</key>
+		<string>159.6</string>
+		<key>Molecular formula</key>
+		<string>CuSO4</string>
+		<key>No.</key>
+		<string>48</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Dichloroacetic acid</string>
+		<key>Molar mass</key>
+		<string>128.94</string>
+		<key>Molecular formula</key>
+		<string>C2H2Cl2O2</string>
+		<key>No.</key>
+		<string>49</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Diethyl ether</string>
+		<key>Molar mass</key>
+		<string>74.123</string>
+		<key>Molecular formula</key>
+		<string>(C2H5)2O</string>
+		<key>No.</key>
+		<string>50</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Dimethylglyoxime</string>
+		<key>Molar mass</key>
+		<string>116.12</string>
+		<key>Molecular formula</key>
+		<string>(CH3CNOH)2</string>
+		<key>No.</key>
+		<string>51</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>EDTA, disodium salt</string>
+		<key>Molar mass</key>
+		<string>336.21</string>
+		<key>Molecular formula</key>
+		<string>Na2C10H14N2O8</string>
+		<key>No.</key>
+		<string>52</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Ethanol</string>
+		<key>Molar mass</key>
+		<string>46.069</string>
+		<key>Molecular formula</key>
+		<string>C2H5OH</string>
+		<key>No.</key>
+		<string>53</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Ethylene glycol</string>
+		<key>Molar mass</key>
+		<string>62.068</string>
+		<key>Molecular formula</key>
+		<string>(CH2OH)2</string>
+		<key>No.</key>
+		<string>54</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Formaldehyde</string>
+		<key>Molar mass</key>
+		<string>30.026</string>
+		<key>Molecular formula</key>
+		<string>CH2O</string>
+		<key>No.</key>
+		<string>55</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Formic acid</string>
+		<key>Molar mass</key>
+		<string>46.025</string>
+		<key>Molecular formula</key>
+		<string>CH2O2</string>
+		<key>No.</key>
+		<string>56</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Fructose</string>
+		<key>Molar mass</key>
+		<string>180.156</string>
+		<key>Molecular formula</key>
+		<string>C6H12O6</string>
+		<key>No.</key>
+		<string>57</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Glucose</string>
+		<key>Molar mass</key>
+		<string>180.156</string>
+		<key>Molecular formula</key>
+		<string>C6H12O6</string>
+		<key>No.</key>
+		<string>58</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Glycerol</string>
+		<key>Molar mass</key>
+		<string>92.094</string>
+		<key>Molecular formula</key>
+		<string>C3H8O3</string>
+		<key>No.</key>
+		<string>59</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Hexafluorosilicic acid</string>
+		<key>Molar mass</key>
+		<string>144.089</string>
+		<key>Molecular formula</key>
+		<string>H2SiF6</string>
+		<key>No.</key>
+		<string>60</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Hydrazine</string>
+		<key>Molar mass</key>
+		<string>32.046</string>
+		<key>Molecular formula</key>
+		<string>N2H4</string>
+		<key>No.</key>
+		<string>61</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Hydrobromic acid</string>
+		<key>Molar mass</key>
+		<string>80.912</string>
+		<key>Molecular formula</key>
+		<string>HBr</string>
+		<key>No.</key>
+		<string>62</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Hydrochloric acid</string>
+		<key>Molar mass</key>
+		<string>36.46</string>
+		<key>Molecular formula</key>
+		<string>HCl</string>
+		<key>No.</key>
+		<string>63</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Hydrocyanic acid</string>
+		<key>Molar mass</key>
+		<string>27.026</string>
+		<key>Molecular formula</key>
+		<string>HCN</string>
+		<key>No.</key>
+		<string>64</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Hydrofluoric acid</string>
+		<key>Molar mass</key>
+		<string>20.006</string>
+		<key>Molecular formula</key>
+		<string>HF</string>
+		<key>No.</key>
+		<string>65</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Hydrogen peroxide</string>
+		<key>Molar mass</key>
+		<string>34.014</string>
+		<key>Molecular formula</key>
+		<string>H2O2</string>
+		<key>No.</key>
+		<string>66</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Hydroiodic acid</string>
+		<key>Molar mass</key>
+		<string>127.9</string>
+		<key>Molecular formula</key>
+		<string>HI</string>
+		<key>No.</key>
+		<string>67</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Iodic acid</string>
+		<key>Molar mass</key>
+		<string>175.9</string>
+		<key>Molecular formula</key>
+		<string>HIO3</string>
+		<key>No.</key>
+		<string>68</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Iron(II) ammonium sulfate</string>
+		<key>Molar mass</key>
+		<string>284.04</string>
+		<key>Molecular formula</key>
+		<string>FeSO4+(NH4)2SO4</string>
+		<key>No.</key>
+		<string>69</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Iron(II) sulfate</string>
+		<key>Molar mass</key>
+		<string>151.9</string>
+		<key>Molecular formula</key>
+		<string>FeSO4</string>
+		<key>No.</key>
+		<string>70</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Iron(III) chloride</string>
+		<key>Molar mass</key>
+		<string>162.2</string>
+		<key>Molecular formula</key>
+		<string>FeCl3</string>
+		<key>No.</key>
+		<string>71</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Iron(III) nitrate</string>
+		<key>Molar mass</key>
+		<string>241.857</string>
+		<key>Molecular formula</key>
+		<string>Fe(NO3)3</string>
+		<key>No.</key>
+		<string>72</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Iron(III) sulfate</string>
+		<key>Molar mass</key>
+		<string>399.86</string>
+		<key>Molecular formula</key>
+		<string>Fe2(SO4)3</string>
+		<key>No.</key>
+		<string>73</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Isobutanol</string>
+		<key>Molar mass</key>
+		<string>74.123</string>
+		<key>Molecular formula</key>
+		<string>C4H10O</string>
+		<key>No.</key>
+		<string>74</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Lactic acid</string>
+		<key>Molar mass</key>
+		<string>90.078</string>
+		<key>Molecular formula</key>
+		<string>C3H6O3</string>
+		<key>No.</key>
+		<string>75</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Lactose</string>
+		<key>Molar mass</key>
+		<string>342.297</string>
+		<key>Molecular formula</key>
+		<string>C12H22O11</string>
+		<key>No.</key>
+		<string>76</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Lead(II) acetate</string>
+		<key>Molar mass</key>
+		<string>325.3</string>
+		<key>Molecular formula</key>
+		<string>Pb(C2H3O2)2</string>
+		<key>No.</key>
+		<string>77</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Lead(II) chloride</string>
+		<key>Molar mass</key>
+		<string>278.1</string>
+		<key>Molecular formula</key>
+		<string>PbCl2</string>
+		<key>No.</key>
+		<string>78</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Lead(II) nitrate</string>
+		<key>Molar mass</key>
+		<string>331.2</string>
+		<key>Molecular formula</key>
+		<string>Pb(NO3)2</string>
+		<key>No.</key>
+		<string>79</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Lead(IV) acetate</string>
+		<key>Molar mass</key>
+		<string>443.4</string>
+		<key>Molecular formula</key>
+		<string>Pb(C2H3O2)4</string>
+		<key>No.</key>
+		<string>80</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Lithium chloride</string>
+		<key>Molar mass</key>
+		<string>42.39</string>
+		<key>Molecular formula</key>
+		<string>LiCl</string>
+		<key>No.</key>
+		<string>81</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Magnesium chloride</string>
+		<key>Molar mass</key>
+		<string>95.21</string>
+		<key>Molecular formula</key>
+		<string>MgCl2</string>
+		<key>No.</key>
+		<string>82</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Magnesium nitrate</string>
+		<key>Molar mass</key>
+		<string>148.313</string>
+		<key>Molecular formula</key>
+		<string>Mg(NO3)2</string>
+		<key>No.</key>
+		<string>83</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Magnesium sulfate</string>
+		<key>Molar mass</key>
+		<string>120.36</string>
+		<key>Molecular formula</key>
+		<string>MgSO4</string>
+		<key>No.</key>
+		<string>84</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Maleic acid</string>
+		<key>Molar mass</key>
+		<string>116.072</string>
+		<key>Molecular formula</key>
+		<string>C4H4O4</string>
+		<key>No.</key>
+		<string>85</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Malonic acid</string>
+		<key>Molar mass</key>
+		<string>104.061</string>
+		<key>Molecular formula</key>
+		<string>C3H4O4</string>
+		<key>No.</key>
+		<string>86</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Maltose</string>
+		<key>Molar mass</key>
+		<string>342.297</string>
+		<key>Molecular formula</key>
+		<string>C12H22O11</string>
+		<key>No.</key>
+		<string>87</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Manganese(II) chloride</string>
+		<key>Molar mass</key>
+		<string>125.84</string>
+		<key>Molecular formula</key>
+		<string>MnCl2</string>
+		<key>No.</key>
+		<string>88</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Manganese(II) sulfate</string>
+		<key>Molar mass</key>
+		<string>150.99</string>
+		<key>Molecular formula</key>
+		<string>MnSO4</string>
+		<key>No.</key>
+		<string>89</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Mannitol</string>
+		<key>Molar mass</key>
+		<string>182.172</string>
+		<key>Molecular formula</key>
+		<string>C6H14O6</string>
+		<key>No.</key>
+		<string>90</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Mercury(II) chloride</string>
+		<key>Molar mass</key>
+		<string>271.49</string>
+		<key>Molecular formula</key>
+		<string>HgCl2</string>
+		<key>No.</key>
+		<string>91</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Mercury(II) nitrate</string>
+		<key>Molar mass</key>
+		<string>324.6</string>
+		<key>Molecular formula</key>
+		<string>Hg(NO3)2</string>
+		<key>No.</key>
+		<string>92</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Mercury(II) sulfate</string>
+		<key>Molar mass</key>
+		<string>296.65</string>
+		<key>Molecular formula</key>
+		<string>HgSO4</string>
+		<key>No.</key>
+		<string>93</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Methanol</string>
+		<key>Molar mass</key>
+		<string>32.042</string>
+		<key>Molecular formula</key>
+		<string>CH3OH</string>
+		<key>No.</key>
+		<string>94</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Methyl acetate</string>
+		<key>Molar mass</key>
+		<string>74.079</string>
+		<key>Molecular formula</key>
+		<string>C3H6O2</string>
+		<key>No.</key>
+		<string>95</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Nickel chloride</string>
+		<key>Molar mass</key>
+		<string>129.59</string>
+		<key>Molecular formula</key>
+		<string>NiCl2</string>
+		<key>No.</key>
+		<string>96</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Nickel nitrate</string>
+		<key>Molar mass</key>
+		<string>182.701</string>
+		<key>Molecular formula</key>
+		<string>Ni(NO3)2</string>
+		<key>No.</key>
+		<string>97</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Nickel sulfate</string>
+		<key>Molar mass</key>
+		<string>154.75</string>
+		<key>Molecular formula</key>
+		<string>NiSO4</string>
+		<key>No.</key>
+		<string>98</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Nicotine</string>
+		<key>Molar mass</key>
+		<string>162.236</string>
+		<key>Molecular formula</key>
+		<string>C10H14N2</string>
+		<key>No.</key>
+		<string>99</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Nitric acid</string>
+		<key>Molar mass</key>
+		<string>63.012</string>
+		<key>Molecular formula</key>
+		<string>HNO3</string>
+		<key>No.</key>
+		<string>100</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Oxalic acid</string>
+		<key>Molar mass</key>
+		<string>90.034</string>
+		<key>Molecular formula</key>
+		<string>H2C2O4</string>
+		<key>No.</key>
+		<string>101</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Pentan-1-ol</string>
+		<key>Molar mass</key>
+		<string>88.15</string>
+		<key>Molecular formula</key>
+		<string>C5H11OH</string>
+		<key>No.</key>
+		<string>102</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Perchloric acid</string>
+		<key>Molar mass</key>
+		<string>100.45</string>
+		<key>Molecular formula</key>
+		<string>HClO4</string>
+		<key>No.</key>
+		<string>103</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Phenol</string>
+		<key>Molar mass</key>
+		<string>94.113</string>
+		<key>Molecular formula</key>
+		<string>C6H6O</string>
+		<key>No.</key>
+		<string>104</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Phosphoric acid</string>
+		<key>Molar mass</key>
+		<string>97.994</string>
+		<key>Molecular formula</key>
+		<string>H3PO4</string>
+		<key>No.</key>
+		<string>105</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium bicarbonate</string>
+		<key>Molar mass</key>
+		<string>100.114</string>
+		<key>Molecular formula</key>
+		<string>KHCO3</string>
+		<key>No.</key>
+		<string>106</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium bromate</string>
+		<key>Molar mass</key>
+		<string>166.999</string>
+		<key>Molecular formula</key>
+		<string>KBrO3</string>
+		<key>No.</key>
+		<string>107</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium bromide</string>
+		<key>Molar mass</key>
+		<string>119.002</string>
+		<key>Molecular formula</key>
+		<string>KBr</string>
+		<key>No.</key>
+		<string>108</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium carbonate</string>
+		<key>Molar mass</key>
+		<string>138.204</string>
+		<key>Molecular formula</key>
+		<string>K2CO3</string>
+		<key>No.</key>
+		<string>109</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium chlorate</string>
+		<key>Molar mass</key>
+		<string>122.55</string>
+		<key>Molecular formula</key>
+		<string>KClO3</string>
+		<key>No.</key>
+		<string>110</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium chloride</string>
+		<key>Molar mass</key>
+		<string>74.55</string>
+		<key>Molecular formula</key>
+		<string>KCl</string>
+		<key>No.</key>
+		<string>111</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium chromate</string>
+		<key>Molar mass</key>
+		<string>194.188</string>
+		<key>Molecular formula</key>
+		<string>K2CrO4</string>
+		<key>No.</key>
+		<string>112</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium cyanide</string>
+		<key>Molar mass</key>
+		<string>65.116</string>
+		<key>Molecular formula</key>
+		<string>KCN</string>
+		<key>No.</key>
+		<string>113</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium dichromate</string>
+		<key>Molar mass</key>
+		<string>294.181</string>
+		<key>Molecular formula</key>
+		<string>K2Cr2O7</string>
+		<key>No.</key>
+		<string>114</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium dihydrogen phosphate</string>
+		<key>Molar mass</key>
+		<string>136.084</string>
+		<key>Molecular formula</key>
+		<string>KH2PO4</string>
+		<key>No.</key>
+		<string>115</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium hexacyanoferrate(II)</string>
+		<key>Molar mass</key>
+		<string>368.345</string>
+		<key>Molecular formula</key>
+		<string>K4Fe(CN)6</string>
+		<key>No.</key>
+		<string>116</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium hexacyanoferrate(III)</string>
+		<key>Molar mass</key>
+		<string>329.247</string>
+		<key>Molecular formula</key>
+		<string>K3Fe(CN)6</string>
+		<key>No.</key>
+		<string>117</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium hydrogen phosphate</string>
+		<key>Molar mass</key>
+		<string>174.174</string>
+		<key>Molecular formula</key>
+		<string>K2HPO4</string>
+		<key>No.</key>
+		<string>118</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium hydroxide</string>
+		<key>Molar mass</key>
+		<string>56.105</string>
+		<key>Molecular formula</key>
+		<string>KOH</string>
+		<key>No.</key>
+		<string>119</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium iodate</string>
+		<key>Molar mass</key>
+		<string>214</string>
+		<key>Molecular formula</key>
+		<string>KIO3</string>
+		<key>No.</key>
+		<string>120</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium iodide</string>
+		<key>Molar mass</key>
+		<string>166</string>
+		<key>Molecular formula</key>
+		<string>KI</string>
+		<key>No.</key>
+		<string>121</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium nitrate</string>
+		<key>Molar mass</key>
+		<string>101.102</string>
+		<key>Molecular formula</key>
+		<string>KNO3</string>
+		<key>No.</key>
+		<string>122</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium nitrite</string>
+		<key>Molar mass</key>
+		<string>85.103</string>
+		<key>Molecular formula</key>
+		<string>KNO2</string>
+		<key>No.</key>
+		<string>123</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium permanganate</string>
+		<key>Molar mass</key>
+		<string>158.032</string>
+		<key>Molecular formula</key>
+		<string>KMnO4</string>
+		<key>No.</key>
+		<string>124</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium sulfate</string>
+		<key>Molar mass</key>
+		<string>174.25</string>
+		<key>Molecular formula</key>
+		<string>K2SO4</string>
+		<key>No.</key>
+		<string>125</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium sulfite</string>
+		<key>Molar mass</key>
+		<string>158.25</string>
+		<key>Molecular formula</key>
+		<string>K2SO3</string>
+		<key>No.</key>
+		<string>126</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium tartrate</string>
+		<key>Molar mass</key>
+		<string>226.266</string>
+		<key>Molecular formula</key>
+		<string>K2C4H4O6</string>
+		<key>No.</key>
+		<string>127</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Potassium thiocyanate</string>
+		<key>Molar mass</key>
+		<string>97.18</string>
+		<key>Molecular formula</key>
+		<string>KCNS</string>
+		<key>No.</key>
+		<string>128</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Propan-1-ol</string>
+		<key>Molar mass</key>
+		<string>60.096</string>
+		<key>Molecular formula</key>
+		<string>CH3CH2CH2OH</string>
+		<key>No.</key>
+		<string>129</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Propan-2-ol</string>
+		<key>Molar mass</key>
+		<string>60.096</string>
+		<key>Molecular formula</key>
+		<string>CH3CHOHCH3</string>
+		<key>No.</key>
+		<string>130</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Pyridine</string>
+		<key>Molar mass</key>
+		<string>79.102</string>
+		<key>Molecular formula</key>
+		<string>C5H5N</string>
+		<key>No.</key>
+		<string>131</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Resorcinol</string>
+		<key>Molar mass</key>
+		<string>110.112</string>
+		<key>Molecular formula</key>
+		<string>C6H6O2</string>
+		<key>No.</key>
+		<string>132</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Saccharose</string>
+		<key>Molar mass</key>
+		<string>342.297</string>
+		<key>Molecular formula</key>
+		<string>C12H22O11</string>
+		<key>No.</key>
+		<string>133</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Silver nitrate</string>
+		<key>Molar mass</key>
+		<string>169.87</string>
+		<key>Molecular formula</key>
+		<string>AgNO3</string>
+		<key>No.</key>
+		<string>134</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Silver sulfate</string>
+		<key>Molar mass</key>
+		<string>311.8</string>
+		<key>Molecular formula</key>
+		<string>Ag2SO4</string>
+		<key>No.</key>
+		<string>135</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium acetate</string>
+		<key>Molar mass</key>
+		<string>82.03</string>
+		<key>Molecular formula</key>
+		<string>NaC2H3O2</string>
+		<key>No.</key>
+		<string>136</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium arsenate</string>
+		<key>Molar mass</key>
+		<string>207.89</string>
+		<key>Molecular formula</key>
+		<string>Na3AsO4</string>
+		<key>No.</key>
+		<string>137</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium bromide</string>
+		<key>Molar mass</key>
+		<string>102.89</string>
+		<key>Molecular formula</key>
+		<string>NaBr</string>
+		<key>No.</key>
+		<string>138</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium carbonate</string>
+		<key>Molar mass</key>
+		<string>105.99</string>
+		<key>Molecular formula</key>
+		<string>Na2CO3</string>
+		<key>No.</key>
+		<string>139</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium chlorate</string>
+		<key>Molar mass</key>
+		<string>106.44</string>
+		<key>Molecular formula</key>
+		<string>NaClO3</string>
+		<key>No.</key>
+		<string>140</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium chloride</string>
+		<key>Molar mass</key>
+		<string>58.44</string>
+		<key>Molecular formula</key>
+		<string>NaCl</string>
+		<key>No.</key>
+		<string>141</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium chromate</string>
+		<key>Molar mass</key>
+		<string>161.97</string>
+		<key>Molecular formula</key>
+		<string>Na2CrO4</string>
+		<key>No.</key>
+		<string>142</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium citrate</string>
+		<key>Molar mass</key>
+		<string>258.07</string>
+		<key>Molecular formula</key>
+		<string>Na3C6H5O7</string>
+		<key>No.</key>
+		<string>143</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium dichromate</string>
+		<key>Molar mass</key>
+		<string>261.97</string>
+		<key>Molecular formula</key>
+		<string>Na2Cr2O7</string>
+		<key>No.</key>
+		<string>144</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium dihydrogen phosphate</string>
+		<key>Molar mass</key>
+		<string>119.98</string>
+		<key>Molecular formula</key>
+		<string>NaH2PO4</string>
+		<key>No.</key>
+		<string>145</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium formate</string>
+		<key>Molar mass</key>
+		<string>68.01</string>
+		<key>Molecular formula</key>
+		<string>HCOONa</string>
+		<key>No.</key>
+		<string>146</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium hydrogen carbonate</string>
+		<key>Molar mass</key>
+		<string>84.01</string>
+		<key>Molecular formula</key>
+		<string>NaHCO3</string>
+		<key>No.</key>
+		<string>147</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium hydrogen phosphate</string>
+		<key>Molar mass</key>
+		<string>141.96</string>
+		<key>Molecular formula</key>
+		<string>Na2HPO4</string>
+		<key>No.</key>
+		<string>148</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium hydrogen tartrate</string>
+		<key>Molar mass</key>
+		<string>172.07</string>
+		<key>Molecular formula</key>
+		<string>NaHC4H4O6</string>
+		<key>No.</key>
+		<string>149</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium hydroxide</string>
+		<key>Molar mass</key>
+		<string>40</string>
+		<key>Molecular formula</key>
+		<string>NaOH</string>
+		<key>No.</key>
+		<string>150</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium nitrate</string>
+		<key>Molar mass</key>
+		<string>84.99</string>
+		<key>Molecular formula</key>
+		<string>NaNO3</string>
+		<key>No.</key>
+		<string>151</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium nitrite</string>
+		<key>Molar mass</key>
+		<string>69</string>
+		<key>Molecular formula</key>
+		<string>NaNO2</string>
+		<key>No.</key>
+		<string>152</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium phosphate</string>
+		<key>Molar mass</key>
+		<string>163.94</string>
+		<key>Molecular formula</key>
+		<string>Na3PO4</string>
+		<key>No.</key>
+		<string>153</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium potassium tartrate</string>
+		<key>Molar mass</key>
+		<string>210.16</string>
+		<key>Molecular formula</key>
+		<string>NaKC4H4O6</string>
+		<key>No.</key>
+		<string>154</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium sulfate</string>
+		<key>Molar mass</key>
+		<string>142.04</string>
+		<key>Molecular formula</key>
+		<string>Na2SO4</string>
+		<key>No.</key>
+		<string>155</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium sulfide</string>
+		<key>Molar mass</key>
+		<string>78.04</string>
+		<key>Molecular formula</key>
+		<string>Na2S</string>
+		<key>No.</key>
+		<string>156</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium sulfite</string>
+		<key>Molar mass</key>
+		<string>126.04</string>
+		<key>Molecular formula</key>
+		<string>Na2SO3</string>
+		<key>No.</key>
+		<string>157</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium tartrate</string>
+		<key>Molar mass</key>
+		<string>194.05</string>
+		<key>Molecular formula</key>
+		<string>Na2C4H4O6</string>
+		<key>No.</key>
+		<string>158</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sodium thiosulfate</string>
+		<key>Molar mass</key>
+		<string>158.1</string>
+		<key>Molecular formula</key>
+		<string>Na2S2O3</string>
+		<key>No.</key>
+		<string>159</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Strontium chloride</string>
+		<key>Molar mass</key>
+		<string>158.52</string>
+		<key>Molecular formula</key>
+		<string>SrCl2</string>
+		<key>No.</key>
+		<string>160</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Strontium nitrate</string>
+		<key>Molar mass</key>
+		<string>211.63</string>
+		<key>Molecular formula</key>
+		<string>Sr(NO3)2</string>
+		<key>No.</key>
+		<string>161</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Strontium sulfate</string>
+		<key>Molar mass</key>
+		<string>183.68</string>
+		<key>Molecular formula</key>
+		<string>SrSO4</string>
+		<key>No.</key>
+		<string>162</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sulfuric acid</string>
+		<key>Molar mass</key>
+		<string>98.07</string>
+		<key>Molecular formula</key>
+		<string>H2SO4</string>
+		<key>No.</key>
+		<string>163</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Sulfurous acid</string>
+		<key>Molar mass</key>
+		<string>82.07</string>
+		<key>Molecular formula</key>
+		<string>H2SO3</string>
+		<key>No.</key>
+		<string>164</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Tartaric acid</string>
+		<key>Molar mass</key>
+		<string>150.086</string>
+		<key>Molecular formula</key>
+		<string>H2C4H4O6</string>
+		<key>No.</key>
+		<string>165</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Thiourea</string>
+		<key>Molar mass</key>
+		<string>76.12</string>
+		<key>Molecular formula</key>
+		<string>CH4N2S</string>
+		<key>No.</key>
+		<string>166</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Tin(II) chloride</string>
+		<key>Molar mass</key>
+		<string>189.61</string>
+		<key>Molecular formula</key>
+		<string>SnCl2</string>
+		<key>No.</key>
+		<string>167</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Tin(IV) chloride</string>
+		<key>Molar mass</key>
+		<string>260.51</string>
+		<key>Molecular formula</key>
+		<string>SnCl4</string>
+		<key>No.</key>
+		<string>168</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Trichloroacetic acid</string>
+		<key>Molar mass</key>
+		<string>163.38</string>
+		<key>Molecular formula</key>
+		<string>CCl3COOH</string>
+		<key>No.</key>
+		<string>169</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>TRIS</string>
+		<key>Molar mass</key>
+		<string>121.136</string>
+		<key>Molecular formula</key>
+		<string>(HOCH2)3CNH2</string>
+		<key>No.</key>
+		<string>170</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Urea</string>
+		<key>Molar mass</key>
+		<string>60.056</string>
+		<key>Molecular formula</key>
+		<string>(NH2)2CO</string>
+		<key>No.</key>
+		<string>171</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Urethane</string>
+		<key>Molar mass</key>
+		<string>89.094</string>
+		<key>Molecular formula</key>
+		<string>C3H7NO2</string>
+		<key>No.</key>
+		<string>172</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Zinc bromide</string>
+		<key>Molar mass</key>
+		<string>225.19</string>
+		<key>Molecular formula</key>
+		<string>ZnBr2</string>
+		<key>No.</key>
+		<string>173</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Zinc chloride</string>
+		<key>Molar mass</key>
+		<string>136.28</string>
+		<key>Molecular formula</key>
+		<string>ZnCl2</string>
+		<key>No.</key>
+		<string>174</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Zinc nitrate</string>
+		<key>Molar mass</key>
+		<string>189.39</string>
+		<key>Molecular formula</key>
+		<string>Zn(NO3)2</string>
+		<key>No.</key>
+		<string>175</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+	<dict>
+		<key>Compound name</key>
+		<string>Zinc sulfate</string>
+		<key>Molar mass</key>
+		<string>161.44</string>
+		<key>Molecular formula</key>
+		<string>ZnSO4</string>
+		<key>No.</key>
+		<string>176</string>
+		<key>Type</key>
+		<string>Solid</string>
+	</dict>
+</array>
+</plist>

@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Compound" representedClassName="Compound" syncable="YES">
+        <attribute name="formula" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="molecularMass" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Group" representedClassName="Group" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Solution" syncable="YES"/>
+    </entity>
+    <entity name="Solution" representedClassName="Solution" syncable="YES">
+        <attribute name="chemicalPurity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="concentrationUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="finalConcentration" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="finalVolume" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="volumeUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="solute" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Compound" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Compound" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Solution" positionX="171" positionY="-18" width="128" height="133"/>
+        <element name="Group" positionX="-56" positionY="269" width="128" height="73"/>
+    </elements>
 </model>

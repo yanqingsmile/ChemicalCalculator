@@ -13,10 +13,23 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var compoundCount: Int {
+        get {
+            let context = persistentContainer.viewContext
+            var count: Int?
+            context.performAndWait {
+                count = try? context.count(for: NSFetchRequest(entityName: "Compound"))
+            }
+            return count ?? 0
+        }
+    }
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        loadIntoDatabase()
         return true
     }
 
@@ -88,6 +101,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    //MARK: - preload database
 
+    private func readPlistData() -> NSArray? {
+        if let path = Bundle.main.path(forResource: "compound", ofType: "plist") {
+            return NSArray(contentsOfFile: path)
+        }
+        return nil
+    }
+    
+    private func loadIntoDatabase() {
+        let context = persistentContainer.viewContext
+        context.perform {
+            if let data = self.readPlistData() {
+                for compoundInfo in data {
+                    _ = Compound.compoundWithCompoundInfo(compoundInfo: compoundInfo as! Dictionary<String, Any>, inManagedObjectContext: context)
+                    self.saveContext()
+                }
+            }
+        }
+        //printDatabaseStatistics()
+        print ("\(compoundCount) compounds" )
+    }
+    
+    
+    private func printDatabaseStatistics() {
+//        let context = persistentContainer.viewContext
+//        
+//        context.perform {
+//            let compoundCount = try? context.count(for: NSFetchRequest(entityName: "Compound"))
+//            print ("\(compoundCount) compounds" )
+//        }
+        
+    }
+    
 }
 
