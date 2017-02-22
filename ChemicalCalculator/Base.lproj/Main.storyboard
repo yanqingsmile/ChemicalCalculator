@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CompoundCell" textLabel="G4S-pD-wXk" detailTextLabel="1Jd-p0-Xqr" rowHeight="73" style="IBUITableViewCellStyleValue1" id="2BD-tF-820">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CompoundCell" textLabel="G4S-pD-wXk" detailTextLabel="1Jd-p0-Xqr" rowHeight="73" style="IBUITableViewCellStyleValue1" id="2BD-tF-820">
                                 <rect key="frame" x="0.0" y="28" width="375" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2BD-tF-820" id="XNj-kw-HgM">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G4S-pD-wXk">
@@ -34,7 +34,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Jd-p0-Xqr">
-                                            <rect key="frame" x="316" y="26" width="44" height="21"/>
+                                            <rect key="frame" x="296" y="26" width="44" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -42,6 +42,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="F9p-7I-JVd" kind="showDetail" identifier="showDetail" action="showViewController:sender:" id="fyM-qR-ySH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -64,7 +67,7 @@
         <!--New Compound-->
         <scene sceneID="WGO-sK-Zoy">
             <objects>
-                <viewController id="F9p-7I-JVd" sceneMemberID="viewController">
+                <viewController id="F9p-7I-JVd" customClass="NewCompoundViewController" customModule="ChemicalCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MF6-Q0-id4"/>
                         <viewControllerLayoutGuide type="bottom" id="EPF-X7-i4e"/>
@@ -85,11 +88,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vdk-ZQ-DAB">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Vdk-ZQ-DAB">
                                                 <rect key="frame" x="67" y="0.0" width="276" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <connections>
+                                                    <action selector="textFieldDidChange" destination="F9p-7I-JVd" eventType="editingChanged" id="ATP-8h-aMU"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -102,11 +108,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxD-3j-jtO">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kxD-3j-jtO">
                                                 <rect key="frame" x="85.5" y="0.0" width="257.5" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <connections>
+                                                    <action selector="textFieldDidChange" destination="F9p-7I-JVd" eventType="editingChanged" id="aSP-sv-fzI"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -119,11 +128,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5sQ-i1-dLF">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5sQ-i1-dLF">
                                                 <rect key="frame" x="207" y="0.0" width="136" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                                <connections>
+                                                    <action selector="textFieldDidChange" destination="F9p-7I-JVd" eventType="editingChanged" id="PMJ-qp-nxi"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -144,10 +156,28 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="New Compound" id="4S7-gz-sOt">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="erY-37-Dic"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dZQ-jv-aOW"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="erY-37-Dic">
+                            <connections>
+                                <action selector="cancelButtonClicked:" destination="F9p-7I-JVd" id="1O9-NQ-4jO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dZQ-jv-aOW">
+                            <connections>
+                                <action selector="saveButtonClicked:" destination="F9p-7I-JVd" id="2Dn-wA-6HA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="erY-37-Dic" id="zme-IN-Oot"/>
+                        <outlet property="formulaLabel" destination="PVB-Y4-F4t" id="FnH-IY-wAu"/>
+                        <outlet property="formulaTextField" destination="kxD-3j-jtO" id="6KM-Qx-7qv"/>
+                        <outlet property="molecularMassLabel" destination="jXE-0f-WC0" id="zFx-7v-2cS"/>
+                        <outlet property="molecularMassTextField" destination="5sQ-i1-dLF" id="Mru-52-E8x"/>
+                        <outlet property="nameLabel" destination="QIg-JR-wg6" id="KnG-JB-4Wr"/>
+                        <outlet property="nameTextField" destination="Vdk-ZQ-DAB" id="2Rr-z5-nEG"/>
+                        <outlet property="saveButton" destination="dZQ-jv-aOW" id="gqZ-SG-guv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rge-n9-VqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,4 +202,7 @@
             <point key="canvasLocation" x="120.8" y="106.59670164917542"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7fB-y6-uaG"/>
+    </inferredMetricsTieBreakers>
 </document>
