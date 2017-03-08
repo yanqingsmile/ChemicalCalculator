@@ -21,7 +21,8 @@
 		196828781E582CB7001F3FB6 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828771E582CB7001F3FB6 /* SearchTableViewController.swift */; };
 		1968287D1E597DC1001F3FB6 /* Compound+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968287C1E597DC1001F3FB6 /* Compound+CoreDataProperties.swift */; };
 		1968287F1E5A3003001F3FB6 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */; };
-		196828811E5BA53A001F3FB6 /* NewCompoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828801E5BA53A001F3FB6 /* NewCompoundViewController.swift */; };
+		196828811E5BA53A001F3FB6 /* CompoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828801E5BA53A001F3FB6 /* CompoundViewController.swift */; };
+		196828871E6D3496001F3FB6 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828861E6D3495001F3FB6 /* CalculatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +42,8 @@
 		196828771E582CB7001F3FB6 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		1968287C1E597DC1001F3FB6 /* Compound+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Compound+CoreDataProperties.swift"; path = "../Compound+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
-		196828801E5BA53A001F3FB6 /* NewCompoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCompoundViewController.swift; sourceTree = "<group>"; };
+		196828801E5BA53A001F3FB6 /* CompoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundViewController.swift; sourceTree = "<group>"; };
+		196828861E6D3495001F3FB6 /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,8 @@
 			children = (
 				196828681E582954001F3FB6 /* Core Data */,
 				196828771E582CB7001F3FB6 /* SearchTableViewController.swift */,
-				196828801E5BA53A001F3FB6 /* NewCompoundViewController.swift */,
+				196828861E6D3495001F3FB6 /* CalculatorViewController.swift */,
+				196828801E5BA53A001F3FB6 /* CompoundViewController.swift */,
 				1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */,
 				1968283F1E58207F001F3FB6 /* Main.storyboard */,
 				196828791E582D42001F3FB6 /* Supporting Files */,
@@ -186,7 +189,7 @@
 			files = (
 				1968287D1E597DC1001F3FB6 /* Compound+CoreDataProperties.swift in Sources */,
 				1968286F1E582A40001F3FB6 /* Solution+CoreDataClass.swift in Sources */,
-				196828811E5BA53A001F3FB6 /* NewCompoundViewController.swift in Sources */,
+				196828811E5BA53A001F3FB6 /* CompoundViewController.swift in Sources */,
 				1968283C1E58207F001F3FB6 /* AppDelegate.swift in Sources */,
 				196828701E582A40001F3FB6 /* Solution+CoreDataProperties.swift in Sources */,
 				196828731E582A40001F3FB6 /* Group+CoreDataClass.swift in Sources */,
@@ -194,6 +197,7 @@
 				196828781E582CB7001F3FB6 /* SearchTableViewController.swift in Sources */,
 				196828741E582A40001F3FB6 /* Group+CoreDataProperties.swift in Sources */,
 				1968287F1E5A3003001F3FB6 /* CoreDataTableViewController.swift in Sources */,
+				196828871E6D3496001F3FB6 /* CalculatorViewController.swift in Sources */,
 				196828441E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +321,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VXS2P832YK;
 				INFOPLIST_FILE = ChemicalCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.VivianLiu.ChemicalCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -330,6 +335,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VXS2P832YK;
 				INFOPLIST_FILE = ChemicalCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.VivianLiu.ChemicalCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";

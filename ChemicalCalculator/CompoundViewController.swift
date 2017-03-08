@@ -1,5 +1,5 @@
 //
-//  NewCompoundViewController.swift
+//  CompoundViewController.swift
 //  ChemicalCalculator
 //
 //  Created by Vivian Liu on 2/20/17.
@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
-class NewCompoundViewController: UIViewController, UITextFieldDelegate {
+class CompoundViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Properties
-    var compound: Compound?
+    var name: String = ""
+    var formula: String?
+    var molecularMass: Double = 0.0
+   
     
     // MARK: - IBOutlets
     
@@ -33,10 +37,13 @@ class NewCompoundViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IBActions
     
-    
-    
     @IBAction func cancelButtonClicked(_ sender: UIBarButtonItem) {
-        
+        let isPresentingInAddMode = presentingViewController is UINavigationController
+        if isPresentingInAddMode {
+            dismiss(animated: true, completion: nil)
+        } else {
+            _ = navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func textFieldDidChange() {
@@ -51,12 +58,12 @@ class NewCompoundViewController: UIViewController, UITextFieldDelegate {
         molecularMassTextField.delegate = self
         
         // Set up views if editing an existing Compound
-        if let editedCompound = compound {
-            navigationItem.title = editedCompound.name
-            nameTextField.text = editedCompound.name
-            formulaTextField.text = editedCompound.formula
-            molecularMassTextField.text = String(editedCompound.molecularMass)
-        }
+        navigationItem.title = name
+        nameTextField.text = name
+        formulaTextField.text = formula
+        molecularMassTextField.text = String(molecularMass)
+        
+        
         
         // Enable the save button only when all the text fields have valid values.
         checkValidCompound()
@@ -81,20 +88,21 @@ class NewCompoundViewController: UIViewController, UITextFieldDelegate {
     private func checkValidCompound() {
         // Disable saveButton when the name or formula or molecular mass is empty.
         let name = nameTextField.text ?? ""
-        let formula = formulaTextField.text ?? ""
         let molecularMass = Double(molecularMassTextField.text ?? "")
-        saveButton.isEnabled = !name.isEmpty && !formula.isEmpty && molecularMass != nil
+        saveButton.isEnabled = !name.isEmpty && molecularMass != nil
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let obj = sender as? UIBarButtonItem, saveButton === obj {
+            name = nameTextField.text ?? ""
+            formula = formulaTextField.text
+            molecularMass = Double(molecularMassTextField.text!)!
+        }
     }
-    */
+
 
 }

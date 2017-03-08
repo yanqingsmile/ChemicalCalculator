@@ -29,7 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        loadIntoDatabase()
+        if compoundCount == 0 {
+            loadIntoDatabase()
+        }
         return true
     }
 
@@ -121,20 +123,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-        //printDatabaseStatistics()
         print ("\(compoundCount) compounds" )
     }
     
-    
-    private func printDatabaseStatistics() {
-//        let context = persistentContainer.viewContext
-//        
-//        context.perform {
-//            let compoundCount = try? context.count(for: NSFetchRequest(entityName: "Compound"))
-//            print ("\(compoundCount) compounds" )
-//        }
-        
-    }
     
 }
 

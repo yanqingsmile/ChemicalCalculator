@@ -61,7 +61,7 @@ class SearchTableViewController: CoreDataTableViewController {
     }
     
     
-    
+    // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CompoundCell", for: indexPath)
         if let compound = fetchedResultsController?.object(at: indexPath) as? Compound {
@@ -77,8 +77,6 @@ class SearchTableViewController: CoreDataTableViewController {
         return cell
     }
     
-    
-    
 
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -87,28 +85,30 @@ class SearchTableViewController: CoreDataTableViewController {
      }
     
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
     
+     // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if let compoundToDelete = fetchedResultsController?.object(at: indexPath) as? Compound {
+                managedObjectContext?.delete(compoundToDelete)
+                try? managedObjectContext?.save()
+                // Below code is not needed, because the CoreDataTVC which implements fetchedResultsController delegate will handle the change in UI.
+                //tableView.deleteRows(at: [indexPath], with: .fade)
+            }  
+        }
+    }
     
     
      // MARK: - Navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
-            let compoundVC = segue.destination as! NewCompoundViewController
+            let compoundVC = segue.destination as! CompoundViewController
                 if let selectedCell = sender as? UITableViewCell {
                    let indexPath = tableView.indexPath(for: selectedCell)
                     let selectedCompound = fetchedResultsController?.object(at: indexPath!) as! Compound
-                    compoundVC.compound = selectedCompound
+                    compoundVC.name = selectedCompound.name!
+                    compoundVC.formula = selectedCompound.formula
+                    compoundVC.molecularMass = selectedCompound.molecularMass
                 }
         } else if segue.identifier == "addNewCompound" {
         }
@@ -137,11 +137,28 @@ class SearchTableViewController: CoreDataTableViewController {
         }
     }
     
-    func unwindToSearchTVC(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? NewCompoundViewController, let compound = sourceViewController.compound {
-            // update an exiting meal
-            
+    @IBAction func unwindToSearchTVC(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? CompoundViewController {
+            let name = sourceViewController.name
+            let molecularMass = sourceViewController.molecularMass
+            let formula = sourceViewController.formula
+            // update an exiting compound
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                let selectedCompound = fetchedResultsController?.object(at: selectedIndexPath) as! Compound
+                selectedCompound.setValue(name, forKey: "name")
+                selectedCompound.setValue(formula, forKey: "formula")
+                selectedCompound.setValue(molecularMass, forKey: "molecularMass")
+            } else {
+                // add a new compound
+                if let newCompound = NSEntityDescription.insertNewObject(forEntityName: "Compound", into: managedObjectContext!) as? Compound {
+                    newCompound.name = name
+                    newCompound.formula = formula
+                    newCompound.molecularMass = molecularMass
+                }
+            }
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
         }
+        tableView.reloadData()
     }
     
     
