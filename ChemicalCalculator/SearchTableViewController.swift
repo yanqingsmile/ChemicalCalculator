@@ -16,6 +16,8 @@ class SearchTableViewController: CoreDataTableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
     
+    fileprivate var indexPathOfTappedAccessoryButton: IndexPath?
+    
     
     //    private var filtedCompounds = [Compound]()
     
@@ -99,20 +101,6 @@ class SearchTableViewController: CoreDataTableViewController {
     }
     
     
-     // MARK: - Navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            let compoundVC = segue.destination as! CompoundViewController
-                if let selectedCell = sender as? UITableViewCell {
-                   let indexPath = tableView.indexPath(for: selectedCell)
-                    let selectedCompound = fetchedResultsController?.object(at: indexPath!) as! Compound
-                    compoundVC.name = selectedCompound.name!
-                    compoundVC.formula = selectedCompound.formula
-                    compoundVC.molecularMass = selectedCompound.molecularMass
-                }
-        } else if segue.identifier == "addNewCompound" {
-        }
-     }
     
     
     // MARK: - Methods
@@ -137,23 +125,51 @@ class SearchTableViewController: CoreDataTableViewController {
         }
     }
     
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            let compoundVC = segue.destination as! CompoundViewController
+            if let cellForTappedAccessory = sender as? UITableViewCell {
+                indexPathOfTappedAccessoryButton = tableView.indexPath(for: cellForTappedAccessory)
+                let selectedCompound = fetchedResultsController?.object(at: indexPathOfTappedAccessoryButton!) as! Compound
+                compoundVC.name = selectedCompound.name!
+                compoundVC.formula = selectedCompound.formula
+                compoundVC.molecularMass = selectedCompound.molecularMass
+            }
+        } else if segue.identifier == "calculate" {
+            let calculatorVC = segue.destination as! CalculatorViewController
+            if let selectedCell = sender as? UITableViewCell {
+                let selectedIndexPath = tableView.indexPath(for: selectedCell)
+                let selectedCompound = fetchedResultsController?.object(at: selectedIndexPath!) as! Compound
+                calculatorVC.compound = selectedCompound
+            }
+            
+        } else if segue.identifier == "addNewCompound" {
+        }
+    }
+
+    
     @IBAction func unwindToSearchTVC(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? CompoundViewController {
             let name = sourceViewController.name
             let molecularMass = sourceViewController.molecularMass
             let formula = sourceViewController.formula
+            let purity = sourceViewController.purity
             // update an exiting compound
-            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            if let selectedIndexPath = indexPathOfTappedAccessoryButton {
                 let selectedCompound = fetchedResultsController?.object(at: selectedIndexPath) as! Compound
                 selectedCompound.setValue(name, forKey: "name")
                 selectedCompound.setValue(formula, forKey: "formula")
                 selectedCompound.setValue(molecularMass, forKey: "molecularMass")
+                selectedCompound.setValue(purity, forKey: "purity")
+                indexPathOfTappedAccessoryButton = nil
             } else {
                 // add a new compound
                 if let newCompound = NSEntityDescription.insertNewObject(forEntityName: "Compound", into: managedObjectContext!) as? Compound {
                     newCompound.name = name
                     newCompound.formula = formula
                     newCompound.molecularMass = molecularMass
+                    newCompound.purity = purity
                 }
             }
             (UIApplication.shared.delegate as! AppDelegate).saveContext()

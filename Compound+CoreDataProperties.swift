@@ -2,7 +2,7 @@
 //  Compound+CoreDataProperties.swift
 //  ChemicalCalculator
 //
-//  Created by Vivian Liu on 2/18/17.
+//  Created by Vivian Liu on 3/7/17.
 //  Copyright © 2017 Vivian Liu. All rights reserved.
 //
 
@@ -19,5 +19,6 @@ extension Compound {
     @NSManaged public var name: String?
     @NSManaged public var formula: String?
     @NSManaged public var molecularMass: Double
+    @NSManaged public var purity: Double
 
 }

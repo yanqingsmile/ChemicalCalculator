@@ -2,7 +2,7 @@
 //  Solution+CoreDataProperties.swift
 //  ChemicalCalculator
 //
-//  Created by Vivian Liu on 2/17/17.
+//  Created by Vivian Liu on 3/7/17.
 //  Copyright © 2017 Vivian Liu. All rights reserved.
 //
 
@@ -20,7 +20,6 @@ extension Solution {
     @NSManaged public var volumeUnit: String?
     @NSManaged public var finalConcentration: Double
     @NSManaged public var concentrationUnit: String?
-    @NSManaged public var chemicalPurity: Double
     @NSManaged public var solute: Compound?
 
 }

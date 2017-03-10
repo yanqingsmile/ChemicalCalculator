@@ -20,6 +20,7 @@ public class Compound: NSManagedObject {
             compound.name = compoundInfo["Compound name"] as? String
             compound.formula = compoundInfo["Molecular formula"] as? String
             compound.molecularMass = Double(compoundInfo["Molar mass"] as! String) ?? 0.0
+            compound.purity = 1
             return compound
         }
         return nil

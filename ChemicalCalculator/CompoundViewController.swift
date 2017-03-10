@@ -15,6 +15,7 @@ class CompoundViewController: UIViewController, UITextFieldDelegate {
     var name: String = ""
     var formula: String?
     var molecularMass: Double = 0.0
+    var purity: Double = 1.0
    
     
     // MARK: - IBOutlets
@@ -30,6 +31,8 @@ class CompoundViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var formulaTextField: UITextField!
     
     @IBOutlet weak var molecularMassTextField: UITextField!
+    
+    @IBOutlet weak var purityTextField: UITextField!
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
@@ -56,13 +59,14 @@ class CompoundViewController: UIViewController, UITextFieldDelegate {
         nameTextField.delegate = self
         formulaTextField.delegate = self
         molecularMassTextField.delegate = self
+        purityTextField.delegate = self
         
         // Set up views if editing an existing Compound
         navigationItem.title = name
         nameTextField.text = name
         formulaTextField.text = formula
         molecularMassTextField.text = String(molecularMass)
-        
+        purityTextField.text = String(purity * 100)
         
         
         // Enable the save button only when all the text fields have valid values.
@@ -89,7 +93,8 @@ class CompoundViewController: UIViewController, UITextFieldDelegate {
         // Disable saveButton when the name or formula or molecular mass is empty.
         let name = nameTextField.text ?? ""
         let molecularMass = Double(molecularMassTextField.text ?? "")
-        saveButton.isEnabled = !name.isEmpty && molecularMass != nil
+        let purity = Double(purityTextField.text ?? "")
+        saveButton.isEnabled = !name.isEmpty && molecularMass != nil && purity != nil
     }
     
 
@@ -101,6 +106,7 @@ class CompoundViewController: UIViewController, UITextFieldDelegate {
             name = nameTextField.text ?? ""
             formula = formulaTextField.text
             molecularMass = Double(molecularMassTextField.text!)!
+            purity = Double(purityTextField.text!)!
         }
     }
 

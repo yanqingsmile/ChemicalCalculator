@@ -11,16 +11,13 @@ import UIKit
 class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Properties
+    var compound: Compound?
     var mass: Double = 0.0
     
     // MARK: - IBOutlets
     @IBOutlet weak var finalConcTextField: UITextField!
     
     @IBOutlet weak var finalVolumeTextField: UITextField!
-    
-    @IBOutlet weak var coordinatedWaterTextField: UITextField!
-    
-    @IBOutlet weak var purityTextField: UITextField!
     
     @IBOutlet weak var massTextField: UITextField!
     
@@ -30,9 +27,6 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func chooseVolUnit(_ sender: UIButton) {
-    }
-    
-    @IBAction func choosePurityUnit(_ sender: UIButton) {
     }
     
     
