@@ -21,8 +21,9 @@
 		1968287F1E5A3003001F3FB6 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */; };
 		196828811E5BA53A001F3FB6 /* CompoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828801E5BA53A001F3FB6 /* CompoundViewController.swift */; };
 		196828871E6D3496001F3FB6 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828861E6D3495001F3FB6 /* CalculatorViewController.swift */; };
-		1968288A1E6FE227001F3FB6 /* Solution+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828881E6FE227001F3FB6 /* Solution+CoreDataProperties.swift */; };
 		1968288B1E6FE227001F3FB6 /* Compound+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828891E6FE227001F3FB6 /* Compound+CoreDataProperties.swift */; };
+		1968288D1E7291DF001F3FB6 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 1968288C1E7291DF001F3FB6 /* Fonts */; };
+		1968288F1E7E45A0001F3FB6 /* Solution+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968288E1E7E45A0001F3FB6 /* Solution+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +43,9 @@
 		1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
 		196828801E5BA53A001F3FB6 /* CompoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundViewController.swift; sourceTree = "<group>"; };
 		196828861E6D3495001F3FB6 /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
-		196828881E6FE227001F3FB6 /* Solution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Solution+CoreDataProperties.swift"; path = "../Solution+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		196828891E6FE227001F3FB6 /* Compound+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Compound+CoreDataProperties.swift"; path = "../Compound+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1968288C1E7291DF001F3FB6 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		1968288E1E7E45A0001F3FB6 /* Solution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Solution+CoreDataProperties.swift"; path = "../Solution+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				196828421E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld */,
-				196828881E6FE227001F3FB6 /* Solution+CoreDataProperties.swift */,
 				196828891E6FE227001F3FB6 /* Compound+CoreDataProperties.swift */,
 				196828691E582A40001F3FB6 /* Solution+CoreDataClass.swift */,
+				1968288E1E7E45A0001F3FB6 /* Solution+CoreDataProperties.swift */,
 				1968286B1E582A40001F3FB6 /* Compound+CoreDataClass.swift */,
 				1968286D1E582A40001F3FB6 /* Group+CoreDataClass.swift */,
 				1968286E1E582A40001F3FB6 /* Group+CoreDataProperties.swift */,
@@ -104,6 +106,7 @@
 		196828791E582D42001F3FB6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1968288C1E7291DF001F3FB6 /* Fonts */,
 				1968283B1E58207F001F3FB6 /* AppDelegate.swift */,
 				196828451E58207F001F3FB6 /* Assets.xcassets */,
 				196828751E582B18001F3FB6 /* compound.plist */,
@@ -173,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1968288D1E7291DF001F3FB6 /* Fonts in Resources */,
 				196828491E58207F001F3FB6 /* LaunchScreen.storyboard in Resources */,
 				196828761E582B18001F3FB6 /* compound.plist in Resources */,
 				196828461E58207F001F3FB6 /* Assets.xcassets in Resources */,
@@ -187,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1968288F1E7E45A0001F3FB6 /* Solution+CoreDataProperties.swift in Sources */,
 				1968288B1E6FE227001F3FB6 /* Compound+CoreDataProperties.swift in Sources */,
 				1968286F1E582A40001F3FB6 /* Solution+CoreDataClass.swift in Sources */,
 				196828811E5BA53A001F3FB6 /* CompoundViewController.swift in Sources */,
@@ -197,7 +202,6 @@
 				196828741E582A40001F3FB6 /* Group+CoreDataProperties.swift in Sources */,
 				1968287F1E5A3003001F3FB6 /* CoreDataTableViewController.swift in Sources */,
 				196828871E6D3496001F3FB6 /* CalculatorViewController.swift in Sources */,
-				1968288A1E6FE227001F3FB6 /* Solution+CoreDataProperties.swift in Sources */,
 				196828441E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
