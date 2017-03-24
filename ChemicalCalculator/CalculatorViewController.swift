@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // MARK: - Properties
     var compound: Compound?
+    var managedObjectContext: NSManagedObjectContext? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+
     
     var result: Double {
         get {
@@ -46,6 +49,39 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     @IBOutlet weak var massUnitPickerView: UIPickerView!
     
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    // MARK: - IBActions
+    @IBAction func textFieldDidChange() {
+        checkValidSolution()
+    }
+    
+    @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
+        if let volume = Double(finalVolumeTextField.text!),
+            let conc = Double(finalConcTextField.text!),
+            let mass = Double(resultLabel.text!)
+        {
+            let volumeUnit = volumeUnits[volumeUnitPickerView.selectedRow(inComponent: 0)]
+            let concUnit = concentrationUnits[concentrationUnitPickerView.selectedRow(inComponent: 0)]
+            let massUnit = massUnits[massUnitPickerView.selectedRow(inComponent: 0)]
+            
+            if let newSolution = NSEntityDescription.insertNewObject(forEntityName: "Solution", into: managedObjectContext!) as? Solution {
+                newSolution.solute = compound
+                newSolution.soluteMass = mass
+                newSolution.massUnit = massUnit
+                newSolution.finalConcentration = conc
+                newSolution.concentrationUnit = concUnit
+                newSolution.finalVolume = volume
+                newSolution.volumeUnit = volumeUnit
+                newSolution.createdDate = NSDate()
+            }
+            try? managedObjectContext?.save()
+            saveButton.isEnabled = false
+        }
+        
+    }
+    
     // MARK: - View set up
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +94,8 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
         concentrationUnitPickerView.selectRow(3, inComponent: 0, animated: true)
         volumeUnitPickerView.selectRow(1, inComponent: 0, animated: true)
         massUnitPickerView.selectRow(1, inComponent: 0, animated: true)
+        
+        checkValidSolution()
     }
     
     
@@ -68,6 +106,8 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
         performCalculation()
         return true
     }
+    
+    
     
     
     
@@ -100,7 +140,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
     }
     // MARK: - Constants
 
-    // MARK: - Methods
+    // MARK: - Private methods
 
     // convert user input conc unit to g/L
     fileprivate func convertToStandardConc(fromInputConc conc: String?, withUnit unit: UIPickerView) -> Double? {
@@ -163,6 +203,12 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
             let mass = conc * volume
             result = convertToUserChoosedMassUnit(fromComputedMass: mass, toUnit: massUnitPickerView)!
         }
+    }
+    
+    fileprivate func checkValidSolution() {
+        let volume = finalVolumeTextField.text ?? ""
+        let conc = finalConcTextField.text ?? ""
+        saveButton.isEnabled = !volume.isEmpty && !conc.isEmpty
     }
 
 

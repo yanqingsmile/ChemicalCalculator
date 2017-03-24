@@ -26,5 +26,15 @@ public class Compound: NSManagedObject {
         return nil
     }
     
-
+    var uppercaseFirstLetterOfName: String {
+        get {
+            self.willAccessValue(forKey: "uppercaseFirstLetterOfName")
+            if let name = self.value(forKey: "name") as? String {
+                let firstLetterOfName = String(describing: name[name.startIndex]).uppercased()
+                self.didAccessValue(forKey: "uppercaseFirstLetterOfName")
+                return firstLetterOfName
+            }
+            return "NA"
+        }
+    }
 }

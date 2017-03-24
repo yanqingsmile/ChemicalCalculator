@@ -17,13 +17,15 @@
 		196828731E582A40001F3FB6 /* Group+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968286D1E582A40001F3FB6 /* Group+CoreDataClass.swift */; };
 		196828741E582A40001F3FB6 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968286E1E582A40001F3FB6 /* Group+CoreDataProperties.swift */; };
 		196828761E582B18001F3FB6 /* compound.plist in Resources */ = {isa = PBXBuildFile; fileRef = 196828751E582B18001F3FB6 /* compound.plist */; };
-		196828781E582CB7001F3FB6 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828771E582CB7001F3FB6 /* SearchTableViewController.swift */; };
+		196828781E582CB7001F3FB6 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828771E582CB7001F3FB6 /* HomeTableViewController.swift */; };
 		1968287F1E5A3003001F3FB6 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */; };
 		196828811E5BA53A001F3FB6 /* CompoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828801E5BA53A001F3FB6 /* CompoundViewController.swift */; };
 		196828871E6D3496001F3FB6 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828861E6D3495001F3FB6 /* CalculatorViewController.swift */; };
 		1968288B1E6FE227001F3FB6 /* Compound+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828891E6FE227001F3FB6 /* Compound+CoreDataProperties.swift */; };
 		1968288D1E7291DF001F3FB6 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 1968288C1E7291DF001F3FB6 /* Fonts */; };
-		1968288F1E7E45A0001F3FB6 /* Solution+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968288E1E7E45A0001F3FB6 /* Solution+CoreDataProperties.swift */; };
+		196828911E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */; };
+		196828931E7E4AF3001F3FB6 /* SolutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */; };
+		19EC6CE61E839ECA001E3471 /* Solution+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CE51E839ECA001E3471 /* Solution+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,13 +41,15 @@
 		1968286D1E582A40001F3FB6 /* Group+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Group+CoreDataClass.swift"; path = "../Group+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1968286E1E582A40001F3FB6 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Group+CoreDataProperties.swift"; path = "../Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		196828751E582B18001F3FB6 /* compound.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = compound.plist; sourceTree = "<group>"; };
-		196828771E582CB7001F3FB6 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		196828771E582CB7001F3FB6 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
 		196828801E5BA53A001F3FB6 /* CompoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundViewController.swift; sourceTree = "<group>"; };
 		196828861E6D3495001F3FB6 /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		196828891E6FE227001F3FB6 /* Compound+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Compound+CoreDataProperties.swift"; path = "../Compound+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1968288C1E7291DF001F3FB6 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
-		1968288E1E7E45A0001F3FB6 /* Solution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Solution+CoreDataProperties.swift"; path = "../Solution+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedSolutionTableViewController.swift; sourceTree = "<group>"; };
+		196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionTableViewCell.swift; sourceTree = "<group>"; };
+		19EC6CE51E839ECA001E3471 /* Solution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Solution+CoreDataProperties.swift"; path = "../Solution+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +83,11 @@
 			isa = PBXGroup;
 			children = (
 				196828681E582954001F3FB6 /* Core Data */,
-				196828771E582CB7001F3FB6 /* SearchTableViewController.swift */,
+				196828771E582CB7001F3FB6 /* HomeTableViewController.swift */,
 				196828861E6D3495001F3FB6 /* CalculatorViewController.swift */,
 				196828801E5BA53A001F3FB6 /* CompoundViewController.swift */,
-				1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */,
+				196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */,
+				196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */,
 				1968283F1E58207F001F3FB6 /* Main.storyboard */,
 				196828791E582D42001F3FB6 /* Supporting Files */,
 			);
@@ -94,9 +99,9 @@
 			children = (
 				196828421E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld */,
 				196828891E6FE227001F3FB6 /* Compound+CoreDataProperties.swift */,
-				196828691E582A40001F3FB6 /* Solution+CoreDataClass.swift */,
-				1968288E1E7E45A0001F3FB6 /* Solution+CoreDataProperties.swift */,
 				1968286B1E582A40001F3FB6 /* Compound+CoreDataClass.swift */,
+				19EC6CE51E839ECA001E3471 /* Solution+CoreDataProperties.swift */,
+				196828691E582A40001F3FB6 /* Solution+CoreDataClass.swift */,
 				1968286D1E582A40001F3FB6 /* Group+CoreDataClass.swift */,
 				1968286E1E582A40001F3FB6 /* Group+CoreDataProperties.swift */,
 			);
@@ -106,6 +111,7 @@
 		196828791E582D42001F3FB6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */,
 				1968288C1E7291DF001F3FB6 /* Fonts */,
 				1968283B1E58207F001F3FB6 /* AppDelegate.swift */,
 				196828451E58207F001F3FB6 /* Assets.xcassets */,
@@ -191,17 +197,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1968288F1E7E45A0001F3FB6 /* Solution+CoreDataProperties.swift in Sources */,
 				1968288B1E6FE227001F3FB6 /* Compound+CoreDataProperties.swift in Sources */,
+				196828911E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift in Sources */,
 				1968286F1E582A40001F3FB6 /* Solution+CoreDataClass.swift in Sources */,
 				196828811E5BA53A001F3FB6 /* CompoundViewController.swift in Sources */,
 				1968283C1E58207F001F3FB6 /* AppDelegate.swift in Sources */,
 				196828731E582A40001F3FB6 /* Group+CoreDataClass.swift in Sources */,
 				196828711E582A40001F3FB6 /* Compound+CoreDataClass.swift in Sources */,
-				196828781E582CB7001F3FB6 /* SearchTableViewController.swift in Sources */,
+				196828781E582CB7001F3FB6 /* HomeTableViewController.swift in Sources */,
 				196828741E582A40001F3FB6 /* Group+CoreDataProperties.swift in Sources */,
 				1968287F1E5A3003001F3FB6 /* CoreDataTableViewController.swift in Sources */,
 				196828871E6D3496001F3FB6 /* CalculatorViewController.swift in Sources */,
+				196828931E7E4AF3001F3FB6 /* SolutionTableViewCell.swift in Sources */,
+				19EC6CE61E839ECA001E3471 /* Solution+CoreDataProperties.swift in Sources */,
 				196828441E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +374,7 @@
 				1968284F1E58207F001F3FB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

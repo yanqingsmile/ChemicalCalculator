@@ -42,6 +42,15 @@ class CoreDataTableViewController: UITableViewController, NSFetchedResultsContro
         }
     }
     
+    override func tableView(_ tableView: UITableView,
+                            titleForHeaderInSection section: Int) -> String? {
+        if let sections = fetchedResultsController?.sections, sections.count > 0 {
+            return sections[section].name
+        } else {
+            return nil
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         if let sections = fetchedResultsController?.sections, sections.count > 0 {
             return sections[section].name

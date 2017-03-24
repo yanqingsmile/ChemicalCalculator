@@ -1,5 +1,5 @@
 //
-//  SearchTableViewController.swift
+//  HomeTableViewController.swift
 //  ChemicalCalculator
 //
 //  Created by Vivian Liu on 2/17/17.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class SearchTableViewController: CoreDataTableViewController {
+class HomeTableViewController: CoreDataTableViewController {
     
     //MARK: - Properties
     var managedObjectContext: NSManagedObjectContext? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
@@ -27,6 +27,8 @@ class SearchTableViewController: CoreDataTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         // fetch data from database
         if let context = managedObjectContext {
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Compound")
@@ -35,7 +37,7 @@ class SearchTableViewController: CoreDataTableViewController {
                 ascending: true,
                 selector: #selector(NSString.localizedCaseInsensitiveCompare(_:))
                 )]
-            fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: "uppercaseFirstLetterOfName", cacheName: nil)
         } else {
             fetchedResultsController = nil
         }
@@ -100,6 +102,11 @@ class SearchTableViewController: CoreDataTableViewController {
         }
     }
     
+    // Override to remove section footer.
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return nil
+    }
+    
     
     
     
@@ -137,6 +144,7 @@ class SearchTableViewController: CoreDataTableViewController {
                 compoundVC.molecularMass = selectedCompound.molecularMass
             }
         } else if segue.identifier == "calculate" {
+            
             let calculatorVC = segue.destination as! CalculatorViewController
             if let selectedCell = sender as? UITableViewCell {
                 let selectedIndexPath = tableView.indexPath(for: selectedCell)
@@ -179,10 +187,11 @@ class SearchTableViewController: CoreDataTableViewController {
     
     
     
+    
 }
 
 // MARK: - Delegation Methods
-extension SearchTableViewController: UISearchResultsUpdating {
+extension HomeTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
         let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
@@ -192,7 +201,7 @@ extension SearchTableViewController: UISearchResultsUpdating {
 }
 
 
-extension SearchTableViewController: UISearchBarDelegate {
+extension HomeTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let searchBar = searchController.searchBar
         let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
