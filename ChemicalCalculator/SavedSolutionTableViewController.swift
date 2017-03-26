@@ -26,7 +26,30 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     }
     
     fileprivate let searchController = UISearchController(searchResultsController: nil)
+    
+    // MARK: - IBOutlets
+    
+    @IBOutlet var addToButton: UIBarButtonItem!
+    
+    @IBOutlet var cancelButton: UIBarButtonItem!
+    
+    @IBOutlet var selectButton: UIBarButtonItem!
+    
+    // MARK: - IBActions
+    
+    @IBAction func selectButtonClicked(_ sender: UIBarButtonItem) {
+        tableView.setEditing(true, animated: true)
+        tableView.allowsSelectionDuringEditing = true
+        updateButtonsToMatchTableState()
+    }
+    
+    @IBAction func cancelButtonClicked(_ sender: UIBarButtonItem) {
+        tableView.setEditing(false, animated: true)
+        updateButtonsToMatchTableState()
+    }
+    
         
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +67,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         }
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.selectButton
         
         // Set up search controller
         searchController.searchResultsUpdater = self
@@ -53,6 +76,11 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.delegate = self
         searchController.searchBar.placeholder = "Search from \(solutionCount) saved solutions"
+        
+        // Allow bulk selection
+        tableView.allowsMultipleSelectionDuringEditing = true
+        
+        updateButtonsToMatchTableState()
         
     }
     
@@ -145,6 +173,16 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
             fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         } else {
             fetchedResultsController = nil
+        }
+    }
+    
+    fileprivate func updateButtonsToMatchTableState() {
+        if tableView.isEditing {
+            navigationItem.rightBarButtonItem = addToButton
+            navigationItem.leftBarButtonItem = cancelButton
+        } else {
+            navigationItem.rightBarButtonItem = selectButton
+            navigationItem.leftBarButtonItem = nil
         }
     }
         
