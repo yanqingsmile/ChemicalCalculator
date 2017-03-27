@@ -12,7 +12,6 @@ import CoreData
 class HomeTableViewController: CoreDataTableViewController {
     
     //MARK: - Properties
-    var managedObjectContext: NSManagedObjectContext? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
     let searchController = UISearchController(searchResultsController: nil)
     

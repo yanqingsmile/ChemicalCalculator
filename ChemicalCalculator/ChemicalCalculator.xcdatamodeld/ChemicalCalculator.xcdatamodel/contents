@@ -7,6 +7,7 @@
         <attribute name="purity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Group" representedClassName="Group" syncable="YES">
+        <attribute name="modifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Solution" syncable="YES"/>
     </entity>
@@ -22,7 +23,7 @@
     </entity>
     <elements>
         <element name="Compound" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="Group" positionX="-56" positionY="269" width="128" height="73"/>
+        <element name="Group" positionX="-56" positionY="269" width="128" height="88"/>
         <element name="Solution" positionX="171" positionY="-18" width="128" height="165"/>
     </elements>
 </model>

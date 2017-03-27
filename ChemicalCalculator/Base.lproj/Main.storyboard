@@ -470,7 +470,12 @@
                                 <action selector="cancelButtonClicked:" destination="fb2-bs-l5u" id="pfs-Qi-XIf"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add To" id="4n1-Ol-Exf"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add To" id="4n1-Ol-Exf">
+                            <connections>
+                                <action selector="addToButtonClicked:" destination="fb2-bs-l5u" id="cYL-fa-hBt"/>
+                                <segue destination="E2Y-Gw-3ha" kind="presentation" identifier="addToGroup" id="Z0g-WK-DYZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addToButton" destination="4n1-Ol-Exf" id="Mfp-T9-rwe"/>
@@ -486,6 +491,101 @@
                 </barButtonItem>
             </objects>
             <point key="canvasLocation" x="1933.3333333333335" y="839.67391304347836"/>
+        </scene>
+        <!--Add To Temporary Table View Controller-->
+        <scene sceneID="wVt-yf-uFa">
+            <objects>
+                <tableViewController id="Qga-eK-Xlk" customClass="AddToTemporaryTableViewController" customModule="ChemicalCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uMO-n5-uFo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewGroupCell" id="Kwj-eb-bYU" customClass="NewGroupTableViewCell" customModule="ChemicalCalculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kwj-eb-bYU" id="Jst-sH-bz7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjF-8X-wal">
+                                            <rect key="frame" x="15" y="14" width="87" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="newGroupLabel" destination="MjF-8X-wal" id="8QS-eI-mPS"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="68" id="0sI-Xe-5U7" customClass="GroupTableViewCell" customModule="ChemicalCalculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="68"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0sI-Xe-5U7" id="Kj0-XN-zyH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQF-pa-mfB">
+                                            <rect key="frame" x="15" y="25" width="90.333333333333329" height="17"/>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QoK-7T-W0S">
+                                            <rect key="frame" x="303" y="25.333333333333329" width="83" height="35"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cst-Uc-DTX">
+                                                    <rect key="frame" x="20" y="0.0" width="43" height="17.000000000000004"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last modified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ur8-2N-X0B">
+                                                    <rect key="frame" x="5" y="22.000000000000004" width="73.333333333333314" height="12.999999999999996"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Cst-Uc-DTX" firstAttribute="leading" secondItem="QoK-7T-W0S" secondAttribute="leading" constant="20" symbolic="YES" id="Fx2-eE-1Kj"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QoK-7T-W0S" firstAttribute="leading" secondItem="Kj0-XN-zyH" secondAttribute="leading" constant="303" id="8H9-EZ-jSb"/>
+                                        <constraint firstItem="GQF-pa-mfB" firstAttribute="centerY" secondItem="Kj0-XN-zyH" secondAttribute="centerY" id="Vj6-B6-UQn"/>
+                                        <constraint firstItem="GQF-pa-mfB" firstAttribute="leading" secondItem="Kj0-XN-zyH" secondAttribute="leadingMargin" constant="7" id="ab6-xY-Mhe"/>
+                                        <constraint firstItem="Cst-Uc-DTX" firstAttribute="centerY" secondItem="Kj0-XN-zyH" secondAttribute="centerY" id="ein-e8-gvM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QoK-7T-W0S" secondAttribute="trailing" constant="20" id="uoW-MX-e5f"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="groupNameLabel" destination="GQF-pa-mfB" id="CP8-3U-9An"/>
+                                    <outlet property="modifiedDateLabel" destination="Cst-Uc-DTX" id="uYh-Ig-QKf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qga-eK-Xlk" id="lf0-56-iaf"/>
+                            <outlet property="delegate" destination="Qga-eK-Xlk" id="Akq-pL-k4r"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Ghu-wx-OmZ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mkU-T2-cF4">
+                            <connections>
+                                <segue destination="pn0-Sa-Mkl" kind="unwind" unwindAction="unwindToSavedSolutionTVCWithSender:" id="Lo4-wG-lTC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="piw-ul-uEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pn0-Sa-Mkl" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2839.130434782609" y="1584.7826086956522"/>
         </scene>
         <!--Home-->
         <scene sceneID="HQn-6u-afi">
@@ -542,11 +642,11 @@
             </objects>
             <point key="canvasLocation" x="118.84057971014494" y="472.82608695652175"/>
         </scene>
-        <!--Ingredients-->
+        <!--Saved-->
         <scene sceneID="BQj-Tm-DHD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kCl-bm-2JZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ingredients" id="6C6-lU-0Br"/>
+                    <tabBarItem key="tabBarItem" title="Saved" id="6C6-lU-0Br" userLabel="Saved"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="e4t-0f-uJB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -560,6 +660,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beR-BD-crI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1026.0869565217392" y="839.67391304347836"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="M3I-yT-oLN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E2Y-Gw-3ha" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ecu-Ip-eSr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qga-eK-Xlk" kind="relationship" relationship="rootViewController" id="hKE-2j-KTt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RkH-OQ-rM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1931.8840579710147" y="1584.7826086956522"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

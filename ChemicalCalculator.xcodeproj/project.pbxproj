@@ -15,7 +15,6 @@
 		1968286F1E582A40001F3FB6 /* Solution+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828691E582A40001F3FB6 /* Solution+CoreDataClass.swift */; };
 		196828711E582A40001F3FB6 /* Compound+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968286B1E582A40001F3FB6 /* Compound+CoreDataClass.swift */; };
 		196828731E582A40001F3FB6 /* Group+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968286D1E582A40001F3FB6 /* Group+CoreDataClass.swift */; };
-		196828741E582A40001F3FB6 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968286E1E582A40001F3FB6 /* Group+CoreDataProperties.swift */; };
 		196828761E582B18001F3FB6 /* compound.plist in Resources */ = {isa = PBXBuildFile; fileRef = 196828751E582B18001F3FB6 /* compound.plist */; };
 		196828781E582CB7001F3FB6 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828771E582CB7001F3FB6 /* HomeTableViewController.swift */; };
 		1968287F1E5A3003001F3FB6 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */; };
@@ -26,6 +25,10 @@
 		196828911E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */; };
 		196828931E7E4AF3001F3FB6 /* SolutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */; };
 		19EC6CE61E839ECA001E3471 /* Solution+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CE51E839ECA001E3471 /* Solution+CoreDataProperties.swift */; };
+		19EC6CE81E8846DE001E3471 /* AddToTemporaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CE71E8846DE001E3471 /* AddToTemporaryTableViewController.swift */; };
+		19EC6CEA1E88489F001E3471 /* NewGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CE91E88489F001E3471 /* NewGroupTableViewCell.swift */; };
+		19EC6CEC1E8863FD001E3471 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */; };
+		19EC6CEE1E8869C8001E3471 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CED1E8869C8001E3471 /* Group+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +42,6 @@
 		196828691E582A40001F3FB6 /* Solution+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Solution+CoreDataClass.swift"; path = "../Solution+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1968286B1E582A40001F3FB6 /* Compound+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Compound+CoreDataClass.swift"; path = "../Compound+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1968286D1E582A40001F3FB6 /* Group+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Group+CoreDataClass.swift"; path = "../Group+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1968286E1E582A40001F3FB6 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Group+CoreDataProperties.swift"; path = "../Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		196828751E582B18001F3FB6 /* compound.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = compound.plist; sourceTree = "<group>"; };
 		196828771E582CB7001F3FB6 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		1968287E1E5A3003001F3FB6 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,10 @@
 		196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedSolutionTableViewController.swift; sourceTree = "<group>"; };
 		196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionTableViewCell.swift; sourceTree = "<group>"; };
 		19EC6CE51E839ECA001E3471 /* Solution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Solution+CoreDataProperties.swift"; path = "../Solution+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		19EC6CE71E8846DE001E3471 /* AddToTemporaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToTemporaryTableViewController.swift; sourceTree = "<group>"; };
+		19EC6CE91E88489F001E3471 /* NewGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroupTableViewCell.swift; sourceTree = "<group>"; };
+		19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		19EC6CED1E8869C8001E3471 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Group+CoreDataProperties.swift"; path = "../Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,9 @@
 				196828801E5BA53A001F3FB6 /* CompoundViewController.swift */,
 				196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */,
 				196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */,
+				19EC6CE71E8846DE001E3471 /* AddToTemporaryTableViewController.swift */,
+				19EC6CE91E88489F001E3471 /* NewGroupTableViewCell.swift */,
+				19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */,
 				1968283F1E58207F001F3FB6 /* Main.storyboard */,
 				196828791E582D42001F3FB6 /* Supporting Files */,
 			);
@@ -103,7 +112,7 @@
 				19EC6CE51E839ECA001E3471 /* Solution+CoreDataProperties.swift */,
 				196828691E582A40001F3FB6 /* Solution+CoreDataClass.swift */,
 				1968286D1E582A40001F3FB6 /* Group+CoreDataClass.swift */,
-				1968286E1E582A40001F3FB6 /* Group+CoreDataProperties.swift */,
+				19EC6CED1E8869C8001E3471 /* Group+CoreDataProperties.swift */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -197,15 +206,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19EC6CEA1E88489F001E3471 /* NewGroupTableViewCell.swift in Sources */,
+				19EC6CEC1E8863FD001E3471 /* GroupTableViewCell.swift in Sources */,
+				19EC6CE81E8846DE001E3471 /* AddToTemporaryTableViewController.swift in Sources */,
 				1968288B1E6FE227001F3FB6 /* Compound+CoreDataProperties.swift in Sources */,
 				196828911E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift in Sources */,
 				1968286F1E582A40001F3FB6 /* Solution+CoreDataClass.swift in Sources */,
 				196828811E5BA53A001F3FB6 /* CompoundViewController.swift in Sources */,
 				1968283C1E58207F001F3FB6 /* AppDelegate.swift in Sources */,
+				19EC6CEE1E8869C8001E3471 /* Group+CoreDataProperties.swift in Sources */,
 				196828731E582A40001F3FB6 /* Group+CoreDataClass.swift in Sources */,
 				196828711E582A40001F3FB6 /* Compound+CoreDataClass.swift in Sources */,
 				196828781E582CB7001F3FB6 /* HomeTableViewController.swift in Sources */,
-				196828741E582A40001F3FB6 /* Group+CoreDataProperties.swift in Sources */,
 				1968287F1E5A3003001F3FB6 /* CoreDataTableViewController.swift in Sources */,
 				196828871E6D3496001F3FB6 /* CalculatorViewController.swift in Sources */,
 				196828931E7E4AF3001F3FB6 /* SolutionTableViewCell.swift in Sources */,

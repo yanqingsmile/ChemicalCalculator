@@ -11,8 +11,7 @@ import CoreData
 
 class SavedSolutionTableViewController: CoreDataTableViewController {
     
-    var managedObjectContext: NSManagedObjectContext? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
-    
+        
     fileprivate var solutionCount: Int {
         get {
             var count: Int?
@@ -48,7 +47,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         updateButtonsToMatchTableState()
     }
     
-        
+    
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -134,7 +133,13 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         return true
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        updateButtonsToMatchTableState()
+    }
     
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        updateButtonsToMatchTableState()
+    }
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -179,6 +184,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     fileprivate func updateButtonsToMatchTableState() {
         if tableView.isEditing {
             navigationItem.rightBarButtonItem = addToButton
+            addToButton.isEnabled = tableView.indexPathsForSelectedRows?.count ?? 0 > 0
             navigationItem.leftBarButtonItem = cancelButton
         } else {
             navigationItem.rightBarButtonItem = selectButton
@@ -186,16 +192,16 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         }
     }
         
-    /*
+    
      // MARK: - Navigation
-     
+     /*
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
      }
      */
-    
+    @IBAction func unwindToSavedSolutionTVC(sender: UIStoryboardSegue) {}
 }
 
 // MARK: - Delegation Methods

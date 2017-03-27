@@ -2,7 +2,7 @@
 //  Group+CoreDataProperties.swift
 //  ChemicalCalculator
 //
-//  Created by Vivian Liu on 2/17/17.
+//  Created by Vivian Liu on 3/26/17.
 //  Copyright © 2017 Vivian Liu. All rights reserved.
 //
 
@@ -17,6 +17,7 @@ extension Group {
     }
 
     @NSManaged public var title: String?
+    @NSManaged public var modifiedDate: NSDate?
     @NSManaged public var ingredients: NSOrderedSet?
 
 }
