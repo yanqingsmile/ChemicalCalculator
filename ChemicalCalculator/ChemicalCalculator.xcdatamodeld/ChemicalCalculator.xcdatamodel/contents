@@ -24,6 +24,6 @@
     <elements>
         <element name="Compound" positionX="-63" positionY="-18" width="128" height="103"/>
         <element name="Group" positionX="-56" positionY="269" width="128" height="88"/>
-        <element name="Solution" positionX="171" positionY="-18" width="128" height="165"/>
+        <element name="Solution" positionX="171" positionY="-18" width="128" height="163"/>
     </elements>
 </model>

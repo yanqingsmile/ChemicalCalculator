@@ -11,7 +11,7 @@ import CoreData
 
 class SavedSolutionTableViewController: CoreDataTableViewController {
     
-        
+    
     fileprivate var solutionCount: Int {
         get {
             var count: Int?
@@ -52,18 +52,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Fetech data from core data
-        if let context = managedObjectContext {
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Solution")
-            request.sortDescriptors = [NSSortDescriptor(
-                key: "createdDate",
-                ascending: false,
-                selector: nil
-                )]
-            fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: "solute.uppercaseFirstLetterOfName", cacheName: nil)
-        } else {
-            fetchedResultsController = nil
-        }
+       
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.selectButton
@@ -83,43 +72,63 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Fetech data from core data
+        if let context = managedObjectContext {
+            context.performAndWait({
+                let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Solution")
+                request.sortDescriptors = [NSSortDescriptor(
+                    key: "createdDate",
+                    ascending: false,
+                    selector: nil
+                    )]
+                self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: "solute.uppercaseFirstLetterOfName", cacheName: nil)
+            })
+        } else {
+            fetchedResultsController = nil
+        }
+    }
     
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "solutionCell", for: indexPath) as! SolutionTableViewCell
-        if let solution = fetchedResultsController?.object(at: indexPath) as? Solution {
-            var compound: Compound?
-            var conc: Double?
-            var concUnit: String?
-            var volume: Double?
-            var volumeUnit: String?
-            var mass: Double?
-            var massUnit: String?
-            var date: NSDate?
-            solution.managedObjectContext?.performAndWait({
-                compound = solution.solute
-                conc = solution.finalConcentration
-                concUnit = solution.concentrationUnit
-                volume = solution.finalVolume
-                volumeUnit = solution.volumeUnit
-                mass = solution.soluteMass
-                massUnit = solution.massUnit
-                date = solution.createdDate
+        var compound: Compound?
+        var conc: Double?
+        var concUnit: String?
+        var volume: Double?
+        var volumeUnit: String?
+        var mass: Double?
+        var massUnit: String?
+        var date: NSDate?
+        if let context = managedObjectContext {
+            context.performAndWait({
+                if let solution = self.fetchedResultsController?.object(at: indexPath) as? Solution {
+                    compound = solution.solute
+                    conc = solution.finalConcentration
+                    concUnit = solution.concentrationUnit
+                    volume = solution.finalVolume
+                    volumeUnit = solution.volumeUnit
+                    mass = solution.soluteMass
+                    massUnit = solution.massUnit
+                    date = solution.createdDate
+                }
             })
-            cell.nameLabel.text = compound?.name
-            cell.concentrationLabel.text = String(describing: conc!) + " "
-            cell.concentrationUnitLabel.text = concUnit
-            cell.volumeLabel.text = String(describing: volume!) + " "
-            cell.volumeUnitLabel.text = volumeUnit
-            cell.massLabel.text = String(describing: mass!) + " "
-            cell.massUnitLabel.text = massUnit
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM/dd/yyyy"
-            let result = dateFormatter.string(from: date as! Date)
-            cell.createdDateLabel.text = result
+            
         }
+        cell.nameLabel.text = compound?.name
+        cell.concentrationLabel.text = String(describing: conc!) + " "
+        cell.concentrationUnitLabel.text = concUnit
+        cell.volumeLabel.text = String(describing: volume!) + " "
+        cell.volumeUnitLabel.text = volumeUnit
+        cell.massLabel.text = String(describing: mass!) + " "
+        cell.massUnitLabel.text = massUnit
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        let result = dateFormatter.string(from: date as! Date)
+        cell.createdDateLabel.text = result
+        
         return cell
         
         
@@ -145,10 +154,15 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            if let solutionToDelete = fetchedResultsController?.object(at: indexPath) as? Solution {
-                managedObjectContext?.delete(solutionToDelete)
-                try? managedObjectContext?.save()
+            if let context = managedObjectContext {
+                context.performAndWait({
+                    if let solutionToDelete = self.fetchedResultsController?.object(at: indexPath) as? Solution {
+                        context.delete(solutionToDelete)
+                        try? context.save()
+                    }
+                })
             }
+            
             // Below code is not needed, because the CoreDataTVC which implements fetchedResultsController delegate will handle the change in UI.
             //tableView.deleteRows(at: [indexPath], with: .fade)
         }
@@ -191,16 +205,22 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
             navigationItem.leftBarButtonItem = nil
         }
     }
-        
     
-     // MARK: - Navigation
-     /*
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addToGroup" {
+            let naVC = segue.destination as! UINavigationController
+            let addToTemporaryTVC = naVC.visibleViewController as! AddToTemporaryTableViewController
+            if let selectedIndexPaths = tableView.indexPathsForSelectedRows {
+                let selectedSolutions = selectedIndexPaths.map{fetchedResultsController?.object(at: $0) as! Solution}
+                addToTemporaryTVC.toAddSolutions = selectedSolutions
+            }
+        }
+    }
+    
     @IBAction func unwindToSavedSolutionTVC(sender: UIStoryboardSegue) {}
 }
 

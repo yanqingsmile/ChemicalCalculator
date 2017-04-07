@@ -14,6 +14,9 @@ class GroupTableViewCell: UITableViewCell {
     
     @IBOutlet weak var modifiedDateLabel: UILabel!
     
+    @IBOutlet weak var lastModifiedNoteLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

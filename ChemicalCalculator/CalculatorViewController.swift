@@ -55,6 +55,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
     // MARK: - IBActions
     @IBAction func textFieldDidChange() {
         checkValidSolution()
+        performCalculation()
     }
     
     @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
@@ -66,17 +67,21 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
             let concUnit = concentrationUnits[concentrationUnitPickerView.selectedRow(inComponent: 0)]
             let massUnit = massUnits[massUnitPickerView.selectedRow(inComponent: 0)]
             
-            if let newSolution = NSEntityDescription.insertNewObject(forEntityName: "Solution", into: managedObjectContext!) as? Solution {
-                newSolution.solute = compound
-                newSolution.soluteMass = mass
-                newSolution.massUnit = massUnit
-                newSolution.finalConcentration = conc
-                newSolution.concentrationUnit = concUnit
-                newSolution.finalVolume = volume
-                newSolution.volumeUnit = volumeUnit
-                newSolution.createdDate = NSDate()
+            if let context = managedObjectContext {
+                context.performAndWait({
+                    if let newSolution = NSEntityDescription.insertNewObject(forEntityName: "Solution", into: context) as? Solution {
+                        newSolution.solute = self.compound
+                        newSolution.soluteMass = mass
+                        newSolution.massUnit = massUnit
+                        newSolution.finalConcentration = conc
+                        newSolution.concentrationUnit = concUnit
+                        newSolution.finalVolume = volume
+                        newSolution.volumeUnit = volumeUnit
+                        newSolution.createdDate = NSDate()
+                    }
+                    try? context.save()
+                })
             }
-            try? managedObjectContext?.save()
             saveButton.isEnabled = false
         }
         

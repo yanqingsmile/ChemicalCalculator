@@ -115,12 +115,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func loadIntoDatabase() {
         let context = persistentContainer.viewContext
-        context.perform {
+        context.performAndWait {
             if let data = self.readPlistData() {
                 for compoundInfo in data {
                     _ = Compound.compoundWithCompoundInfo(compoundInfo: compoundInfo as! Dictionary<String, Any>, inManagedObjectContext: context)
-                    self.saveContext()
                 }
+                self.saveContext()
             }
         }
         print ("\(compoundCount) compounds" )

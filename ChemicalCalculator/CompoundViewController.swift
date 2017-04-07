@@ -41,8 +41,7 @@ class CompoundViewController: UIViewController, UITextFieldDelegate {
     // MARK: - IBActions
     
     @IBAction func cancelButtonClicked(_ sender: UIBarButtonItem) {
-        let isPresentingInAddMode = presentingViewController is UINavigationController
-        if isPresentingInAddMode {
+        if presentingViewController != nil {
             dismiss(animated: true, completion: nil)
         } else {
             _ = navigationController?.popViewController(animated: true)

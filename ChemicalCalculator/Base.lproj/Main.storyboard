@@ -432,19 +432,30 @@
                                                 </stackView>
                                             </subviews>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="createdDate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FJ-5e-cPX">
-                                            <rect key="frame" x="295.66666666666674" y="55.666666666666671" width="90.333333333333314" height="17.000000000000014"/>
-                                            <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="F8K-mN-Ta9">
+                                            <rect key="frame" x="295.66666666666674" y="45" width="90.333333333333314" height="37"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="createdDate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FJ-5e-cPX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90.333333333333314" height="17"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEf-RF-fuZ">
+                                                    <rect key="frame" x="19.333333333333314" y="22" width="52" height="15"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="rzG-oa-W1k" firstAttribute="leading" secondItem="E8Z-B2-6pq" secondAttribute="leadingMargin" id="1iq-y0-hNS"/>
                                         <constraint firstItem="rzG-oa-W1k" firstAttribute="centerY" secondItem="E8Z-B2-6pq" secondAttribute="centerY" id="6m7-ba-as0"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="F8K-mN-Ta9" secondAttribute="trailing" constant="20" id="Jdo-kX-O0p"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="rzG-oa-W1k" secondAttribute="trailing" id="PnO-f7-FEF"/>
-                                        <constraint firstItem="0FJ-5e-cPX" firstAttribute="centerY" secondItem="E8Z-B2-6pq" secondAttribute="centerY" id="krU-HQ-l59"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="0FJ-5e-cPX" secondAttribute="trailing" constant="20" id="ldR-iV-rHX"/>
+                                        <constraint firstItem="F8K-mN-Ta9" firstAttribute="centerY" secondItem="E8Z-B2-6pq" secondAttribute="centerY" id="YFP-Jg-WYm"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -496,16 +507,16 @@
         <scene sceneID="wVt-yf-uFa">
             <objects>
                 <tableViewController id="Qga-eK-Xlk" customClass="AddToTemporaryTableViewController" customModule="ChemicalCalculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uMO-n5-uFo">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="uMO-n5-uFo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewGroupCell" id="Kwj-eb-bYU" customClass="NewGroupTableViewCell" customModule="ChemicalCalculator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kwj-eb-bYU" id="Jst-sH-bz7">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjF-8X-wal">
@@ -522,7 +533,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="68" id="0sI-Xe-5U7" customClass="GroupTableViewCell" customModule="ChemicalCalculator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="68"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0sI-Xe-5U7" id="Kj0-XN-zyH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
@@ -535,18 +546,18 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QoK-7T-W0S">
-                                            <rect key="frame" x="303" y="25.333333333333329" width="83" height="35"/>
+                                            <rect key="frame" x="312.66666666666674" y="25.333333333333329" width="73.333333333333314" height="35"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cst-Uc-DTX">
-                                                    <rect key="frame" x="20" y="0.0" width="43" height="17.000000000000004"/>
+                                                    <rect key="frame" x="20" y="0.0" width="33.333333333333314" height="17.000000000000004"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last modified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ur8-2N-X0B">
-                                                    <rect key="frame" x="5" y="22.000000000000004" width="73.333333333333314" height="12.999999999999996"/>
+                                                    <rect key="frame" x="0.0" y="22.000000000000004" width="73.333333333333314" height="12.999999999999996"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="13"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -556,7 +567,6 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QoK-7T-W0S" firstAttribute="leading" secondItem="Kj0-XN-zyH" secondAttribute="leading" constant="303" id="8H9-EZ-jSb"/>
                                         <constraint firstItem="GQF-pa-mfB" firstAttribute="centerY" secondItem="Kj0-XN-zyH" secondAttribute="centerY" id="Vj6-B6-UQn"/>
                                         <constraint firstItem="GQF-pa-mfB" firstAttribute="leading" secondItem="Kj0-XN-zyH" secondAttribute="leadingMargin" constant="7" id="ab6-xY-Mhe"/>
                                         <constraint firstItem="Cst-Uc-DTX" firstAttribute="centerY" secondItem="Kj0-XN-zyH" secondAttribute="centerY" id="ein-e8-gvM"/>
@@ -565,6 +575,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="groupNameLabel" destination="GQF-pa-mfB" id="CP8-3U-9An"/>
+                                    <outlet property="lastModifiedNoteLabel" destination="Ur8-2N-X0B" id="loG-A3-jBd"/>
                                     <outlet property="modifiedDateLabel" destination="Cst-Uc-DTX" id="uYh-Ig-QKf"/>
                                 </connections>
                             </tableViewCell>
@@ -585,7 +596,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piw-ul-uEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="pn0-Sa-Mkl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2839.130434782609" y="1584.7826086956522"/>
+            <point key="canvasLocation" x="4536" y="1585"/>
         </scene>
         <!--Home-->
         <scene sceneID="HQn-6u-afi">
@@ -636,6 +647,7 @@
                     <connections>
                         <segue destination="jM7-V3-cz2" kind="relationship" relationship="viewControllers" id="jSN-gb-Pt3"/>
                         <segue destination="kCl-bm-2JZ" kind="relationship" relationship="viewControllers" id="7cM-mR-8G0"/>
+                        <segue destination="FKZ-wc-cCZ" kind="relationship" relationship="viewControllers" id="JUG-WO-QlU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dq0-Wh-Uid" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -661,6 +673,201 @@
             </objects>
             <point key="canvasLocation" x="1026.0869565217392" y="839.67391304347836"/>
         </scene>
+        <!--Group Table View Controller-->
+        <scene sceneID="aBF-4M-inA">
+            <objects>
+                <tableViewController id="J0y-yh-qPn" customClass="GroupTableViewController" customModule="ChemicalCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="gog-ns-ads">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="80" id="uzX-rU-d54" customClass="GroupTableViewCell" customModule="ChemicalCalculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uzX-rU-d54" id="h5z-Ms-Hdb">
+                                    <rect key="frame" x="0.0" y="0.0" width="347" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X6-2P-KjI">
+                                            <rect key="frame" x="15" y="31.333333333333336" width="90.333333333333329" height="17.000000000000007"/>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6kT-lH-OZn">
+                                            <rect key="frame" x="245.66666666666663" y="31.333333333333329" width="73.333333333333371" height="35"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhf-Vq-4WD">
+                                                    <rect key="frame" x="20.000000000000028" y="0.0" width="33.333333333333314" height="17.000000000000004"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last modified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekt-Ak-Iea">
+                                                    <rect key="frame" x="0.0" y="22.000000000000004" width="73.333333333333343" height="12.999999999999996"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Nhf-Vq-4WD" firstAttribute="leading" secondItem="6kT-lH-OZn" secondAttribute="leading" constant="20" symbolic="YES" id="lWJ-YT-79i"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7X6-2P-KjI" firstAttribute="centerY" secondItem="h5z-Ms-Hdb" secondAttribute="centerY" id="HJZ-qG-Tx9"/>
+                                        <constraint firstItem="7X6-2P-KjI" firstAttribute="leading" secondItem="h5z-Ms-Hdb" secondAttribute="leadingMargin" constant="7" id="OVm-OG-Nf0"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6kT-lH-OZn" secondAttribute="trailing" constant="20" id="Sd6-mc-UsZ"/>
+                                        <constraint firstItem="Nhf-Vq-4WD" firstAttribute="centerY" secondItem="h5z-Ms-Hdb" secondAttribute="centerY" id="tc8-ZU-pZD"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="groupNameLabel" destination="7X6-2P-KjI" id="WdN-wt-KHL"/>
+                                    <outlet property="lastModifiedNoteLabel" destination="Ekt-Ak-Iea" id="B6v-D4-pKO"/>
+                                    <outlet property="modifiedDateLabel" destination="Nhf-Vq-4WD" id="w96-pK-FgU"/>
+                                    <segue destination="jRl-ba-TRW" kind="show" identifier="showGroupDetail" id="mQQ-Vd-nKi"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="J0y-yh-qPn" id="RoS-Zu-FJo"/>
+                            <outlet property="delegate" destination="J0y-yh-qPn" id="ThQ-qI-qjs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6Hm-dv-fCf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CS7-WL-wat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026.0869565217392" y="1508.967391304348"/>
+        </scene>
+        <!--Group Detail Table View Controller-->
+        <scene sceneID="oAW-Zh-LI4">
+            <objects>
+                <tableViewController id="jRl-ba-TRW" customClass="GroupDetailTableViewController" customModule="ChemicalCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="127" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ify-DI-BEk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" rowHeight="127" id="aMd-sX-Eab" customClass="SolutionTableViewCell" customModule="ChemicalCalculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="127"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aMd-sX-Eab" id="ebn-So-0ty">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JU8-qx-L5N">
+                                            <rect key="frame" x="8" y="11" width="398" height="104"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CompoundName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yA-6B-cQt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="152.33333333333334" height="20"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOn-TF-16D">
+                                                    <rect key="frame" x="0.0" y="30" width="129.66666666666666" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp7-J2-rGW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="20"/>
+                                                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MassUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oo-1H-kao">
+                                                            <rect key="frame" x="46.333333333333343" y="0.0" width="83.333333333333314" height="20"/>
+                                                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8XY-4i-a5B">
+                                                    <rect key="frame" x="0.0" y="60" width="236.66666666666666" height="17"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concentration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqj-2l-tT2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="17"/>
+                                                            <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ConcentrationUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VQ-NP-UAc">
+                                                            <rect key="frame" x="103.66666666666669" y="0.0" width="133" height="17"/>
+                                                            <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOE-If-Opd">
+                                                    <rect key="frame" x="0.0" y="87" width="140.66666666666666" height="17"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47W-gW-40j">
+                                                            <rect key="frame" x="0.0" y="0.0" width="55.666666666666664" height="17"/>
+                                                            <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VolumeUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP0-hA-FNz">
+                                                            <rect key="frame" x="55.666666666666657" y="0.0" width="85" height="17"/>
+                                                            <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6kL-JN-yVe">
+                                            <rect key="frame" x="295.66666666666674" y="45" width="90.333333333333314" height="37"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="createdDate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NW-fE-wdm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90.333333333333314" height="17"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNl-43-Jph">
+                                                    <rect key="frame" x="19.333333333333314" y="22" width="52" height="15"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JU8-qx-L5N" firstAttribute="centerY" secondItem="ebn-So-0ty" secondAttribute="centerY" id="115-6O-HG4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6kL-JN-yVe" secondAttribute="trailing" constant="20" id="JdF-al-kjk"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="JU8-qx-L5N" secondAttribute="trailing" id="TCB-86-mo5"/>
+                                        <constraint firstItem="6kL-JN-yVe" firstAttribute="centerY" secondItem="ebn-So-0ty" secondAttribute="centerY" id="eok-aB-Ql0"/>
+                                        <constraint firstItem="JU8-qx-L5N" firstAttribute="leading" secondItem="ebn-So-0ty" secondAttribute="leadingMargin" id="ybj-DQ-OTo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="concentrationLabel" destination="uqj-2l-tT2" id="j0h-8M-sy9"/>
+                                    <outlet property="concentrationUnitLabel" destination="6VQ-NP-UAc" id="bD9-vQ-Uw6"/>
+                                    <outlet property="createdDateLabel" destination="2NW-fE-wdm" id="Efu-I7-4GJ"/>
+                                    <outlet property="massLabel" destination="Zp7-J2-rGW" id="I4k-Gq-VQN"/>
+                                    <outlet property="massUnitLabel" destination="6oo-1H-kao" id="nvm-mO-pZQ"/>
+                                    <outlet property="nameLabel" destination="5yA-6B-cQt" id="cVM-4E-oAt"/>
+                                    <outlet property="volumeLabel" destination="47W-gW-40j" id="s7j-lu-jjj"/>
+                                    <outlet property="volumeUnitLabel" destination="LP0-hA-FNz" id="O4C-vd-eRE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jRl-ba-TRW" id="qpP-ND-Qo3"/>
+                            <outlet property="delegate" destination="jRl-ba-TRW" id="Moy-V3-IkL"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4l-Bu-Y2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1933" y="1604"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="M3I-yT-oLN">
             <objects>
@@ -677,7 +884,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RkH-OQ-rM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1931.8840579710147" y="1584.7826086956522"/>
+            <point key="canvasLocation" x="3691" y="1585"/>
+        </scene>
+        <!--Groups-->
+        <scene sceneID="8Ad-db-5Hh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FKZ-wc-cCZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Groups" id="Nna-55-YiR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O5K-Lv-dz2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J0y-yh-qPn" kind="relationship" relationship="rootViewController" id="G0f-zb-Kox"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8A0-Vd-5ZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="1508.967391304348"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -11,6 +11,7 @@ import CoreData
 
 class AddToTemporaryTableViewController: CoreDataTableViewController {
     
+    var toAddSolutions: [Solution]?
     
     // MARK: - View life cycle
     override func viewDidLoad() {
@@ -24,24 +25,20 @@ class AddToTemporaryTableViewController: CoreDataTableViewController {
             fetchedResultsController = nil
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return super.tableView(tableView, numberOfRowsInSection: section) + 1
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NewGroupCell", for: indexPath) as! NewGroupTableViewCell
             cell.newGroupLabel.text = "New Group"
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as!GroupTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as! GroupTableViewCell
             let indexPathForExistedGroup = IndexPath(row: indexPath.row - 1, section: indexPath.section)
             if let group = fetchedResultsController?.object(at: indexPathForExistedGroup) as? Group {
                 var title: String?
@@ -51,56 +48,50 @@ class AddToTemporaryTableViewController: CoreDataTableViewController {
                     date = group.modifiedDate
                 })
                 cell.groupNameLabel.text = title
-                cell.modifiedDateLabel.text = String(describing: date)
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM/dd/yyyy"
+                let result = dateFormatter.string(from: date as! Date)
+                cell.modifiedDateLabel.text = result
             }
             return cell
         }
     }
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var inputTextField: UITextField?
+        let groupNamePrompt = UIAlertController(title: "New Group", message: "Enter a name for this group", preferredStyle: .alert)
+        groupNamePrompt.addTextField { (textField: UITextField) in
+            textField.placeholder = "Title"
+            inputTextField = textField
+        }
+        groupNamePrompt.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        groupNamePrompt.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action: UIAlertAction) in
+            if let context = self.managedObjectContext {
+                context.performAndWait({
+                    let newGroup = NSEntityDescription.insertNewObject(forEntityName: "Group", into: context) as! Group
+                    newGroup.title = inputTextField!.text
+                    newGroup.modifiedDate = NSDate()
+                    newGroup.addToIngredients(NSOrderedSet(array: self.toAddSolutions!))
+                    try? context.save()
+                })
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+        }))
+        present(groupNamePrompt, animated: true, completion: nil)
     }
-    */
-
+    
+    
+    
+    
     /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

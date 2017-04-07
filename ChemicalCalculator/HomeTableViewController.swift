@@ -93,9 +93,13 @@ class HomeTableViewController: CoreDataTableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let compoundToDelete = fetchedResultsController?.object(at: indexPath) as? Compound {
-                managedObjectContext?.delete(compoundToDelete)
-                try? managedObjectContext?.save()
-                // Below code is not needed, because the CoreDataTVC which implements fetchedResultsController delegate will handle the change in UI.
+                if let context = managedObjectContext {
+                    context.performAndWait({
+                        context.delete(compoundToDelete)
+                        try? context.save()
+                    })
+                }
+                               // Below code is not needed, because the CoreDataTVC which implements fetchedResultsController delegate will handle the change in UI.
                 //tableView.deleteRows(at: [indexPath], with: .fade)
             }  
         }
@@ -163,23 +167,28 @@ class HomeTableViewController: CoreDataTableViewController {
             let formula = sourceViewController.formula
             let purity = sourceViewController.purity
             // update an exiting compound
-            if let selectedIndexPath = indexPathOfTappedAccessoryButton {
-                let selectedCompound = fetchedResultsController?.object(at: selectedIndexPath) as! Compound
-                selectedCompound.setValue(name, forKey: "name")
-                selectedCompound.setValue(formula, forKey: "formula")
-                selectedCompound.setValue(molecularMass, forKey: "molecularMass")
-                selectedCompound.setValue(purity, forKey: "purity")
-                indexPathOfTappedAccessoryButton = nil
-            } else {
-                // add a new compound
-                if let newCompound = NSEntityDescription.insertNewObject(forEntityName: "Compound", into: managedObjectContext!) as? Compound {
-                    newCompound.name = name
-                    newCompound.formula = formula
-                    newCompound.molecularMass = molecularMass
-                    newCompound.purity = purity
-                }
+            if let context = managedObjectContext {
+                context.performAndWait({
+                    if let selectedIndexPath = self.indexPathOfTappedAccessoryButton {
+                        let selectedCompound = self.fetchedResultsController?.object(at: selectedIndexPath) as! Compound
+                        selectedCompound.setValue(name, forKey: "name")
+                        selectedCompound.setValue(formula, forKey: "formula")
+                        selectedCompound.setValue(molecularMass, forKey: "molecularMass")
+                        selectedCompound.setValue(purity, forKey: "purity")
+                        self.indexPathOfTappedAccessoryButton = nil
+                    } else {
+                        // add a new compound
+                        if let newCompound = NSEntityDescription.insertNewObject(forEntityName: "Compound", into: context) as? Compound {
+                            newCompound.name = name
+                            newCompound.formula = formula
+                            newCompound.molecularMass = molecularMass
+                            newCompound.purity = purity
+                        }
+                    }
+                    try? context.save()
+                })
+                
             }
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
         }
         tableView.reloadData()
     }
