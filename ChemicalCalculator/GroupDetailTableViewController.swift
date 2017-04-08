@@ -45,6 +45,8 @@ class GroupDetailTableViewController: CoreDataTableViewController {
             cell.massUnitLabel.text = ingredient.massUnit
             cell.concentrationLabel.text = String(describing: ingredient.finalConcentration)
             cell.concentrationUnitLabel.text = ingredient.concentrationUnit
+            cell.volumeLabel.text = String(describing: ingredient.finalVolume)
+            cell.volumeUnitLabel.text = ingredient.volumeUnit
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM/dd/yyyy"
             let result = dateFormatter.string(from: ingredient.createdDate as! Date)

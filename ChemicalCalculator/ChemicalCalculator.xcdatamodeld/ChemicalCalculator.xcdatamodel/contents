@@ -5,11 +5,12 @@
         <attribute name="molecularMass" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="purity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="solutions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Solution" inverseName="solute" inverseEntity="Solution" syncable="YES"/>
     </entity>
     <entity name="Group" representedClassName="Group" syncable="YES">
         <attribute name="modifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Solution" syncable="YES"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Solution" inverseName="groups" inverseEntity="Solution" syncable="YES"/>
     </entity>
     <entity name="Solution" representedClassName="Solution" syncable="YES">
         <attribute name="concentrationUnit" optional="YES" attributeType="String" syncable="YES"/>
@@ -19,11 +20,12 @@
         <attribute name="massUnit" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="soluteMass" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="volumeUnit" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="solute" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Compound" syncable="YES"/>
+        <relationship name="groups" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Group" inverseName="ingredients" inverseEntity="Group" syncable="YES"/>
+        <relationship name="solute" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Compound" inverseName="solutions" inverseEntity="Compound" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Compound" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="Group" positionX="-56" positionY="269" width="128" height="88"/>
-        <element name="Solution" positionX="171" positionY="-18" width="128" height="163"/>
+        <element name="Compound" positionX="-81" positionY="-18" width="128" height="118"/>
+        <element name="Group" positionX="-83" positionY="252" width="128" height="88"/>
+        <element name="Solution" positionX="171" positionY="-18" width="128" height="178"/>
     </elements>
 </model>

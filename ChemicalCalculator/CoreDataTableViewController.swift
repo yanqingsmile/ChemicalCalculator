@@ -101,6 +101,7 @@ class CoreDataTableViewController: UITableViewController, NSFetchedResultsContro
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
+        
     }
 
 }

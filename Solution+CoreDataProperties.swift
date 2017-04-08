@@ -2,7 +2,7 @@
 //  Solution+CoreDataProperties.swift
 //  ChemicalCalculator
 //
-//  Created by Vivian Liu on 3/22/17.
+//  Created by Vivian Liu on 4/6/17.
 //  Copyright © 2017 Vivian Liu. All rights reserved.
 //
 
@@ -24,5 +24,23 @@ extension Solution {
     @NSManaged public var volumeUnit: String?
     @NSManaged public var createdDate: NSDate?
     @NSManaged public var solute: Compound?
+    @NSManaged public var groups: NSSet?
+
+}
+
+// MARK: Generated accessors for groups
+extension Solution {
+
+    @objc(addGroupsObject:)
+    @NSManaged public func addToGroups(_ value: Group)
+
+    @objc(removeGroupsObject:)
+    @NSManaged public func removeFromGroups(_ value: Group)
+
+    @objc(addGroups:)
+    @NSManaged public func addToGroups(_ values: NSSet)
+
+    @objc(removeGroups:)
+    @NSManaged public func removeFromGroups(_ values: NSSet)
 
 }
