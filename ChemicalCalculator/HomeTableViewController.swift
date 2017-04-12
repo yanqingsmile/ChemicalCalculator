@@ -30,17 +30,23 @@ class HomeTableViewController: CoreDataTableViewController {
         
         // fetch data from database
         if let context = managedObjectContext {
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Compound")
-            request.sortDescriptors = [NSSortDescriptor(
-                key: "name",
-                ascending: true,
-                selector: #selector(NSString.localizedCaseInsensitiveCompare(_:))
-                )]
-            fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: "uppercaseFirstLetterOfName", cacheName: nil)
+            context.performAndWait({ 
+                let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Compound")
+                request.sortDescriptors = [NSSortDescriptor(
+                    key: "name",
+                    ascending: true,
+                    selector: #selector(NSString.localizedCaseInsensitiveCompare(_:))
+                    )]
+                self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: "uppercaseFirstLetterOfName", cacheName: nil)
+                })
         } else {
             fetchedResultsController = nil
         }
+
+
         
+    
+    
         
         
         

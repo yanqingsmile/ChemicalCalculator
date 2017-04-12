@@ -96,7 +96,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
                     ascending: false,
                     selector: nil
                     )]
-                self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: "solute.uppercaseFirstLetterOfName", cacheName: nil)
+                self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
             })
         } else {
             fetchedResultsController = nil
