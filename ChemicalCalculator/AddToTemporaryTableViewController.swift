@@ -58,27 +58,44 @@ class AddToTemporaryTableViewController: CoreDataTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var inputTextField: UITextField?
-        let groupNamePrompt = UIAlertController(title: "New Group", message: "Enter a name for this group", preferredStyle: .alert)
-        groupNamePrompt.addTextField { (textField: UITextField) in
-            textField.placeholder = "Title"
-            inputTextField = textField
-        }
-        groupNamePrompt.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        groupNamePrompt.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action: UIAlertAction) in
-            if let context = self.managedObjectContext {
-                context.performAndWait({
-                    let newGroup = NSEntityDescription.insertNewObject(forEntityName: "Group", into: context) as! Group
-                    newGroup.title = inputTextField!.text
-                    newGroup.modifiedDate = NSDate()
-                    newGroup.addToIngredients(NSOrderedSet(array: self.toAddSolutions!))
-                    try? context.save()
-                })
+        if let context = managedObjectContext {
+            if indexPath.row == 0 {
+                var inputTextField: UITextField?
+                let groupNamePrompt = UIAlertController(title: "New Group", message: "Enter a name for this group", preferredStyle: .alert)
+                groupNamePrompt.addTextField { (textField: UITextField) in
+                    textField.placeholder = "Title"
+                    inputTextField = textField
+                }
+                groupNamePrompt.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                groupNamePrompt.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action: UIAlertAction) in context.performAndWait({
+                        let newGroup = NSEntityDescription.insertNewObject(forEntityName: "Group", into: context) as! Group
+                        newGroup.title = inputTextField!.text
+                        newGroup.modifiedDate = NSDate()
+                        newGroup.addToIngredients(NSOrderedSet(array: self.toAddSolutions!))
+                        try? context.save()
+                    })
+                    self.dismiss(animated: true, completion: nil)
+                    
+                }))
+                present(groupNamePrompt, animated: true, completion: nil)
+            } else {
+                let indexPathForselectedGroup = IndexPath(row: indexPath.row - 1, section: indexPath.section)
+                if let selectedGroup = fetchedResultsController?.object(at: indexPathForselectedGroup) as? Group {
+                    context.performAndWait(
+                        {let mutableIngredients = selectedGroup.ingredients!.mutableCopy() as! NSMutableOrderedSet
+                            mutableIngredients.addObjects(from: self.toAddSolutions!)
+                            selectedGroup.ingredients = mutableIngredients.copy() as? NSOrderedSet
+                        try? context.save()
+                        }
+                    )
+                }
+                if presentingViewController is UITabBarController {
+                    dismiss(animated: true, completion: nil)
+                } else {
+                    performSegue(withIdentifier: "unwindToGroupDetail", sender: self)
+                }
             }
-            
-            self.dismiss(animated: true, completion: nil)
-        }))
-        present(groupNamePrompt, animated: true, completion: nil)
+        }
     }
     
     

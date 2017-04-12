@@ -10,8 +10,14 @@ import UIKit
 import CoreData
 
 class GroupDetailTableViewController: CoreDataTableViewController {
+    
+    // MARK: - Properties
     var group: Group?
+    
 
+
+
+    // MARK: - View life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,14 +74,16 @@ class GroupDetailTableViewController: CoreDataTableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            if let context = managedObjectContext {
-                context.perform({ 
-                    if let ingredientToDelete = self.fetchedResultsController?.object(at: indexPath) as? Solution {
-                        context.delete(ingredientToDelete)
-                        try? context.save()
-                    }
+            if let ingredientToDelete = self.group?.ingredients?[indexPath.row] as? Solution, let context = group?.managedObjectContext {
+                context.performAndWait({ 
+                    let mutableIngredients = self.group!.ingredients!.mutableCopy() as! NSMutableOrderedSet
+                    mutableIngredients.remove(ingredientToDelete)
+                    self.group!.ingredients = mutableIngredients.copy() as? NSOrderedSet
+                    try? context.save()
                 })
-                            }
+                tableView.reloadData()
+            }
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
@@ -97,14 +105,29 @@ class GroupDetailTableViewController: CoreDataTableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "addNewIngredientToGroup" {
+            
+            if let navcon = segue.destination as? UINavigationController, let solutionListTVC = navcon.visibleViewController as? SavedSolutionTableViewController {
+                solutionListTVC.isEditing = true
+            }
+        }
     }
-    */
-
+    
+    @IBAction func unwindToGroupDetailTableViewController(sender: UIStoryboardSegue) {
+        if let sourceTVC = sender.source as? SavedSolutionTableViewController, let selectedIndexPaths = sourceTVC.tableView.indexPathsForSelectedRows {
+            let selectedSolutions = selectedIndexPaths.map{sourceTVC.fetchedResultsController?.object(at: $0) as! Solution}
+            group!.managedObjectContext?.performAndWait({
+                let mutableIngredients = self.group!.ingredients!.mutableCopy() as! NSMutableOrderedSet
+                mutableIngredients.addObjects(from: selectedSolutions)
+                self.group!.ingredients = mutableIngredients.copy() as? NSOrderedSet
+                try? self.group!.managedObjectContext?.save()
+                
+            })
+        }
+        tableView.reloadData()
+    }
 }

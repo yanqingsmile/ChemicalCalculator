@@ -43,8 +43,21 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     }
     
     @IBAction func cancelButtonClicked(_ sender: UIBarButtonItem) {
-        tableView.setEditing(false, animated: true)
-        updateButtonsToMatchTableState()
+        if presentingViewController != nil {
+            presentingViewController?.dismiss(animated: true, completion: nil)
+        } else {
+            tableView.setEditing(false, animated: true)
+            updateButtonsToMatchTableState()
+        }
+    }
+    
+    
+    @IBAction func addToButtonClicked(_ sender: UIBarButtonItem) {
+        if presentingViewController == nil {
+            performSegue(withIdentifier: "addToGroup", sender: self)
+        } else {
+            performSegue(withIdentifier: "addToSourceGroup", sender: self)
+        }
     }
     
     
@@ -221,7 +234,8 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         }
     }
     
-    @IBAction func unwindToSavedSolutionTVC(sender: UIStoryboardSegue) {}
+    @IBAction func unwindToSavedSolutionTVC(sender: UIStoryboardSegue) {
+    }
 }
 
 // MARK: - Delegation Methods
