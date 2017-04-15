@@ -65,6 +65,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.separatorStyle = .none
        
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -156,6 +157,9 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if !tableView.isEditing {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
         updateButtonsToMatchTableState()
     }
     

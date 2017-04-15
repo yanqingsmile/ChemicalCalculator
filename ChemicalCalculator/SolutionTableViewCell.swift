@@ -28,16 +28,36 @@ class SolutionTableViewCell: UITableViewCell {
     @IBOutlet weak var volumeUnitLabel: UILabel!
     
     @IBOutlet weak var createdDateLabel: UILabel!
+    
+    @IBOutlet weak var cardView: UIView!
+    
    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    
+    
+    override func layoutSubviews() {
+        cardSetup()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    fileprivate func cardSetup() {
+        cardView.layer.masksToBounds = false
+        cardView.layer.cornerRadius = 10
+        cardView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        cardView.layer.shadowRadius = 2
+        let path = UIBezierPath(rect: cardView.bounds)
+        cardView.layer.shadowPath = path.cgPath
+        cardView.layer.shadowOpacity = 0.2
+    
     }
 
 }
