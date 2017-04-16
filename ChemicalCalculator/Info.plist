@@ -36,6 +36,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Proxima Nova Bold.otf</string>
 		<string>Proxima Nova Sbold.otf</string>
 		<string>Proxima Nova Light.otf</string>
 		<string>Proxima Nova Reg.otf</string>
