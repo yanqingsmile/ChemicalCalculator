@@ -31,6 +31,7 @@
 		19EC6CF71E97608C001E3471 /* Compound+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CF41E97608C001E3471 /* Compound+CoreDataProperties.swift */; };
 		19EC6CF81E97608C001E3471 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CF51E97608C001E3471 /* Group+CoreDataProperties.swift */; };
 		19EC6CF91E97608C001E3471 /* Solution+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CF61E97608C001E3471 /* Solution+CoreDataProperties.swift */; };
+		AC807838E681B3C88E380EA5 /* Pods_ChemicalCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76227136BD3F53E8C7E25D49 /* Pods_ChemicalCalculator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,9 @@
 		19EC6CF41E97608C001E3471 /* Compound+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Compound+CoreDataProperties.swift"; path = "../Compound+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		19EC6CF51E97608C001E3471 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Group+CoreDataProperties.swift"; path = "../Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		19EC6CF61E97608C001E3471 /* Solution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Solution+CoreDataProperties.swift"; path = "../Solution+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4F81E9B5B8DCDFF84B313FDA /* Pods-ChemicalCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChemicalCalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChemicalCalculator/Pods-ChemicalCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		5D55E12BB6C5BBEA746BCD16 /* Pods-ChemicalCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChemicalCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChemicalCalculator/Pods-ChemicalCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		76227136BD3F53E8C7E25D49 /* Pods_ChemicalCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChemicalCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC807838E681B3C88E380EA5 /* Pods_ChemicalCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,8 @@
 			children = (
 				1968283A1E58207F001F3FB6 /* ChemicalCalculator */,
 				196828391E58207F001F3FB6 /* Products */,
+				C207A8B1C49A1739E07BD8B3 /* Pods */,
+				AD9FD160BFED46A841E24E64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +144,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AD9FD160BFED46A841E24E64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76227136BD3F53E8C7E25D49 /* Pods_ChemicalCalculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C207A8B1C49A1739E07BD8B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F81E9B5B8DCDFF84B313FDA /* Pods-ChemicalCalculator.debug.xcconfig */,
+				5D55E12BB6C5BBEA746BCD16 /* Pods-ChemicalCalculator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1968284D1E58207F001F3FB6 /* Build configuration list for PBXNativeTarget "ChemicalCalculator" */;
 			buildPhases = (
+				E234AA6813265ECD73DCDC6E /* [CP] Check Pods Manifest.lock */,
 				196828341E58207F001F3FB6 /* Sources */,
 				196828351E58207F001F3FB6 /* Frameworks */,
 				196828361E58207F001F3FB6 /* Resources */,
+				95726B23B76060C5BB4D8795 /* [CP] Embed Pods Frameworks */,
+				726DD1B27C378B12FA4DB7A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +233,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		726DD1B27C378B12FA4DB7A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChemicalCalculator/Pods-ChemicalCalculator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95726B23B76060C5BB4D8795 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChemicalCalculator/Pods-ChemicalCalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E234AA6813265ECD73DCDC6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		196828341E58207F001F3FB6 /* Sources */ = {
@@ -349,6 +424,7 @@
 		};
 		1968284E1E58207F001F3FB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F81E9B5B8DCDFF84B313FDA /* Pods-ChemicalCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VXS2P832YK;
@@ -363,6 +439,7 @@
 		};
 		1968284F1E58207F001F3FB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D55E12BB6C5BBEA746BCD16 /* Pods-ChemicalCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VXS2P832YK;

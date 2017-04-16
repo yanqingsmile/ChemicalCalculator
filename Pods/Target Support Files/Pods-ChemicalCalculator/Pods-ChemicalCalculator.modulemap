@@ -1,0 +1,6 @@
+framework module Pods_ChemicalCalculator {
+  umbrella header "Pods-ChemicalCalculator-umbrella.h"
+
+  export *
+  module * { export * }
+}
