@@ -14,21 +14,18 @@ class GroupDetailTableViewController: CoreDataTableViewController {
     // MARK: - Properties
     var group: Group?
     
-
-
-
+    
+    
+    
     // MARK: - View life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.separatorStyle = .none
         
-        // fetch data from data base
-        
-
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
     
-
+    
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,11 +36,11 @@ class GroupDetailTableViewController: CoreDataTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return group?.ingredients?.count ?? 0
     }
-
+    
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! SolutionTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "solutionCell", for: indexPath) as! SolutionTableViewCell
         if let ingredients = group?.ingredients {
             let ingredient = ingredients.object(at: indexPath.row) as! Solution
             cell.nameLabel.text = ingredient.solute?.name
@@ -61,21 +58,21 @@ class GroupDetailTableViewController: CoreDataTableViewController {
         return cell
     }
     
-
+    
     /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
+     // Override to support conditional editing of the table view.
+     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let ingredientToDelete = self.group?.ingredients?[indexPath.row] as? Solution, let context = group?.managedObjectContext {
-                context.performAndWait({ 
+                context.performAndWait({
                     let mutableIngredients = self.group!.ingredients!.mutableCopy() as! NSMutableOrderedSet
                     mutableIngredients.remove(ingredientToDelete)
                     self.group!.ingredients = mutableIngredients.copy() as? NSOrderedSet
@@ -86,28 +83,28 @@ class GroupDetailTableViewController: CoreDataTableViewController {
             
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     
-
+    
     /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+     // Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
     
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addNewIngredientToGroup" {
             
