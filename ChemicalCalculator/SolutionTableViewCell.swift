@@ -31,6 +31,8 @@ class SolutionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cardView: UIView!
     
+    @IBOutlet weak var countLabel: UILabel!
+    
    
     override func awakeFromNib() {
         super.awakeFromNib()
