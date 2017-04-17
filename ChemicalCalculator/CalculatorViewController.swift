@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import Material
 
-class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // MARK: - Properties
     var compound: Compound?
@@ -19,10 +19,10 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     var result: Double {
         get {
-           return Double(resultLabel.text!)!
+           return Double(resultTextField.text!)!
         }
         set {
-            resultLabel.text = newValue != 0 ? String(describing: newValue) : ""
+            resultTextField.text = newValue != 0 ? String(describing: newValue) : ""
         }
     }
     
@@ -36,12 +36,11 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     @IBOutlet weak var molecularMassLabel: UILabel!
     
-    @IBOutlet weak var finalConcTextField: UITextField!
+    @IBOutlet weak var finalConcTextField: ErrorTextField!
     
-    @IBOutlet weak var finalVolumeTextField: UITextField!
+    @IBOutlet weak var finalVolumeTextField: ErrorTextField!
     
-   
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var resultTextField: TextField!
     
     @IBOutlet weak var concentrationUnitPickerView: UIPickerView!
     
@@ -54,15 +53,23 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     // MARK: - IBActions
-    @IBAction func textFieldDidChange() {
+    @IBAction func textFieldDidChange(_ sender: ErrorTextField) {
+        sender.isErrorRevealed = checkValidInput(in: sender)
+        if sender.isErrorRevealed {
+            sender.detail = "Invalid number"
+        }
         checkValidSolution()
         performCalculation()
+    }
+    
+    fileprivate func checkValidInput(in textField: TextField) -> Bool{
+        return (!textField.text!.isEmpty) && (Double(textField.text!) == nil)
     }
     
     @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
         if let volume = Double(finalVolumeTextField.text!),
             let conc = Double(finalConcTextField.text!),
-            let mass = Double(resultLabel.text!)
+            let mass = Double(resultTextField.text!)
         {
             let volumeUnit = volumeUnits[volumeUnitPickerView.selectedRow(inComponent: 0)]
             let concUnit = concentrationUnits[concentrationUnitPickerView.selectedRow(inComponent: 0)]
@@ -104,18 +111,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
         checkValidSolution()
     }
     
-    
-    // MARK: - UITextFieldDelegate
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Hide the keyboard.
-        textField.resignFirstResponder()
-        performCalculation()
-        return true
-    }
-    
-    
-    
-    
+
     
     // MARK: - UIPickerView delegate and data source
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -147,7 +143,8 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
     // MARK: - Constants
 
     // MARK: - Private methods
-
+    
+    
     // convert user input conc unit to g/L
     fileprivate func convertToStandardConc(fromInputConc conc: String?, withUnit unit: UIPickerView) -> Double? {
         if let molecularMass = compound?.molecularMass {
@@ -212,9 +209,10 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
     }
     
     fileprivate func checkValidSolution() {
-        let volume = finalVolumeTextField.text ?? ""
-        let conc = finalConcTextField.text ?? ""
-        saveButton.isEnabled = !volume.isEmpty && !conc.isEmpty
+        let volume = Double(finalVolumeTextField.text!)
+        let conc = Double(finalConcTextField.text!)
+        saveButton.isEnabled = (volume != nil && conc != nil)
+    
     }
 
 
@@ -229,3 +227,26 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate, UIPickerV
     */
 
 }
+
+// MARK: - TextFieldDelegate
+extension CalculatorViewController: TextFieldDelegate {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField is ErrorTextField {
+            textFieldDidChange(textField as! ErrorTextField)
+        }
+    }
+    
+    public func textField(textField: UITextField, didClear text: String?) {
+        if textField is ErrorTextField {
+            textFieldDidChange(textField as! ErrorTextField)
+        }
+    }
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        performCalculation()
+        return true
+    }
+}
+

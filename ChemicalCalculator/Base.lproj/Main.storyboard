@@ -231,42 +231,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final Concentration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWZ-tY-bhi">
-                                <rect key="frame" x="20" y="188" width="205" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter volume" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02A-CE-6Jn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02A-CE-6Jn" customClass="ErrorTextField" customModule="Material">
                                 <rect key="frame" x="20" y="390" width="254" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Final Volume"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="textFieldDidChange" destination="8hX-fA-Lyk" eventType="editingChanged" id="3px-TV-57G"/>
+                                    <action selector="textFieldDidChange:" destination="8hX-fA-Lyk" eventType="editingChanged" id="q4P-4q-DNj"/>
                                     <outlet property="delegate" destination="8hX-fA-Lyk" id="omQ-nx-g56"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter concentration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHX-CG-ph4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHX-CG-ph4" customClass="ErrorTextField" customModule="Material">
                                 <rect key="frame" x="20" y="222" width="254" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Final Concentration"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Invaild number"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="detailVerticalOffset">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="textFieldDidChange" destination="8hX-fA-Lyk" eventType="editingChanged" id="n3s-eq-xK1"/>
+                                    <action selector="textFieldDidChange:" destination="8hX-fA-Lyk" eventType="editingChanged" id="00n-kg-AcB"/>
                                     <outlet property="delegate" destination="8hX-fA-Lyk" id="L9D-1q-KSS"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aS6-18-mWq">
-                                <rect key="frame" x="20" y="358" width="143" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFo-Bt-EML">
                                 <rect key="frame" x="282" y="222" width="111" height="84"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -283,13 +284,6 @@
                                     <outlet property="delegate" destination="8hX-fA-Lyk" id="R5K-tp-pP9"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PV-Qs-RoA">
-                                <rect key="frame" x="20" y="526" width="143" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-HX-eXL">
                                 <rect key="frame" x="282" y="565" width="111" height="84"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -298,14 +292,6 @@
                                     <outlet property="delegate" destination="8hX-fA-Lyk" id="rHY-BB-Ypa"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPP-oo-N4t">
-                                <rect key="frame" x="20" y="565" width="254" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lzX-7E-ZYE">
                                 <rect key="frame" x="20" y="79" width="374" height="54"/>
                                 <subviews>
@@ -323,6 +309,21 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7RW-9G-BAF" userLabel="Result Text Field" customClass="TextField" customModule="Material">
+                                <rect key="frame" x="20" y="565" width="254" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mass"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="8hX-fA-Lyk" eventType="editingChanged" id="sm6-bw-MI5"/>
+                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="HRb-NX-pCE"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -348,7 +349,7 @@
                         <outlet property="finalVolumeTextField" destination="02A-CE-6Jn" id="LEQ-zG-OPb"/>
                         <outlet property="massUnitPickerView" destination="xyc-HX-eXL" id="IyV-Wr-NJF"/>
                         <outlet property="molecularMassLabel" destination="YAQ-ef-FDa" id="tl5-4i-eUT"/>
-                        <outlet property="resultLabel" destination="pPP-oo-N4t" id="1av-8p-WDK"/>
+                        <outlet property="resultTextField" destination="7RW-9G-BAF" id="btb-iz-gm4"/>
                         <outlet property="saveButton" destination="xae-Cx-ELY" id="vcL-18-j31"/>
                         <outlet property="volumeUnitPickerView" destination="1Je-Hy-GRs" id="YOs-pB-wag"/>
                     </connections>
@@ -594,13 +595,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQF-pa-mfB">
-                                            <rect key="frame" x="15" y="25.333333333333336" width="90.333333333333329" height="17.000000000000007"/>
+                                            <rect key="frame" x="15" y="25.666666666666664" width="90.333333333333329" height="16.999999999999993"/>
                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QoK-7T-W0S">
-                                            <rect key="frame" x="312.66666666666674" y="26.333333333333329" width="73.333333333333314" height="35"/>
+                                            <rect key="frame" x="312.66666666666674" y="25.333333333333329" width="73.333333333333314" height="35"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cst-Uc-DTX">
                                                     <rect key="frame" x="20" y="0.0" width="33.333333333333314" height="17.000000000000004"/>
@@ -748,22 +749,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X6-2P-KjI">
-                                            <rect key="frame" x="15" y="31.333333333333336" width="90.333333333333329" height="17.000000000000007"/>
+                                            <rect key="frame" x="15" y="31.666666666666664" width="90.333333333333329" height="16.999999999999993"/>
                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6kT-lH-OZn">
-                                            <rect key="frame" x="279.66666666666674" y="32.333333333333329" width="73.333333333333314" height="34.999999999999986"/>
+                                            <rect key="frame" x="279.66666666666674" y="31.333333333333329" width="73.333333333333314" height="35"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhf-Vq-4WD">
-                                                    <rect key="frame" x="20" y="0.0" width="33.333333333333314" height="17"/>
+                                                    <rect key="frame" x="20" y="0.0" width="33.333333333333314" height="17.000000000000004"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last modified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekt-Ak-Iea">
-                                                    <rect key="frame" x="0.0" y="22" width="73.333333333333314" height="12.999999999999993"/>
+                                                    <rect key="frame" x="0.0" y="22.000000000000004" width="73.333333333333314" height="12.999999999999996"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -898,7 +899,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U7K-qS-zJU" userLabel="Right Mass Stack View">
-                                                    <rect key="frame" x="162.33333333333337" y="55" width="165.66666666666663" height="45"/>
+                                                    <rect key="frame" x="162.33333333333337" y="54.333333333333329" width="165.66666666666663" height="45"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpI-8n-wf8">
                                                             <rect key="frame" x="0.0" y="0.0" width="33" height="15"/>
@@ -926,7 +927,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="createdDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbq-s5-7eR">
-                                                    <rect key="frame" x="206" y="110" width="79.666666666666686" height="15"/>
+                                                    <rect key="frame" x="206" y="109.33333333333334" width="79.666666666666686" height="15.000000000000014"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -944,7 +945,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Noj-m4-49h">
-                                            <rect key="frame" x="18" y="79" width="55.666666666666671" height="22"/>
+                                            <rect key="frame" x="18" y="79.333333333333329" width="55.666666666666671" height="22"/>
                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="22"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
