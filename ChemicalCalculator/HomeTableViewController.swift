@@ -22,6 +22,16 @@ class HomeTableViewController: CoreDataTableViewController {
     
     //let searchController = UISearchController(searchResultsController: nil)
     
+    override func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        super.controllerDidChangeContent(controller)
+        refreshPlaceholderText()
+    }
+    
+    fileprivate func refreshPlaceholderText() {
+        let count = (UIApplication.shared.delegate as! AppDelegate).compoundCount
+        searchController.searchBar.placeholder = "Search from \(count) compounds"
+    }
+    
     //MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +47,7 @@ class HomeTableViewController: CoreDataTableViewController {
                     ascending: true,
                     selector: #selector(NSString.localizedCaseInsensitiveCompare(_:))
                     )]
-                self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: "uppercaseFirstLetterOfName", cacheName: nil)
+                self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
                 })
         } else {
             fetchedResultsController = nil
@@ -55,8 +65,7 @@ class HomeTableViewController: CoreDataTableViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
-        let count = (UIApplication.shared.delegate as! AppDelegate).compoundCount
-        searchController.searchBar.placeholder = "Search from \(count) compounds"
+        refreshPlaceholderText()
         searchController.searchBar.delegate = self
         searchController.searchBar.scopeButtonTitles = ["name", "formula"]
         
@@ -196,7 +205,6 @@ class HomeTableViewController: CoreDataTableViewController {
                 
             }
         }
-        tableView.reloadData()
     }
     
     

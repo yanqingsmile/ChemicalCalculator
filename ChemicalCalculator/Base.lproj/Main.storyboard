@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="1948" y="-423"/>
         </scene>
-        <!--New Compound-->
+        <!--Compound View Controller-->
         <scene sceneID="WGO-sK-Zoy">
             <objects>
                 <viewController id="F9p-7I-JVd" customClass="CompoundViewController" customModule="ChemicalCalculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -94,101 +94,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qYb-cy-UHK">
-                                <rect key="frame" x="20" y="104" width="374" height="180"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qYb-cy-UHK">
+                                <rect key="frame" x="20" y="84" width="374" height="450"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6qo-o2-vlH">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIg-JR-wg6">
-                                                <rect key="frame" x="0.0" y="0.0" width="46.666666666666671" height="30"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Vdk-ZQ-DAB">
-                                                <rect key="frame" x="66.666666666666657" y="0.0" width="307.33333333333337" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                                <connections>
-                                                    <action selector="textFieldDidChange" destination="F9p-7I-JVd" eventType="editingChanged" id="ATP-8h-aMU"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bmz-Yb-B4Q">
-                                        <rect key="frame" x="0.0" y="50" width="374" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVB-Y4-F4t">
-                                                <rect key="frame" x="0.0" y="0.0" width="65.333333333333329" height="30"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kxD-3j-jtO">
-                                                <rect key="frame" x="85.333333333333343" y="0.0" width="288.66666666666663" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lfG-Au-1dX">
-                                        <rect key="frame" x="0.0" y="100" width="374" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Molecular Mass (g/mol)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXE-0f-WC0">
-                                                <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="30"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5sQ-i1-dLF">
-                                                <rect key="frame" x="206.66666666666663" y="0.0" width="167.33333333333337" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
-                                                <connections>
-                                                    <action selector="textFieldDidChange" destination="F9p-7I-JVd" eventType="editingChanged" id="PMJ-qp-nxi"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vbk-Vr-zCP">
-                                        <rect key="frame" x="0.0" y="150" width="374" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purity (%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRN-yf-rmk">
-                                                <rect key="frame" x="0.0" y="0.0" width="77.333333333333329" height="30"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Rtu-xf-49y">
-                                                <rect key="frame" x="97.333333333333343" y="0.0" width="276.66666666666663" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Vdk-ZQ-DAB" customClass="TextField" customModule="Material">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Name"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="Hak-Ax-Maj"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kxD-3j-jtO" customClass="TextField" customModule="Material">
+                                        <rect key="frame" x="0.0" y="125" width="374" height="75"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Formula"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="q6w-pm-6D4"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5sQ-i1-dLF" customClass="ErrorTextField" customModule="Material">
+                                        <rect key="frame" x="0.0" y="250" width="374" height="75"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Molecular Mass (g/mol)"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Invaild number"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="Q18-j6-rk1"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Rtu-xf-49y" customClass="ErrorTextField" customModule="Material">
+                                        <rect key="frame" x="0.0" y="375" width="374" height="75"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Purity (%)"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Invalid number"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="asG-nH-AR4"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="bmz-Yb-B4Q" secondAttribute="trailing" id="KVe-ue-tbq"/>
-                                    <constraint firstAttribute="trailing" secondItem="6qo-o2-vlH" secondAttribute="trailing" id="OTC-Kd-n6b"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="vbk-Vr-zCP" secondAttribute="trailing" id="Tir-OS-7LO"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="lfG-Au-1dX" secondAttribute="trailing" id="bfh-Of-j9W"/>
+                                    <constraint firstItem="5sQ-i1-dLF" firstAttribute="width" secondItem="qYb-cy-UHK" secondAttribute="width" id="5IE-3M-H4u"/>
+                                    <constraint firstItem="Rtu-xf-49y" firstAttribute="width" secondItem="qYb-cy-UHK" secondAttribute="width" id="DmU-mz-hHg"/>
+                                    <constraint firstItem="Vdk-ZQ-DAB" firstAttribute="width" secondItem="qYb-cy-UHK" secondAttribute="width" id="SOV-91-nvM"/>
+                                    <constraint firstItem="kxD-3j-jtO" firstAttribute="width" secondItem="qYb-cy-UHK" secondAttribute="width" id="Sj9-Cd-55m"/>
+                                    <constraint firstAttribute="height" constant="450" id="aTv-Ze-DbH"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qYb-cy-UHK" firstAttribute="top" secondItem="MF6-Q0-id4" secondAttribute="bottom" constant="40" id="dwU-It-TAW"/>
+                            <constraint firstItem="qYb-cy-UHK" firstAttribute="top" secondItem="MF6-Q0-id4" secondAttribute="bottom" constant="20" id="dwU-It-TAW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qYb-cy-UHK" secondAttribute="trailing" id="hly-3R-FtY"/>
                             <constraint firstAttribute="leadingMargin" secondItem="qYb-cy-UHK" secondAttribute="leading" id="xLa-Lz-EwK"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="New Compound" id="4S7-gz-sOt">
+                    <navigationItem key="navigationItem" id="4S7-gz-sOt">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="erY-37-Dic">
                             <connections>
                                 <action selector="cancelButtonClicked:" destination="F9p-7I-JVd" id="1O9-NQ-4jO"/>
@@ -196,7 +185,6 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="dZQ-jv-aOW">
                             <connections>
-                                <action selector="saveButtonClicked:" destination="F9p-7I-JVd" id="2Dn-wA-6HA"/>
                                 <segue destination="er6-UC-DgV" kind="unwind" unwindAction="unwindToSearchTVCWithSender:" id="A68-tX-BoW"/>
                             </connections>
                         </barButtonItem>
@@ -204,11 +192,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cancelButton" destination="erY-37-Dic" id="zme-IN-Oot"/>
-                        <outlet property="formulaLabel" destination="PVB-Y4-F4t" id="FnH-IY-wAu"/>
                         <outlet property="formulaTextField" destination="kxD-3j-jtO" id="6KM-Qx-7qv"/>
-                        <outlet property="molecularMassLabel" destination="jXE-0f-WC0" id="zFx-7v-2cS"/>
                         <outlet property="molecularMassTextField" destination="5sQ-i1-dLF" id="Mru-52-E8x"/>
-                        <outlet property="nameLabel" destination="QIg-JR-wg6" id="KnG-JB-4Wr"/>
                         <outlet property="nameTextField" destination="Vdk-ZQ-DAB" id="2Rr-z5-nEG"/>
                         <outlet property="purityTextField" destination="Rtu-xf-49y" id="zfX-L6-Eql"/>
                         <outlet property="saveButton" destination="dZQ-jv-aOW" id="gqZ-SG-guv"/>
@@ -232,7 +217,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02A-CE-6Jn" customClass="ErrorTextField" customModule="Material">
-                                <rect key="frame" x="20" y="390" width="254" height="84"/>
+                                <rect key="frame" x="20" y="390" width="373" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
@@ -247,7 +232,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHX-CG-ph4" customClass="ErrorTextField" customModule="Material">
-                                <rect key="frame" x="20" y="222" width="254" height="84"/>
+                                <rect key="frame" x="20" y="222" width="373" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
@@ -268,7 +253,7 @@
                                     <outlet property="delegate" destination="8hX-fA-Lyk" id="L9D-1q-KSS"/>
                                 </connections>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFo-Bt-EML">
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFo-Bt-EML">
                                 <rect key="frame" x="282" y="222" width="111" height="84"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -276,7 +261,7 @@
                                     <outlet property="delegate" destination="8hX-fA-Lyk" id="zUY-X0-0b3"/>
                                 </connections>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Je-Hy-GRs">
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Je-Hy-GRs">
                                 <rect key="frame" x="282" y="390" width="111" height="84"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -284,7 +269,7 @@
                                     <outlet property="delegate" destination="8hX-fA-Lyk" id="R5K-tp-pP9"/>
                                 </connections>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-HX-eXL">
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-HX-eXL">
                                 <rect key="frame" x="282" y="565" width="111" height="84"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -310,7 +295,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7RW-9G-BAF" userLabel="Result Text Field" customClass="TextField" customModule="Material">
-                                <rect key="frame" x="20" y="565" width="254" height="84"/>
+                                <rect key="frame" x="20" y="565" width="373" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
@@ -356,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHw-lC-wvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2959" y="-263"/>
+            <point key="canvasLocation" x="2957.971014492754" y="-263.31521739130437"/>
         </scene>
         <!--Saved Solution Table View Controller-->
         <scene sceneID="5HO-ld-xMC">

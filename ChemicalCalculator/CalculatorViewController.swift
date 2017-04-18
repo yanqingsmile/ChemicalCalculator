@@ -62,7 +62,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         performCalculation()
     }
     
-    fileprivate func checkValidInput(in textField: TextField) -> Bool{
+    fileprivate func checkValidInput(in textField: ErrorTextField) -> Bool{
         return (!textField.text!.isEmpty) && (Double(textField.text!) == nil)
     }
     
@@ -109,9 +109,16 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         massUnitPickerView.selectRow(1, inComponent: 0, animated: true)
         
         checkValidSolution()
+        
+        removeSelectionIndicator(in: concentrationUnitPickerView)
+        removeSelectionIndicator(in: volumeUnitPickerView)
+        removeSelectionIndicator(in: massUnitPickerView)
     }
     
-
+    fileprivate func removeSelectionIndicator(in pickerView: UIPickerView) {
+        pickerView.subviews[1].isHidden = true
+        pickerView.subviews[2].isHidden = true
+    }
     
     // MARK: - UIPickerView delegate and data source
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -160,7 +167,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 return inputConcentration
             case "mg/L":
                 return inputConcentration / 1000
-            case "g/ml":
+            case "g/mL":
                 return inputConcentration * 1000
             case "kg/L":
                 return inputConcentration * 1000
