@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -223,10 +224,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHX-CG-ph4" customClass="ErrorTextField" customModule="Material">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="80"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="250" id="jhF-Im-kw1"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="249.33333333333331" height="80"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -247,7 +245,7 @@
                                                 </connections>
                                             </textField>
                                             <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFo-Bt-EML">
-                                                <rect key="frame" x="250" y="0.0" width="124" height="80"/>
+                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666671" height="80"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="8hX-fA-Lyk" id="kfc-V1-SNj"/>
                                                     <outlet property="delegate" destination="8hX-fA-Lyk" id="zUY-X0-0b3"/>
@@ -256,6 +254,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="Upd-Yf-6N7"/>
+                                            <constraint firstItem="BHX-CG-ph4" firstAttribute="width" secondItem="FFs-de-Li1" secondAttribute="width" multiplier="0.667" id="Xp2-p6-J3V"/>
                                             <constraint firstItem="fFo-Bt-EML" firstAttribute="height" secondItem="BHX-CG-ph4" secondAttribute="height" id="mJm-Fa-xYY"/>
                                         </constraints>
                                     </stackView>
@@ -263,10 +262,7 @@
                                         <rect key="frame" x="0.0" y="140" width="374" height="80"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02A-CE-6Jn" customClass="ErrorTextField" customModule="Material">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="80"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="250" id="z4g-dq-lu2"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="249.33333333333331" height="80"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
@@ -280,7 +276,7 @@
                                                 </connections>
                                             </textField>
                                             <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Je-Hy-GRs">
-                                                <rect key="frame" x="250" y="0.0" width="124" height="80"/>
+                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666671" height="80"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="8hX-fA-Lyk" id="1Ho-eu-Um8"/>
                                                     <outlet property="delegate" destination="8hX-fA-Lyk" id="R5K-tp-pP9"/>
@@ -288,6 +284,7 @@
                                             </pickerView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="02A-CE-6Jn" firstAttribute="width" secondItem="JCY-Bi-Bao" secondAttribute="width" multiplier="0.667" id="6ra-Lw-h5p"/>
                                             <constraint firstItem="1Je-Hy-GRs" firstAttribute="height" secondItem="02A-CE-6Jn" secondAttribute="height" id="AE2-EF-o9M"/>
                                             <constraint firstAttribute="height" constant="80" id="YNA-rQ-JI5"/>
                                         </constraints>
@@ -296,10 +293,7 @@
                                         <rect key="frame" x="0.0" y="280" width="374" height="120"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7RW-9G-BAF" userLabel="Result Text Field" customClass="TextField" customModule="Material">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="120"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="250" id="0Ks-fJ-fJN"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="249.33333333333331" height="120"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
@@ -313,7 +307,7 @@
                                                 </connections>
                                             </textField>
                                             <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-HX-eXL">
-                                                <rect key="frame" x="250" y="0.0" width="124" height="120"/>
+                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666671" height="120"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="8hX-fA-Lyk" id="ka1-wf-IVE"/>
                                                     <outlet property="delegate" destination="8hX-fA-Lyk" id="rHY-BB-Ypa"/>
@@ -322,10 +316,19 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="7RW-9G-BAF" firstAttribute="height" secondItem="xyc-HX-eXL" secondAttribute="height" id="SH4-bp-m5M"/>
+                                            <constraint firstItem="7RW-9G-BAF" firstAttribute="width" secondItem="WHe-U8-2lJ" secondAttribute="width" multiplier="0.667" id="VOe-2D-Kxn"/>
                                             <constraint firstAttribute="height" constant="120" id="coZ-L7-cvi"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="WHe-U8-2lJ" firstAttribute="leading" secondItem="akM-2V-j1j" secondAttribute="leading" id="6ng-Dj-q1C"/>
+                                    <constraint firstAttribute="trailing" secondItem="WHe-U8-2lJ" secondAttribute="trailing" id="KHU-KR-fij"/>
+                                    <constraint firstItem="FFs-de-Li1" firstAttribute="leading" secondItem="akM-2V-j1j" secondAttribute="leading" id="KzY-gM-9aT"/>
+                                    <constraint firstItem="JCY-Bi-Bao" firstAttribute="leading" secondItem="akM-2V-j1j" secondAttribute="leading" id="LAI-mZ-74k"/>
+                                    <constraint firstAttribute="trailing" secondItem="JCY-Bi-Bao" secondAttribute="trailing" id="abU-UV-VhM"/>
+                                    <constraint firstAttribute="trailing" secondItem="FFs-de-Li1" secondAttribute="trailing" id="iOw-FG-XPo"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lzX-7E-ZYE">
                                 <rect key="frame" x="20" y="79" width="374" height="127"/>
