@@ -40,18 +40,18 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2BD-tF-820" id="XNj-kw-HgM">
-                                    <rect key="frame" x="0.0" y="0.0" width="367" height="72"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="367" height="72.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G4S-pD-wXk">
-                                            <rect key="frame" x="15" y="26" width="34" height="21"/>
+                                            <rect key="frame" x="15" y="27" width="33.333333333333336" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Jd-p0-Xqr">
-                                            <rect key="frame" x="323" y="26" width="44" height="21"/>
+                                            <rect key="frame" x="323" y="27" width="44" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -216,104 +216,143 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02A-CE-6Jn" customClass="ErrorTextField" customModule="Material">
-                                <rect key="frame" x="20" y="390" width="373" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Final Volume"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="textFieldDidChange:" destination="8hX-fA-Lyk" eventType="editingChanged" id="q4P-4q-DNj"/>
-                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="omQ-nx-g56"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHX-CG-ph4" customClass="ErrorTextField" customModule="Material">
-                                <rect key="frame" x="20" y="222" width="373" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Final Concentration"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
-                                        <real key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Invaild number"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="detailVerticalOffset">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="textFieldDidChange:" destination="8hX-fA-Lyk" eventType="editingChanged" id="00n-kg-AcB"/>
-                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="L9D-1q-KSS"/>
-                                </connections>
-                            </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFo-Bt-EML">
-                                <rect key="frame" x="282" y="222" width="111" height="84"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="8hX-fA-Lyk" id="kfc-V1-SNj"/>
-                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="zUY-X0-0b3"/>
-                                </connections>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Je-Hy-GRs">
-                                <rect key="frame" x="282" y="390" width="111" height="84"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="8hX-fA-Lyk" id="1Ho-eu-Um8"/>
-                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="R5K-tp-pP9"/>
-                                </connections>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-HX-eXL">
-                                <rect key="frame" x="282" y="565" width="111" height="84"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="8hX-fA-Lyk" id="ka1-wf-IVE"/>
-                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="rHY-BB-Ypa"/>
-                                </connections>
-                            </pickerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lzX-7E-ZYE">
-                                <rect key="frame" x="20" y="79" width="374" height="54"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="akM-2V-j1j">
+                                <rect key="frame" x="20" y="236" width="374" height="400"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compound Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8V-6M-k7z">
-                                        <rect key="frame" x="84.666666666666686" y="0.0" width="204.66666666666663" height="26"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FFs-de-Li1" userLabel="nameStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHX-CG-ph4" customClass="ErrorTextField" customModule="Material">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="jhF-Im-kw1"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Final Concentration"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Invaild number"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="detailVerticalOffset">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="textFieldDidChange:" destination="8hX-fA-Lyk" eventType="editingChanged" id="00n-kg-AcB"/>
+                                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="L9D-1q-KSS"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFo-Bt-EML">
+                                                <rect key="frame" x="250" y="0.0" width="124" height="80"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="8hX-fA-Lyk" id="kfc-V1-SNj"/>
+                                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="zUY-X0-0b3"/>
+                                                </connections>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Upd-Yf-6N7"/>
+                                            <constraint firstItem="fFo-Bt-EML" firstAttribute="height" secondItem="BHX-CG-ph4" secondAttribute="height" id="mJm-Fa-xYY"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JCY-Bi-Bao" userLabel="volumeStackView">
+                                        <rect key="frame" x="0.0" y="140" width="374" height="80"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02A-CE-6Jn" customClass="ErrorTextField" customModule="Material">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="z4g-dq-lu2"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Final Volume"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="textFieldDidChange:" destination="8hX-fA-Lyk" eventType="editingChanged" id="q4P-4q-DNj"/>
+                                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="omQ-nx-g56"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Je-Hy-GRs">
+                                                <rect key="frame" x="250" y="0.0" width="124" height="80"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="8hX-fA-Lyk" id="1Ho-eu-Um8"/>
+                                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="R5K-tp-pP9"/>
+                                                </connections>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1Je-Hy-GRs" firstAttribute="height" secondItem="02A-CE-6Jn" secondAttribute="height" id="AE2-EF-o9M"/>
+                                            <constraint firstAttribute="height" constant="80" id="YNA-rQ-JI5"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="WHe-U8-2lJ" userLabel="resultStackView">
+                                        <rect key="frame" x="0.0" y="280" width="374" height="120"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7RW-9G-BAF" userLabel="Result Text Field" customClass="TextField" customModule="Material">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="0Ks-fJ-fJN"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mass"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="textFieldDidChange:" destination="8hX-fA-Lyk" eventType="editingChanged" id="sm6-bw-MI5"/>
+                                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="HRb-NX-pCE"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-HX-eXL">
+                                                <rect key="frame" x="250" y="0.0" width="124" height="120"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="8hX-fA-Lyk" id="ka1-wf-IVE"/>
+                                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="rHY-BB-Ypa"/>
+                                                </connections>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="7RW-9G-BAF" firstAttribute="height" secondItem="xyc-HX-eXL" secondAttribute="height" id="SH4-bp-m5M"/>
+                                            <constraint firstAttribute="height" constant="120" id="coZ-L7-cvi"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lzX-7E-ZYE">
+                                <rect key="frame" x="20" y="79" width="374" height="127"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Compound Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8V-6M-k7z">
+                                        <rect key="frame" x="84.666666666666686" y="0.0" width="204.66666666666663" height="99"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Molecular Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAQ-ef-FDa">
-                                        <rect key="frame" x="126.66666666666667" y="36" width="121.00000000000001" height="18"/>
+                                        <rect key="frame" x="126.66666666666667" y="109" width="121.00000000000001" height="18"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7RW-9G-BAF" userLabel="Result Text Field" customClass="TextField" customModule="Material">
-                                <rect key="frame" x="20" y="565" width="373" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mass"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="textFieldDidChange:" destination="8hX-fA-Lyk" eventType="editingChanged" id="sm6-bw-MI5"/>
-                                    <outlet property="delegate" destination="8hX-fA-Lyk" id="HRb-NX-pCE"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="akM-2V-j1j" firstAttribute="leading" secondItem="eFP-Iv-iW8" secondAttribute="leadingMargin" id="2fL-6T-bvG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="akM-2V-j1j" secondAttribute="bottom" constant="100" id="35x-AN-L0W"/>
                             <constraint firstItem="lzX-7E-ZYE" firstAttribute="top" secondItem="u6N-3k-i26" secondAttribute="bottom" constant="15" id="4Bi-00-AVV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="akM-2V-j1j" secondAttribute="trailing" id="6wg-h8-Jfq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lzX-7E-ZYE" secondAttribute="trailing" id="9K9-6B-Oay"/>
+                            <constraint firstItem="akM-2V-j1j" firstAttribute="top" secondItem="lzX-7E-ZYE" secondAttribute="bottom" constant="30" id="RkC-xO-I0Q"/>
                             <constraint firstItem="lzX-7E-ZYE" firstAttribute="leading" secondItem="eFP-Iv-iW8" secondAttribute="leadingMargin" id="cl1-ch-EuV"/>
                             <constraint firstItem="lzX-7E-ZYE" firstAttribute="centerX" secondItem="eFP-Iv-iW8" secondAttribute="centerX" id="m6i-uw-P3u"/>
                         </constraints>
@@ -357,7 +396,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zbg-xp-bgb" id="nlS-pc-cWU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="179.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNk-g3-3jp" userLabel="Card View">
@@ -556,7 +595,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kwj-eb-bYU" id="Jst-sH-bz7">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjF-8X-wal">
@@ -576,7 +615,7 @@
                                 <rect key="frame" x="0.0" y="108" width="414" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0sI-Xe-5U7" id="Kj0-XN-zyH">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="67.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQF-pa-mfB">
@@ -730,7 +769,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uzX-rU-d54" id="h5z-Ms-Hdb">
-                                    <rect key="frame" x="0.0" y="0.0" width="381" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="79.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X6-2P-KjI">
@@ -799,7 +838,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jjE-it-Ia6" id="jq5-AX-c0P">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="179.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8JC-L6-8jD" userLabel="Card View">

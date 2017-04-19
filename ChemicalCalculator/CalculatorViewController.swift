@@ -144,6 +144,10 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
     }
     
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 30
+    }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         performCalculation()
     }

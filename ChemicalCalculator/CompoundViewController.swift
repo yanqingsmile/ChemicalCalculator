@@ -112,19 +112,6 @@ class CompoundViewController: UIViewController {
 
 // MARK: - TextFieldDelegate
 extension CompoundViewController: TextFieldDelegate {
-    public func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        if textField is ErrorTextField {
-            //textFieldDidChange(textField as! ErrorTextField)
-        }
-    }
-    
-    public func textField(textField: UITextField, didClear text: String?) {
-        if textField is ErrorTextField {
-            //textFieldDidChange(textField as! ErrorTextField)
-        }
-    }
-    
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
         textField.resignFirstResponder()

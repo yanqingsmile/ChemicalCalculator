@@ -11,6 +11,8 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+
 
     var window: UIWindow?
     
@@ -32,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if compoundCount == 0 {
             loadIntoDatabase()
         }
+        
         return true
     }
 

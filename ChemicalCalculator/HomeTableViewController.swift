@@ -13,6 +13,7 @@ class HomeTableViewController: CoreDataTableViewController {
     
     //MARK: - Properties
     
+    
     let searchController = UISearchController(searchResultsController: nil)
     
     fileprivate var indexPathOfTappedAccessoryButton: IndexPath?
