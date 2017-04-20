@@ -14,16 +14,12 @@ class GroupDetailTableViewController: CoreDataTableViewController {
     // MARK: - Properties
     var group: Group?
     
-    
-    
-    
     // MARK: - View life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
         
     }
-    
     
     
     // MARK: - Table view data source

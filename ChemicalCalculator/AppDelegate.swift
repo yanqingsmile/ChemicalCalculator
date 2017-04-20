@@ -34,6 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if compoundCount == 0 {
             loadIntoDatabase()
         }
+        //window?.tintColor = UIColor(red: 251/255.0, green: 248/255.0, blue: 243/255.0, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
+        
+                
+        
         
         return true
     }

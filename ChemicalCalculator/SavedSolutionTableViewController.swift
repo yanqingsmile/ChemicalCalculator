@@ -157,9 +157,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if !tableView.isEditing {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+
         updateButtonsToMatchTableState()
     }
     
@@ -167,6 +165,15 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         updateButtonsToMatchTableState()
     }
     
+    
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        if !tableView.isEditing {
+            return false
+        }
+        return true
+    }
+ 
+
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

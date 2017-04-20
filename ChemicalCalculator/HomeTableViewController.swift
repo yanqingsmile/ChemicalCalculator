@@ -53,12 +53,6 @@ class HomeTableViewController: CoreDataTableViewController {
         } else {
             fetchedResultsController = nil
         }
-
-
-        
-    
-    
-        
         
         
         // Set up searchController
@@ -69,7 +63,7 @@ class HomeTableViewController: CoreDataTableViewController {
         refreshPlaceholderText()
         searchController.searchBar.delegate = self
         searchController.searchBar.scopeButtonTitles = ["name", "formula"]
-        
+        searchController.searchBar.barTintColor = UIColor(red: 145/255.0, green: 186/255.0, blue: 185/255.0, alpha: 0.8)
         
         
         // Uncomment the following line to preserve selection between presentations

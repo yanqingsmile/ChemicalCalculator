@@ -28,10 +28,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Compounds Library-->
+        <!--Home-->
         <scene sceneID="e0m-Fr-EcI">
             <objects>
-                <tableViewController id="prr-UF-lcz" customClass="HomeTableViewController" customModule="ChemicalCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Home" id="prr-UF-lcz" customClass="HomeTableViewController" customModule="ChemicalCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" id="yna-SP-vMd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,12 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                        <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="F9p-7I-JVd" kind="show" identifier="showDetail" trigger="accessoryAction" id="FGL-TU-OzX"/>
                                     <segue destination="8hX-fA-Lyk" kind="show" identifier="calculate" id="dW2-4u-oN1"/>
@@ -683,15 +689,16 @@
             </objects>
             <point key="canvasLocation" x="4536" y="1585"/>
         </scene>
-        <!--Home-->
+        <!--Compounds-->
         <scene sceneID="HQn-6u-afi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jM7-V3-cz2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="yhM-5z-Xby"/>
+                    <tabBarItem key="tabBarItem" title="Compounds" image="compounds" selectedImage="compounds" id="yhM-5z-Xby"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Rcq-PW-g5A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.56862745098039214" green="0.72941176470588232" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -710,6 +717,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oca-YT-LLr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -729,6 +737,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.98431372549019602" green="0.97254901960784312" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="jM7-V3-cz2" kind="relationship" relationship="viewControllers" id="jSN-gb-Pt3"/>
@@ -740,15 +750,16 @@
             </objects>
             <point key="canvasLocation" x="118.84057971014494" y="472.82608695652175"/>
         </scene>
-        <!--Saved-->
+        <!--Solution-->
         <scene sceneID="BQj-Tm-DHD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kCl-bm-2JZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Saved" id="6C6-lU-0Br" userLabel="Saved"/>
+                    <tabBarItem key="tabBarItem" title="Solution" image="solution" selectedImage="solution" id="6C6-lU-0Br" userLabel="Saved"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="e4t-0f-uJB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -926,7 +937,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U7K-qS-zJU" userLabel="Right Mass Stack View">
-                                                    <rect key="frame" x="162.33333333333337" y="54.333333333333329" width="165.66666666666663" height="45"/>
+                                                    <rect key="frame" x="162.33333333333337" y="55.333333333333329" width="165.66666666666663" height="45"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpI-8n-wf8">
                                                             <rect key="frame" x="0.0" y="0.0" width="33" height="15"/>
@@ -954,7 +965,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="createdDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbq-s5-7eR">
-                                                    <rect key="frame" x="206" y="109.33333333333334" width="79.666666666666686" height="15.000000000000014"/>
+                                                    <rect key="frame" x="206" y="110.33333333333334" width="79.666666666666686" height="15.000000000000014"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1030,6 +1041,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ecu-Ip-eSr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1044,11 +1056,12 @@
         <scene sceneID="8Ad-db-5Hh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FKZ-wc-cCZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Groups" id="Nna-55-YiR"/>
+                    <tabBarItem key="tabBarItem" title="Groups" image="group" selectedImage="group" id="Nna-55-YiR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O5K-Lv-dz2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1060,8 +1073,13 @@
             <point key="canvasLocation" x="118.84057971014494" y="1508.967391304348"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="compounds" width="25" height="25"/>
+        <image name="group" width="25" height="25"/>
+        <image name="solution" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KF4-hd-4Gj"/>
+        <segue reference="7cM-mR-8G0"/>
         <segue reference="rjQ-Ff-yK8"/>
     </inferredMetricsTieBreakers>
 </document>
