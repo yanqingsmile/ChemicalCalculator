@@ -60,7 +60,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
                                         <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -114,6 +114,9 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
                                                 <real key="value" value="30"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="Hak-Ax-Maj"/>
@@ -128,6 +131,9 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Formula"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
                                                 <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -145,6 +151,9 @@
                                                 <real key="value" value="30"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Invaild number"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="Q18-j6-rk1"/>
@@ -161,6 +170,9 @@
                                                 <real key="value" value="30"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Invalid number"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="asG-nH-AR4"/>
@@ -211,7 +223,7 @@
             </objects>
             <point key="canvasLocation" x="4159" y="128"/>
         </scene>
-        <!--Calculator View Controller-->
+        <!--Calculator-->
         <scene sceneID="eIS-Z6-tOy">
             <objects>
                 <viewController id="8hX-fA-Lyk" customClass="CalculatorViewController" customModule="ChemicalCalculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -244,6 +256,9 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="detailVerticalOffset">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                        <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="textFieldDidChange:" destination="8hX-fA-Lyk" eventType="editingChanged" id="00n-kg-AcB"/>
@@ -275,6 +290,9 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Final Volume"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                        <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="textFieldDidChange:" destination="8hX-fA-Lyk" eventType="editingChanged" id="q4P-4q-DNj"/>
@@ -306,6 +324,9 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mass"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                        <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="textFieldDidChange:" destination="8hX-fA-Lyk" eventType="editingChanged" id="sm6-bw-MI5"/>
@@ -367,7 +388,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="tIm-P1-ZZY">
+                    <navigationItem key="navigationItem" title="Calculator" id="tIm-P1-ZZY">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="xae-Cx-ELY">
                             <connections>
                                 <action selector="saveButtonClicked:" destination="8hX-fA-Lyk" id="q9E-WI-5uh"/>
@@ -398,7 +419,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="bcD-Gd-MOt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="solutionCell" id="Zbg-xp-bgb" customClass="SolutionTableViewCell" customModule="ChemicalCalculator" customModuleProvider="target">
@@ -412,19 +433,19 @@
                                             <rect key="frame" x="18" y="13" width="378" height="153.66666666666666"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="phL-FJ-mpW" userLabel="Left Half Stack View">
-                                                    <rect key="frame" x="20" y="0.0" width="232" height="154"/>
+                                                    <rect key="frame" x="20" y="5" width="232" height="143.66666666666666"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w2V-rN-VXt">
-                                                            <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="46.666666666666671"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Compound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktm-4p-kJ1">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="16.666666666666664"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NY3-fu-HT7">
-                                                                    <rect key="frame" x="0.0" y="25" width="66.333333333333329" height="25"/>
+                                                                    <rect key="frame" x="0.0" y="21.666666666666668" width="66.333333333333329" height="25.000000000000004"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="25"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -432,7 +453,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="75F-gd-xZ9">
-                                                            <rect key="frame" x="0.0" y="60" width="232" height="41"/>
+                                                            <rect key="frame" x="0.0" y="56.666666666666671" width="232" height="38"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concentration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-im-dVA">
                                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="15"/>
@@ -441,16 +462,16 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JEq-Rd-bNW">
-                                                                    <rect key="frame" x="0.0" y="20" width="232" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="20" width="232" height="18"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Concentration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njm-jO-r53">
-                                                                            <rect key="frame" x="0.0" y="2" width="102" height="17"/>
+                                                                            <rect key="frame" x="0.0" y="0.3333333333333286" width="102" height="17"/>
                                                                             <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ConcentrationUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWz-vR-gh8">
-                                                                            <rect key="frame" x="102" y="2" width="130" height="17"/>
+                                                                            <rect key="frame" x="102" y="0.3333333333333286" width="130" height="17"/>
                                                                             <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -460,25 +481,25 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OdP-1E-5b3">
-                                                            <rect key="frame" x="0.0" y="111" width="138" height="43"/>
+                                                            <rect key="frame" x="0.0" y="104.66666666666666" width="138" height="38.999999999999972"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87K-0X-nYb">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="48.333333333333329" height="15"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="48.333333333333329" height="14.999999999999986"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Oh9-wp-oQd">
-                                                                    <rect key="frame" x="0.0" y="20" width="138" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="19.999999999999986" width="138" height="19"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZa-L3-j9N">
-                                                                            <rect key="frame" x="0.0" y="3" width="55" height="17"/>
+                                                                            <rect key="frame" x="0.0" y="1" width="55" height="17"/>
                                                                             <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VolumeUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehD-J7-0oL">
-                                                                            <rect key="frame" x="55" y="3" width="83" height="17"/>
+                                                                            <rect key="frame" x="55" y="1" width="83" height="17"/>
                                                                             <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -490,7 +511,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TJ6-iM-Mzd" userLabel="Right Mass Stack View">
-                                                    <rect key="frame" x="195.66666666666663" y="55" width="162.33333333333337" height="45"/>
+                                                    <rect key="frame" x="195.66666666666663" y="54.666666666666671" width="162.33333333333337" height="45"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEU-qd-iE1">
                                                             <rect key="frame" x="0.0" y="0.0" width="33" height="15"/>
@@ -518,7 +539,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="createdDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaF-Aa-hgq">
-                                                    <rect key="frame" x="237.66666666666669" y="110" width="79.666666666666686" height="15"/>
+                                                    <rect key="frame" x="237.66666666666669" y="109.66666666666666" width="79.666666666666686" height="14.999999999999986"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -526,16 +547,25 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="phL-FJ-mpW" secondAttribute="bottom" id="LbS-cC-tZW"/>
+                                                <constraint firstAttribute="bottom" secondItem="phL-FJ-mpW" secondAttribute="bottom" constant="5" id="LbS-cC-tZW"/>
                                                 <constraint firstAttribute="trailing" secondItem="TJ6-iM-Mzd" secondAttribute="trailing" constant="20" id="U3P-bL-OFv"/>
                                                 <constraint firstItem="QaF-Aa-hgq" firstAttribute="top" secondItem="TJ6-iM-Mzd" secondAttribute="bottom" constant="10" id="UyH-jP-cCo"/>
                                                 <constraint firstItem="TJ6-iM-Mzd" firstAttribute="centerY" secondItem="yNk-g3-3jp" secondAttribute="centerY" id="lgT-Hy-kMJ"/>
                                                 <constraint firstItem="QaF-Aa-hgq" firstAttribute="centerX" secondItem="TJ6-iM-Mzd" secondAttribute="centerX" id="tQZ-An-8T0"/>
-                                                <constraint firstItem="phL-FJ-mpW" firstAttribute="top" secondItem="yNk-g3-3jp" secondAttribute="top" id="vzY-eH-1TI"/>
+                                                <constraint firstItem="phL-FJ-mpW" firstAttribute="top" secondItem="yNk-g3-3jp" secondAttribute="top" constant="5" id="vzY-eH-1TI"/>
                                                 <constraint firstItem="phL-FJ-mpW" firstAttribute="leading" secondItem="yNk-g3-3jp" secondAttribute="leading" constant="20" id="zEh-v8-xsa"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="yNk-g3-3jp" firstAttribute="bottom" secondItem="nlS-pc-cWU" secondAttribute="bottomMargin" constant="-5" id="AmG-g8-o2D"/>
                                         <constraint firstItem="yNk-g3-3jp" firstAttribute="leading" secondItem="nlS-pc-cWU" secondAttribute="leadingMargin" constant="10" id="BI9-Sh-vWI"/>
@@ -543,6 +573,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="yNk-g3-3jp" secondAttribute="trailing" constant="10" id="fjG-R5-ooc"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="cardView" destination="yNk-g3-3jp" id="kwD-nc-tLK"/>
                                     <outlet property="concentrationLabel" destination="Njm-jO-r53" id="CMp-mm-Fzs"/>
@@ -628,13 +659,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQF-pa-mfB">
-                                            <rect key="frame" x="15" y="25.666666666666664" width="90.333333333333329" height="16.999999999999993"/>
+                                            <rect key="frame" x="15" y="26.333333333333336" width="90.333333333333329" height="17.000000000000007"/>
                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QoK-7T-W0S">
-                                            <rect key="frame" x="312.66666666666674" y="25.333333333333329" width="73.333333333333314" height="35"/>
+                                            <rect key="frame" x="312.66666666666674" y="26.333333333333329" width="73.333333333333314" height="35"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cst-Uc-DTX">
                                                     <rect key="frame" x="20" y="0.0" width="33.333333333333314" height="17.000000000000004"/>
@@ -787,22 +818,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X6-2P-KjI">
-                                            <rect key="frame" x="15" y="31.666666666666664" width="90.333333333333329" height="16.999999999999993"/>
+                                            <rect key="frame" x="15" y="32.333333333333336" width="90.333333333333329" height="17"/>
                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6kT-lH-OZn">
-                                            <rect key="frame" x="279.66666666666674" y="31.333333333333329" width="73.333333333333314" height="35"/>
+                                            <rect key="frame" x="279.66666666666674" y="32.333333333333329" width="73.333333333333314" height="34.999999999999986"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhf-Vq-4WD">
-                                                    <rect key="frame" x="20" y="0.0" width="33.333333333333314" height="17.000000000000004"/>
+                                                    <rect key="frame" x="20" y="0.0" width="33.333333333333314" height="17"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last modified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekt-Ak-Iea">
-                                                    <rect key="frame" x="0.0" y="22.000000000000004" width="73.333333333333314" height="12.999999999999996"/>
+                                                    <rect key="frame" x="0.0" y="22" width="73.333333333333314" height="12.999999999999993"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -820,6 +851,12 @@
                                         <constraint firstItem="Nhf-Vq-4WD" firstAttribute="centerY" secondItem="h5z-Ms-Hdb" secondAttribute="centerY" id="tc8-ZU-pZD"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                        <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="groupNameLabel" destination="7X6-2P-KjI" id="WdN-wt-KHL"/>
                                     <outlet property="lastModifiedNoteLabel" destination="Ekt-Ak-Iea" id="B6v-D4-pKO"/>
@@ -828,6 +865,11 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="J0y-yh-qPn" id="RoS-Zu-FJo"/>
                             <outlet property="delegate" destination="J0y-yh-qPn" id="ThQ-qI-qjs"/>
@@ -937,7 +979,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U7K-qS-zJU" userLabel="Right Mass Stack View">
-                                                    <rect key="frame" x="162.33333333333337" y="55.333333333333329" width="165.66666666666663" height="45"/>
+                                                    <rect key="frame" x="162.33333333333337" y="55" width="165.66666666666663" height="45"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpI-8n-wf8">
                                                             <rect key="frame" x="0.0" y="0.0" width="33" height="15"/>
@@ -965,7 +1007,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="createdDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbq-s5-7eR">
-                                                    <rect key="frame" x="206" y="110.33333333333334" width="79.666666666666686" height="15.000000000000014"/>
+                                                    <rect key="frame" x="206" y="110" width="79.666666666666686" height="15"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -983,7 +1025,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Noj-m4-49h">
-                                            <rect key="frame" x="18" y="79.333333333333329" width="55.666666666666671" height="22"/>
+                                            <rect key="frame" x="18" y="79" width="55.666666666666671" height="22"/>
                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="22"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -998,6 +1040,11 @@
                                         <constraint firstItem="8JC-L6-8jD" firstAttribute="leading" secondItem="jq5-AX-c0P" secondAttribute="leadingMargin" constant="40" id="yFE-el-9dq"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                        <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="cardView" destination="8JC-L6-8jD" id="efq-gU-eEF"/>
                                     <outlet property="concentrationLabel" destination="hTU-qw-XTb" id="pKF-1H-sdw"/>
@@ -1012,6 +1059,11 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="jRl-ba-TRW" id="qpP-ND-Qo3"/>
                             <outlet property="delegate" destination="jRl-ba-TRW" id="Moy-V3-IkL"/>
@@ -1079,7 +1131,7 @@
         <image name="solution" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7cM-mR-8G0"/>
-        <segue reference="rjQ-Ff-yK8"/>
+        <segue reference="KF4-hd-4Gj"/>
+        <segue reference="FGL-TU-OzX"/>
     </inferredMetricsTieBreakers>
 </document>

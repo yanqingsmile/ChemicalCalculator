@@ -66,6 +66,11 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         super.viewDidLoad()
         
         tableView.separatorStyle = .none
+        
+        // Set up tableview background view color
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor.grayWhite()
+        tableView.backgroundView = bgView
        
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.

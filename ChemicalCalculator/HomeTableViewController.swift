@@ -63,14 +63,12 @@ class HomeTableViewController: CoreDataTableViewController {
         refreshPlaceholderText()
         searchController.searchBar.delegate = self
         searchController.searchBar.scopeButtonTitles = ["name", "formula"]
-        searchController.searchBar.barTintColor = UIColor(red: 145/255.0, green: 186/255.0, blue: 185/255.0, alpha: 0.8)
         
+        // Set up tableview background view color
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor.grayWhite()
+        tableView.backgroundView = bgView
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     

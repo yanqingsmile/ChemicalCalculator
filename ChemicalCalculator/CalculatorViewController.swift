@@ -98,6 +98,11 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     // MARK: - View set up
     override func viewDidLoad() {
         super.viewDidLoad()
+        // change navigation bar backItem title
+        let backItem = UIBarButtonItem()
+        backItem.title = "Library"
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backItem
+    
         
         if let compound = compound {
             compoundNameLabel.text = compound.name

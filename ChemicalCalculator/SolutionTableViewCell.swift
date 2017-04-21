@@ -52,13 +52,14 @@ class SolutionTableViewCell: UITableViewCell {
     }
     
     fileprivate func cardSetup() {
-        cardView.layer.masksToBounds = false
+        // cardView.layer.masksToBounds = false
         cardView.layer.cornerRadius = 10
-        cardView.layer.shadowOffset = CGSize(width: 5, height: 5)
-        cardView.layer.shadowRadius = 2
-        let path = UIBezierPath(rect: cardView.bounds)
-        cardView.layer.shadowPath = path.cgPath
-        cardView.layer.shadowOpacity = 0.2
+        //cardView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        //cardView.layer.shadowRadius = 2
+        //let path = UIBezierPath(rect: cardView.bounds)
+        
+        //cardView.layer.shadowPath = path.cgPath
+        //cardView.layer.shadowOpacity = 0.2
     
     }
 

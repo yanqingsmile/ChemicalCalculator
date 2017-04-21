@@ -36,9 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         //window?.tintColor = UIColor(red: 251/255.0, green: 248/255.0, blue: 243/255.0, alpha: 1.0)
         UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        UISegmentedControl.appearance().tintColor = UIColor.warmOrange()
+        UISegmentedControl.appearance().backgroundColor = UIColor.grayWhite()
+        UISearchBar.appearance().backgroundColor = UIColor.warmOrange()
+        UISearchBar.appearance().barTintColor = UIColor.grayWhite()
+        UISearchBar.appearance().tintColor = UIColor.warmOrange()
         
-        
-                
+
         
         
         return true

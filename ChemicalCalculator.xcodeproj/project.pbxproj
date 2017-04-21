@@ -23,6 +23,7 @@
 		1968288D1E7291DF001F3FB6 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 1968288C1E7291DF001F3FB6 /* Fonts */; };
 		196828911E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */; };
 		196828931E7E4AF3001F3FB6 /* SolutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */; };
+		199F29F21EA932FC006E0F12 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F29F11EA932FB006E0F12 /* UIExtensions.swift */; };
 		19EC6CE81E8846DE001E3471 /* AddToTemporaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CE71E8846DE001E3471 /* AddToTemporaryTableViewController.swift */; };
 		19EC6CEA1E88489F001E3471 /* NewGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CE91E88489F001E3471 /* NewGroupTableViewCell.swift */; };
 		19EC6CEC1E8863FD001E3471 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */; };
@@ -53,6 +54,7 @@
 		1968288C1E7291DF001F3FB6 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedSolutionTableViewController.swift; sourceTree = "<group>"; };
 		196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionTableViewCell.swift; sourceTree = "<group>"; };
+		199F29F11EA932FB006E0F12 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		19EC6CE71E8846DE001E3471 /* AddToTemporaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToTemporaryTableViewController.swift; sourceTree = "<group>"; };
 		19EC6CE91E88489F001E3471 /* NewGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroupTableViewCell.swift; sourceTree = "<group>"; };
 		19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */,
 				19EC6CEF1E8C5AA7001E3471 /* GroupTableViewController.swift */,
 				19EC6CF11E8C69A1001E3471 /* GroupDetailTableViewController.swift */,
+				199F29F11EA932FB006E0F12 /* UIExtensions.swift */,
 				1968283F1E58207F001F3FB6 /* Main.storyboard */,
 				196828791E582D42001F3FB6 /* Supporting Files */,
 			);
@@ -290,6 +293,7 @@
 				19EC6CEA1E88489F001E3471 /* NewGroupTableViewCell.swift in Sources */,
 				19EC6CEC1E8863FD001E3471 /* GroupTableViewCell.swift in Sources */,
 				19EC6CE81E8846DE001E3471 /* AddToTemporaryTableViewController.swift in Sources */,
+				199F29F21EA932FC006E0F12 /* UIExtensions.swift in Sources */,
 				196828911E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift in Sources */,
 				1968286F1E582A40001F3FB6 /* Solution+CoreDataClass.swift in Sources */,
 				196828811E5BA53A001F3FB6 /* CompoundViewController.swift in Sources */,
