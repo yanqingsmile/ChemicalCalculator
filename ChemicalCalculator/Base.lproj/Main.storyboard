@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mmj-IK-Quq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mmj-IK-Quq">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -360,14 +360,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lzX-7E-ZYE">
                                 <rect key="frame" x="20" y="79" width="374" height="127"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Compound Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8V-6M-k7z">
-                                        <rect key="frame" x="84.666666666666686" y="0.0" width="204.66666666666663" height="99"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8V-6M-k7z">
+                                        <rect key="frame" x="152.66666666666666" y="0.0" width="69" height="99"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Molecular Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAQ-ef-FDa">
-                                        <rect key="frame" x="126.66666666666667" y="109" width="121.00000000000001" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAQ-ef-FDa">
+                                        <rect key="frame" x="164.66666666666666" y="109" width="45" height="18"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -397,13 +397,13 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="compoundNameLabel" destination="Y8V-6M-k7z" id="d2c-6S-v6L"/>
                         <outlet property="concentrationUnitPickerView" destination="fFo-Bt-EML" id="St1-Bw-7YV"/>
+                        <outlet property="detailLabel" destination="YAQ-ef-FDa" id="JyC-rr-Aki"/>
                         <outlet property="finalConcTextField" destination="BHX-CG-ph4" id="mCo-Y6-D9H"/>
                         <outlet property="finalVolumeTextField" destination="02A-CE-6Jn" id="LEQ-zG-OPb"/>
-                        <outlet property="massUnitPickerView" destination="xyc-HX-eXL" id="IyV-Wr-NJF"/>
-                        <outlet property="molecularMassLabel" destination="YAQ-ef-FDa" id="tl5-4i-eUT"/>
+                        <outlet property="nameLabel" destination="Y8V-6M-k7z" id="cUq-IB-6WQ"/>
                         <outlet property="resultTextField" destination="7RW-9G-BAF" id="btb-iz-gm4"/>
+                        <outlet property="resultUnitPickerView" destination="xyc-HX-eXL" id="Q0T-vH-kzl"/>
                         <outlet property="saveButton" destination="xae-Cx-ELY" id="vcL-18-j31"/>
                         <outlet property="volumeUnitPickerView" destination="1Je-Hy-GRs" id="YOs-pB-wag"/>
                     </connections>
@@ -511,7 +511,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TJ6-iM-Mzd" userLabel="Right Mass Stack View">
-                                                    <rect key="frame" x="195.66666666666663" y="54.666666666666671" width="162.33333333333337" height="45"/>
+                                                    <rect key="frame" x="195.66666666666663" y="55" width="162.33333333333337" height="45"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEU-qd-iE1">
                                                             <rect key="frame" x="0.0" y="0.0" width="33" height="15"/>
@@ -539,7 +539,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="createdDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaF-Aa-hgq">
-                                                    <rect key="frame" x="237.66666666666669" y="109.66666666666666" width="79.666666666666686" height="14.999999999999986"/>
+                                                    <rect key="frame" x="237.66666666666669" y="110" width="79.666666666666686" height="15"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -659,13 +659,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQF-pa-mfB">
-                                            <rect key="frame" x="15" y="26.333333333333336" width="90.333333333333329" height="17.000000000000007"/>
+                                            <rect key="frame" x="15" y="25.666666666666664" width="90.333333333333329" height="16.999999999999993"/>
                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QoK-7T-W0S">
-                                            <rect key="frame" x="312.66666666666674" y="26.333333333333329" width="73.333333333333314" height="35"/>
+                                            <rect key="frame" x="312.66666666666674" y="25.333333333333329" width="73.333333333333314" height="35"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cst-Uc-DTX">
                                                     <rect key="frame" x="20" y="0.0" width="33.333333333333314" height="17.000000000000004"/>
@@ -726,7 +726,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jM7-V3-cz2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Compounds" image="compounds" selectedImage="compounds" id="yhM-5z-Xby"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Rcq-PW-g5A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rcq-PW-g5A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.56862745098039214" green="0.72941176470588232" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
@@ -745,7 +745,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dYt-zD-WDg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oca-YT-LLr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oca-YT-LLr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -787,7 +787,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kCl-bm-2JZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Solution" image="solution" selectedImage="solution" id="6C6-lU-0Br" userLabel="Saved"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="e4t-0f-uJB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e4t-0f-uJB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -818,22 +818,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X6-2P-KjI">
-                                            <rect key="frame" x="15" y="32.333333333333336" width="90.333333333333329" height="17"/>
+                                            <rect key="frame" x="15" y="31.666666666666664" width="90.333333333333329" height="16.999999999999993"/>
                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6kT-lH-OZn">
-                                            <rect key="frame" x="279.66666666666674" y="32.333333333333329" width="73.333333333333314" height="34.999999999999986"/>
+                                            <rect key="frame" x="279.66666666666674" y="31.333333333333329" width="73.333333333333314" height="35"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhf-Vq-4WD">
-                                                    <rect key="frame" x="20" y="0.0" width="33.333333333333314" height="17"/>
+                                                    <rect key="frame" x="20" y="0.0" width="33.333333333333314" height="17.000000000000004"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last modified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekt-Ak-Iea">
-                                                    <rect key="frame" x="0.0" y="22" width="73.333333333333314" height="12.999999999999993"/>
+                                                    <rect key="frame" x="0.0" y="22.000000000000004" width="73.333333333333314" height="12.999999999999996"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -979,7 +979,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U7K-qS-zJU" userLabel="Right Mass Stack View">
-                                                    <rect key="frame" x="162.33333333333337" y="55" width="165.66666666666663" height="45"/>
+                                                    <rect key="frame" x="162.33333333333337" y="55.333333333333329" width="165.66666666666663" height="45"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpI-8n-wf8">
                                                             <rect key="frame" x="0.0" y="0.0" width="33" height="15"/>
@@ -1007,7 +1007,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="createdDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbq-s5-7eR">
-                                                    <rect key="frame" x="206" y="110" width="79.666666666666686" height="15"/>
+                                                    <rect key="frame" x="206" y="110.33333333333334" width="79.666666666666686" height="15.000000000000014"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1025,7 +1025,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Noj-m4-49h">
-                                            <rect key="frame" x="18" y="79" width="55.666666666666671" height="22"/>
+                                            <rect key="frame" x="18" y="79.333333333333329" width="55.666666666666671" height="22"/>
                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="22"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -1090,7 +1090,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E2Y-Gw-3ha" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ecu-Ip-eSr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ecu-Ip-eSr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -1110,7 +1110,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FKZ-wc-cCZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Groups" image="group" selectedImage="group" id="Nna-55-YiR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O5K-Lv-dz2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O5K-Lv-dz2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>

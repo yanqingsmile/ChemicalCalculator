@@ -10,12 +10,18 @@ import UIKit
 import CoreData
 import Material
 
+enum CalculatorViewControllerStyle {
+    case weight, dilution
+}
+
 class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     
     // MARK: - Properties
     var compound: Compound?
+    var stockSolution: Solution?
+    var style: CalculatorViewControllerStyle = .weight
     var managedObjectContext: NSManagedObjectContext? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
-
     
     var result: Double {
         get {
@@ -30,11 +36,13 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     let volumeUnits = ["uL", "mL", "L"]
     let massUnits = ["mg", "g", "kg"]
     
+    
+    
     // MARK: - IBOutlets
     
-    @IBOutlet weak var compoundNameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var molecularMassLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
     
     @IBOutlet weak var finalConcTextField: ErrorTextField!
     
@@ -44,11 +52,9 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     @IBOutlet weak var concentrationUnitPickerView: UIPickerView!
     
-
     @IBOutlet weak var volumeUnitPickerView: UIPickerView!
     
-    @IBOutlet weak var massUnitPickerView: UIPickerView!
-    
+    @IBOutlet weak var resultUnitPickerView: UIPickerView!
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
@@ -73,7 +79,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         {
             let volumeUnit = volumeUnits[volumeUnitPickerView.selectedRow(inComponent: 0)]
             let concUnit = concentrationUnits[concentrationUnitPickerView.selectedRow(inComponent: 0)]
-            let massUnit = massUnits[massUnitPickerView.selectedRow(inComponent: 0)]
+            let massUnit = massUnits[resultUnitPickerView.selectedRow(inComponent: 0)]
             
             if let context = managedObjectContext {
                 context.performAndWait({
@@ -100,26 +106,36 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         super.viewDidLoad()
         // change navigation bar backItem title
         let backItem = UIBarButtonItem()
-        backItem.title = "Library"
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backItem
-    
-        
-        if let compound = compound {
-            compoundNameLabel.text = compound.name
-            molecularMassLabel.text = String(compound.molecularMass) + " g/mol"
+        switch style {
+        case .weight:
+            backItem.title = "Library"
+            if let compound = compound {
+                nameLabel.text = compound.name
+                detailLabel.text = String(compound.molecularMass) + " g/mol"
+            }
+        case .dilution:
+            backItem.title = "Stock Solution"
+            if let stockSolution = stockSolution {
+                nameLabel.text = stockSolution.solute?.name
+                detailLabel.text = String(describing: stockSolution.finalConcentration) + " " + String(describing: stockSolution.concentrationUnit)
+            }
         }
         
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backItem
+    
+
         concentrationUnitPickerView.selectRow(3, inComponent: 0, animated: true)
         volumeUnitPickerView.selectRow(1, inComponent: 0, animated: true)
-        massUnitPickerView.selectRow(1, inComponent: 0, animated: true)
+        resultUnitPickerView.selectRow(1, inComponent: 0, animated: true)
         
         checkValidSolution()
         
         removeSelectionIndicator(in: concentrationUnitPickerView)
         removeSelectionIndicator(in: volumeUnitPickerView)
-        removeSelectionIndicator(in: massUnitPickerView)
+        removeSelectionIndicator(in: resultUnitPickerView)
     }
     
+    // remove pickerView seperator line
     fileprivate func removeSelectionIndicator(in pickerView: UIPickerView) {
         pickerView.subviews[1].isHidden = true
         pickerView.subviews[2].isHidden = true
@@ -130,7 +146,13 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         switch pickerView {
         case concentrationUnitPickerView: return concentrationUnits[row]
         case volumeUnitPickerView: return volumeUnits[row]
-        case massUnitPickerView: return massUnits[row]
+        case resultUnitPickerView:
+            switch style {
+            case .weight:
+                return massUnits[row]
+            case .dilution:
+                return volumeUnits[row]
+            }
         default: return nil
         }
     }
@@ -143,10 +165,15 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         switch pickerView {
         case concentrationUnitPickerView: return concentrationUnits.count
         case volumeUnitPickerView: return volumeUnits.count
-        case massUnitPickerView: return massUnits.count
+        case resultUnitPickerView:
+            switch style {
+            case .weight:
+                return massUnits.count
+            case .dilution:
+                return volumeUnits.count
+            }
         default: return 0
         }
-
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
@@ -162,10 +189,10 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     
     // convert user input conc unit to g/L
-    fileprivate func convertToStandardConc(fromInputConc conc: String?, withUnit unit: UIPickerView) -> Double? {
+    fileprivate func convertToStandardConc(fromInputConc conc: String?, withUnit unit: String) -> Double? {
         if let molecularMass = compound?.molecularMass {
             let inputConcentration = Double(conc ?? "0") ?? 0
-            switch concentrationUnits[unit.selectedRow(inComponent: 0)] {
+            switch unit {
             case "nmol/L":
                 return inputConcentration * molecularMass / 1000000
             case "mmol/L":
@@ -216,13 +243,37 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
     }
     
-    // perform calculation
-    fileprivate func performCalculation() {
-        if let conc = convertToStandardConc(fromInputConc: finalConcTextField.text, withUnit: concentrationUnitPickerView), let volume = convertToStandardVolume(fromInputVolume: finalVolumeTextField.text, withUnit: volumeUnitPickerView) {
-            let mass = conc * volume
-            result = convertToUserChoosedMassUnit(fromComputedMass: mass, toUnit: massUnitPickerView)!
+    //convert computed volume result from L to user choosed unit
+    fileprivate func convertToUserChoosedVolumeUnit(fromComputedVolume volume: Double, toUnit unit: UIPickerView) -> Double? {
+        switch  volumeUnits[unit.selectedRow(inComponent: 0)] {
+        case "uL":
+            return volume * 1000000
+        case "mL":
+            return volume * 1000
+        case "L":
+            return volume
+        default:
+            return nil
         }
     }
+    
+    // perform calculation
+    fileprivate func performCalculation() {
+        if let conc = convertToStandardConc(fromInputConc: finalConcTextField.text, withUnit: concentrationUnits[concentrationUnitPickerView.selectedRow(inComponent: 0)]), let volume = convertToStandardVolume(fromInputVolume: finalVolumeTextField.text, withUnit: volumeUnitPickerView) {
+            switch style {
+            case .weight:
+                let mass = conc * volume
+                result = convertToUserChoosedMassUnit(fromComputedMass: mass, toUnit: resultUnitPickerView)!
+            case .dilution:
+                if let stockConcentration = convertToStandardConc(fromInputConc: String(describing:stockSolution!.finalConcentration), withUnit: stockSolution!.concentrationUnit!) {
+                    let stockVolume = conc * volume / stockConcentration
+                    result = convertToUserChoosedVolumeUnit(fromComputedVolume: stockVolume, toUnit: resultUnitPickerView)!
+                }
+                
+            }
+        }
+    }
+        
     
     fileprivate func checkValidSolution() {
         let volume = Double(finalVolumeTextField.text!)
