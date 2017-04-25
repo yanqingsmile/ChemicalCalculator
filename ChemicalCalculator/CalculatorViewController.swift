@@ -108,16 +108,19 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         let backItem = UIBarButtonItem()
         switch style {
         case .weight:
+            title = "Calculator"
             backItem.title = "Library"
             if let compound = compound {
                 nameLabel.text = compound.name
                 detailLabel.text = String(compound.molecularMass) + " g/mol"
             }
         case .dilution:
+            title = "Dilution"
             backItem.title = "Stock Solution"
+            resultTextField.placeholder = "Volume of Stock Solution"
             if let stockSolution = stockSolution {
                 nameLabel.text = stockSolution.solute?.name
-                detailLabel.text = String(describing: stockSolution.finalConcentration) + " " + String(describing: stockSolution.concentrationUnit)
+                detailLabel.text = String(describing: stockSolution.finalConcentration) + " " + String(describing: stockSolution.concentrationUnit!)
             }
         }
         

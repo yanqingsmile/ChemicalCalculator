@@ -82,7 +82,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = "Search from \(solutionCount) saved solutions"
+        refreshPlaceholderText()
         
         // Allow bulk selection
         tableView.allowsMultipleSelectionDuringEditing = true
@@ -172,9 +172,9 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     
     
     override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        if !tableView.isEditing {
-            return false
-        }
+        //if !tableView.isEditing {
+            //return false
+        //}
         return true
     }
  
@@ -201,6 +201,12 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return nil
     }
+    
+    override func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        super.controllerDidChangeContent(controller)
+        refreshPlaceholderText()
+    }
+    
     
     // MARK: - Methods
     func filterContentForSearchText(searchText: String?) {
@@ -235,6 +241,11 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         }
     }
     
+    fileprivate func refreshPlaceholderText() {
+        let count = (UIApplication.shared.delegate as! AppDelegate).compoundCount
+        searchController.searchBar.placeholder = "Search from \(count) compounds"
+    }
+    
     
     // MARK: - Navigation
     
@@ -246,6 +257,15 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
             if let selectedIndexPaths = tableView.indexPathsForSelectedRows {
                 let selectedSolutions = selectedIndexPaths.map{fetchedResultsController?.object(at: $0) as! Solution}
                 addToTemporaryTVC.toAddSolutions = selectedSolutions
+            }
+        } else if segue.identifier == "make a dilution" {
+            let calculatorVC = segue.destination as! CalculatorViewController
+            calculatorVC.style = .dilution
+            if let selectedCell = sender as? UITableViewCell {
+                let selectedIndexPath = tableView.indexPath(for: selectedCell)
+                let selectedSolution = fetchedResultsController?.object(at: selectedIndexPath!) as! Solution
+                calculatorVC.stockSolution = selectedSolution
+                calculatorVC.compound = selectedSolution.solute
             }
         }
     }

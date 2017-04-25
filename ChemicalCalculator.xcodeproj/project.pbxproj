@@ -24,6 +24,7 @@
 		196828911E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */; };
 		196828931E7E4AF3001F3FB6 /* SolutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */; };
 		199F29F21EA932FC006E0F12 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F29F11EA932FB006E0F12 /* UIExtensions.swift */; };
+		19A42E591EAC6D72004909C3 /* DilutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A42E581EAC6D72004909C3 /* DilutionTableViewCell.swift */; };
 		19EC6CE81E8846DE001E3471 /* AddToTemporaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CE71E8846DE001E3471 /* AddToTemporaryTableViewController.swift */; };
 		19EC6CEA1E88489F001E3471 /* NewGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CE91E88489F001E3471 /* NewGroupTableViewCell.swift */; };
 		19EC6CEC1E8863FD001E3471 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */; };
@@ -55,6 +56,7 @@
 		196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedSolutionTableViewController.swift; sourceTree = "<group>"; };
 		196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionTableViewCell.swift; sourceTree = "<group>"; };
 		199F29F11EA932FB006E0F12 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		19A42E581EAC6D72004909C3 /* DilutionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DilutionTableViewCell.swift; sourceTree = "<group>"; };
 		19EC6CE71E8846DE001E3471 /* AddToTemporaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToTemporaryTableViewController.swift; sourceTree = "<group>"; };
 		19EC6CE91E88489F001E3471 /* NewGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroupTableViewCell.swift; sourceTree = "<group>"; };
 		19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				196828801E5BA53A001F3FB6 /* CompoundViewController.swift */,
 				196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */,
 				196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */,
+				19A42E581EAC6D72004909C3 /* DilutionTableViewCell.swift */,
 				19EC6CE71E8846DE001E3471 /* AddToTemporaryTableViewController.swift */,
 				19EC6CE91E88489F001E3471 /* NewGroupTableViewCell.swift */,
 				19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */,
@@ -307,6 +310,7 @@
 				196828871E6D3496001F3FB6 /* CalculatorViewController.swift in Sources */,
 				196828931E7E4AF3001F3FB6 /* SolutionTableViewCell.swift in Sources */,
 				196828441E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld in Sources */,
+				19A42E591EAC6D72004909C3 /* DilutionTableViewCell.swift in Sources */,
 				19EC6CF71E97608C001E3471 /* Compound+CoreDataProperties.swift in Sources */,
 				19EC6CF01E8C5AA7001E3471 /* GroupTableViewController.swift in Sources */,
 				19EC6CF91E97608C001E3471 /* Solution+CoreDataProperties.swift in Sources */,
