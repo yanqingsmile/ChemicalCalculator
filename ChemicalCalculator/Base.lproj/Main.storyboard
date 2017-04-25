@@ -448,19 +448,19 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9gp-6i-GFx">
                                                             <rect key="frame" x="0.0" y="0.0" width="119.66666666666666" height="73"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEU-qd-iE1">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concentration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-im-dVA">
                                                                     <rect key="frame" x="0.0" y="0.0" width="119.66666666666666" height="22.999999999999993"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concentration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-im-dVA">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87K-0X-nYb">
                                                                     <rect key="frame" x="0.0" y="24.999999999999993" width="119.66666666666666" height="23"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87K-0X-nYb">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEU-qd-iE1">
                                                                     <rect key="frame" x="0.0" y="49.999999999999993" width="119.66666666666666" height="23.000000000000007"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -471,21 +471,21 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="TcU-qh-Gds">
                                                             <rect key="frame" x="124.66666666666666" y="0.0" width="88" height="73"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yh-hV-ffs">
-                                                                    <rect key="frame" x="39.666666666666686" y="0.0" width="48.333333333333314" height="22.999999999999993"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" ambiguous="YES" text="Conc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njm-jO-r53">
-                                                                    <rect key="frame" x="43.333333333333343" y="24.999999999999993" width="44.666666666666657" height="23"/>
+                                                                    <rect key="frame" x="43.333333333333343" y="0.0" width="44.666666666666657" height="22.999999999999993"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZa-L3-j9N">
-                                                                    <rect key="frame" x="25" y="49.999999999999993" width="63" height="23.000000000000007"/>
+                                                                    <rect key="frame" x="25" y="24.999999999999993" width="63" height="23"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yh-hV-ffs">
+                                                                    <rect key="frame" x="39.666666666666686" y="49.999999999999993" width="48.333333333333314" height="23.000000000000007"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -494,21 +494,21 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9lb-XK-qGP">
                                                             <rect key="frame" x="217.66666666666663" y="0.0" width="97.333333333333371" height="73"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="MassUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfw-z5-Qgk">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="86.000000000000028" height="22.999999999999993"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ConcUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWz-vR-gh8">
-                                                                    <rect key="frame" x="0.0" y="24.999999999999993" width="78.666666666666657" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="78.666666666666657" height="22.999999999999993"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="VolumeUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehD-J7-0oL">
-                                                                    <rect key="frame" x="0.0" y="49.999999999999993" width="97.333333333333343" height="23.000000000000007"/>
+                                                                    <rect key="frame" x="0.0" y="24.999999999999993" width="97.333333333333343" height="23"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="MassUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfw-z5-Qgk">
+                                                                    <rect key="frame" x="0.0" y="49.999999999999993" width="86.000000000000028" height="23.000000000000007"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -577,124 +577,97 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvX-fl-u8H" userLabel="Card View">
                                             <rect key="frame" x="18" y="13" width="345" height="153.66666666666666"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LuP-8S-0WU" userLabel="concentrationStack View">
-                                                    <rect key="frame" x="19.999999999999986" y="40" width="200.33333333333334" height="17"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Concentration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf5-OA-AnM">
-                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="15"/>
-                                                            <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
-                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9AB-VN-lRW" userLabel="concUnitStackView">
-                                                            <rect key="frame" x="95.000000000000014" y="0.0" width="105.33333333333336" height="17"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" ambiguous="YES" text="Conc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeb-Vu-OR3">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="38.666666666666657" height="17"/>
-                                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ConcUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m4-gU-qLs">
-                                                                    <rect key="frame" x="38.666666666666657" y="0.0" width="66.666666666666686" height="17"/>
-                                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fAg-hj-FEk" userLabel="stockConcentrationStack View">
-                                                    <rect key="frame" x="19.999999999999986" y="87" width="239.66666666666666" height="17"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Stock Concentration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctm-i0-3XP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="15"/>
-                                                            <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
-                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CuC-KW-Jd1" userLabel="concUnitStackView">
-                                                            <rect key="frame" x="134.33333333333334" y="0.0" width="105.33333333333331" height="17"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" ambiguous="YES" text="Conc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnu-A7-YqA">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="38.666666666666657" height="17"/>
-                                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ConcUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X4-hN-H9a">
-                                                                    <rect key="frame" x="38.666666666666657" y="0.0" width="66.666666666666657" height="17"/>
-                                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gQq-lB-ixh" userLabel="stockNeededStackView">
-                                                    <rect key="frame" x="133.66666666666663" y="87" width="213.33333333333337" height="25"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Stock needed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHu-VP-Yeq">
-                                                            <rect key="frame" x="0.0" y="0.0" width="90.333333333333343" height="15"/>
-                                                            <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
-                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fQm-PG-dlY">
-                                                            <rect key="frame" x="95.333333333333343" y="0.0" width="118" height="25"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Vol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xT7-0T-32k">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="36" height="25"/>
-                                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="25"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="VolUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUP-ip-gG2">
-                                                                    <rect key="frame" x="36" y="0.0" width="82" height="25"/>
-                                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="25"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="createdDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTz-NG-AGC">
-                                                    <rect key="frame" x="217" y="23" width="79.666666666666686" height="15.000000000000014"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ht7-st-sLf">
-                                                    <rect key="frame" x="142" y="0.0" width="66.333333333333329" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ht7-st-sLf">
+                                                    <rect key="frame" x="143.33333333333334" y="0.0" width="58.333333333333314" height="26.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eyV-vN-C3a" userLabel="volumeStackView">
-                                                    <rect key="frame" x="19" y="62" width="191.33333333333337" height="17"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rVv-ks-4EU">
+                                                    <rect key="frame" x="15" y="34.333333333333343" width="315" height="98"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9d-QF-uQF">
-                                                            <rect key="frame" x="0.0" y="0.0" width="48.333333333333343" height="15"/>
-                                                            <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="15"/>
-                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mqc-PD-t7v">
-                                                            <rect key="frame" x="53.333333333333343" y="0.0" width="138" height="17"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="jPb-ty-cR1">
+                                                            <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="98"/>
                                                             <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concentration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf5-OA-AnM">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="119.66666666666666" height="22.999999999999993"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9d-QF-uQF">
+                                                                    <rect key="frame" x="0.0" y="24.999999999999993" width="63" height="23"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Stock Concentration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctm-i0-3XP">
+                                                                    <rect key="frame" x="0.0" y="49.999999999999993" width="144.66666666666666" height="23.000000000000007"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock needed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHu-VP-Yeq">
+                                                                    <rect key="frame" x="0.0" y="75" width="117" height="23.000000000000014"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5pC-i0-xUw">
+                                                            <rect key="frame" x="149.66666666666666" y="0.0" width="63" height="98"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" ambiguous="YES" text="Conc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeb-Vu-OR3">
+                                                                    <rect key="frame" x="18.333333333333343" y="0.0" width="44.666666666666657" height="22.999999999999993"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ths-wg-U87">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="17"/>
-                                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="24.999999999999993" width="63" height="23"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" ambiguous="YES" text="Conc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnu-A7-YqA" userLabel="StockConc">
+                                                                    <rect key="frame" x="18.333333333333343" y="49.999999999999993" width="44.666666666666657" height="23.000000000000007"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Vol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xT7-0T-32k" userLabel="StockVol">
+                                                                    <rect key="frame" x="34.333333333333343" y="75" width="28.666666666666657" height="23.000000000000014"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6T6-uQ-ATx">
+                                                            <rect key="frame" x="217.66666666666663" y="0.0" width="97.333333333333371" height="98"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ConcUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m4-gU-qLs">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="78.666666666666657" height="22.999999999999993"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="VolumeUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6L-Au-GSb">
-                                                                    <rect key="frame" x="55" y="0.0" width="83" height="17"/>
-                                                                    <fontDescription key="fontDescription" name="ProximaNova-Thin" family="Proxima Nova" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="24.999999999999993" width="97.333333333333343" height="23"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ConcUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X4-hN-H9a" userLabel="StockConcUnit">
+                                                                    <rect key="frame" x="0.0" y="49.999999999999993" width="78.666666666666657" height="23.000000000000007"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="VolUnit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUP-ip-gG2" userLabel="StockVolUnit">
+                                                                    <rect key="frame" x="0.0" y="75" width="66.333333333333343" height="23.000000000000014"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -702,15 +675,22 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="createdDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTz-NG-AGC">
+                                                    <rect key="frame" x="138" y="134.33333333333334" width="69.666666666666657" height="14.333333333333314"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="eyV-vN-C3a" secondAttribute="trailing" constant="20" id="0tI-df-u0f"/>
-                                                <constraint firstItem="gQq-lB-ixh" firstAttribute="top" secondItem="eyV-vN-C3a" secondAttribute="bottom" constant="10" id="JDo-Ri-neg"/>
-                                                <constraint firstItem="gQq-lB-ixh" firstAttribute="leading" secondItem="eyV-vN-C3a" secondAttribute="leading" id="O6V-zY-caF"/>
-                                                <constraint firstItem="fAg-hj-FEk" firstAttribute="top" secondItem="LuP-8S-0WU" secondAttribute="bottom" constant="10" id="nte-4B-lsJ"/>
-                                                <constraint firstItem="eyV-vN-C3a" firstAttribute="centerY" secondItem="LuP-8S-0WU" secondAttribute="centerY" id="qje-pG-RDm"/>
-                                                <constraint firstItem="TTz-NG-AGC" firstAttribute="trailing" secondItem="eyV-vN-C3a" secondAttribute="trailing" id="ySz-PN-Y0X"/>
+                                                <constraint firstItem="ht7-st-sLf" firstAttribute="centerX" secondItem="rvX-fl-u8H" secondAttribute="centerX" id="3n3-Vu-hkY"/>
+                                                <constraint firstItem="rVv-ks-4EU" firstAttribute="leading" secondItem="rvX-fl-u8H" secondAttribute="leading" constant="15" id="8bG-ET-aH5"/>
+                                                <constraint firstItem="rVv-ks-4EU" firstAttribute="top" secondItem="ht7-st-sLf" secondAttribute="bottom" constant="8" id="MgD-hX-1wf"/>
+                                                <constraint firstAttribute="bottom" secondItem="TTz-NG-AGC" secondAttribute="bottom" constant="5" id="ZLN-JJ-Wkl"/>
+                                                <constraint firstItem="TTz-NG-AGC" firstAttribute="centerX" secondItem="rvX-fl-u8H" secondAttribute="centerX" id="lJk-79-wgI"/>
+                                                <constraint firstItem="ht7-st-sLf" firstAttribute="top" secondItem="rvX-fl-u8H" secondAttribute="top" id="msE-X8-BTN"/>
+                                                <constraint firstAttribute="trailing" secondItem="rVv-ks-4EU" secondAttribute="trailing" constant="15" id="xJQ-Gu-RER"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
