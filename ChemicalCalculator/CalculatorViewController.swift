@@ -75,23 +75,33 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
         if let volume = Double(finalVolumeTextField.text!),
             let conc = Double(finalConcTextField.text!),
-            let mass = Double(resultTextField.text!)
+            let result = Double(resultTextField.text!)
         {
             let volumeUnit = volumeUnits[volumeUnitPickerView.selectedRow(inComponent: 0)]
             let concUnit = concentrationUnits[concentrationUnitPickerView.selectedRow(inComponent: 0)]
-            let massUnit = massUnits[resultUnitPickerView.selectedRow(inComponent: 0)]
+            let resultUnit = massUnits[resultUnitPickerView.selectedRow(inComponent: 0)]
             
             if let context = managedObjectContext {
                 context.performAndWait({
                     if let newSolution = NSEntityDescription.insertNewObject(forEntityName: "Solution", into: context) as? Solution {
                         newSolution.solute = self.compound
-                        newSolution.soluteMass = mass
-                        newSolution.massUnit = massUnit
                         newSolution.finalConcentration = conc
                         newSolution.concentrationUnit = concUnit
                         newSolution.finalVolume = volume
                         newSolution.volumeUnit = volumeUnit
                         newSolution.createdDate = NSDate()
+                        switch self.style {
+                        case .weight:
+                            newSolution.isDiluted = false
+                            newSolution.soluteMass = result
+                            newSolution.massUnit = resultUnit
+                            
+                        case .dilution:
+                            newSolution.isDiluted = true
+                            newSolution.stockNeededVolume = result
+                            newSolution.stockNeededVolumeUnit = resultUnit
+                            newSolution.stockConcentration = self.detailLabel.text
+                        }
                     }
                     try? context.save()
                 })

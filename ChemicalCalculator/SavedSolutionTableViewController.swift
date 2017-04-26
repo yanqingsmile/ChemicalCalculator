@@ -112,7 +112,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "solutionCell", for: indexPath) as! SolutionTableViewCell
+        
         var compound: Compound?
         var conc: Double?
         var concUnit: String?
@@ -121,6 +121,11 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         var mass: Double?
         var massUnit: String?
         var date: NSDate?
+        var isDiluted = false
+        var stockConcentrationText: String?
+        var stockNeededVolume: Double?
+        var stockNeededVolumeUnit: String?
+        
         if let context = managedObjectContext {
             context.performAndWait({
                 if let solution = self.fetchedResultsController?.object(at: indexPath) as? Solution {
@@ -132,25 +137,47 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
                     mass = solution.soluteMass
                     massUnit = solution.massUnit
                     date = solution.createdDate
+                    isDiluted = solution.isDiluted
+                    stockConcentrationText = solution.stockConcentration
+                    stockNeededVolume = solution.stockNeededVolume
+                    stockNeededVolumeUnit = solution.stockNeededVolumeUnit
                 }
             })
             
         }
-        cell.nameLabel.text = compound?.name
-        cell.concentrationLabel.text = String(describing: conc!) + " "
-        cell.concentrationUnitLabel.text = concUnit
-        cell.volumeLabel.text = String(describing: volume!) + " "
-        cell.volumeUnitLabel.text = volumeUnit
-        cell.massLabel.text = String(describing: mass!) + " "
-        cell.massUnitLabel.text = massUnit
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        let result = dateFormatter.string(from: date as! Date)
-        cell.createdDateLabel.text = result
-        
-        return cell
-        
-        
+
+        if isDiluted {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "dilutionCell", for: indexPath) as! SolutionTableViewCell
+            cell.nameLabel.text = compound?.name
+            cell.concentrationLabel.text = String(describing: conc!) + " "
+            cell.concentrationUnitLabel.text = concUnit
+            cell.volumeLabel.text = String(describing: volume!) + " "
+            cell.volumeUnitLabel.text = volumeUnit
+            cell.stockNeededVolumeLabel.text = String(describing: stockNeededVolume!) + " "
+            cell.stockNeededVolumeUnitLabel.text = stockNeededVolumeUnit
+            cell.stockConcentrationLabel.text = stockConcentrationText?.components(separatedBy: " ")[0]
+            cell.stockConcentrationUnitLabel.text = stockConcentrationText?.components(separatedBy: " ")[1]
+                        
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy"
+            let result = dateFormatter.string(from: date! as Date)
+            cell.createdDateLabel.text = result
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "solutionCell", for: indexPath) as! SolutionTableViewCell
+            cell.nameLabel.text = compound?.name
+            cell.concentrationLabel.text = String(describing: conc!) + " "
+            cell.concentrationUnitLabel.text = concUnit
+            cell.volumeLabel.text = String(describing: volume!) + " "
+            cell.volumeUnitLabel.text = volumeUnit
+            cell.massLabel.text = String(describing: mass!) + " "
+            cell.massUnitLabel.text = massUnit
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy"
+            let result = dateFormatter.string(from: date! as Date)
+            cell.createdDateLabel.text = result
+            return cell
+        }
     }
     
     

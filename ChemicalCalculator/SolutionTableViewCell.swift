@@ -33,7 +33,15 @@ class SolutionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var countLabel: UILabel!
     
-   
+    @IBOutlet weak var stockNeededVolumeLabel: UILabel!
+    
+    @IBOutlet weak var stockNeededVolumeUnitLabel: UILabel!
+    
+    @IBOutlet weak var stockConcentrationLabel: UILabel!
+    
+    @IBOutlet weak var stockConcentrationUnitLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Compound" representedClassName="Compound" syncable="YES">
         <attribute name="formula" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="molecularMass" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -17,8 +17,12 @@
         <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="finalConcentration" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="finalVolume" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isDiluted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="massUnit" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="soluteMass" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="stockConcentration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stockNeededVolume" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="stockNeededVolumeUnit" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="volumeUnit" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="groups" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Group" inverseName="ingredients" inverseEntity="Group" syncable="YES"/>
         <relationship name="solute" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Compound" inverseName="solutions" inverseEntity="Compound" syncable="YES"/>
@@ -26,6 +30,6 @@
     <elements>
         <element name="Compound" positionX="-81" positionY="-18" width="128" height="118"/>
         <element name="Group" positionX="-83" positionY="252" width="128" height="88"/>
-        <element name="Solution" positionX="171" positionY="-18" width="128" height="178"/>
+        <element name="Solution" positionX="171" positionY="-18" width="128" height="240"/>
     </elements>
 </model>
