@@ -42,6 +42,14 @@ class SolutionTableViewCell: UITableViewCell {
     @IBOutlet weak var stockConcentrationUnitLabel: UILabel!
     
     
+    @IBOutlet weak var disclosureIndicator: UIImageView! {
+        didSet {
+            let image = UIImage(named:"chevron_grey")?.withRenderingMode(.alwaysTemplate)
+            disclosureIndicator.tintColor = UIColor.warmOrange()
+            disclosureIndicator.image = image
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -60,15 +68,7 @@ class SolutionTableViewCell: UITableViewCell {
     }
     
     fileprivate func cardSetup() {
-        // cardView.layer.masksToBounds = false
         cardView.layer.cornerRadius = 10
-        //cardView.layer.shadowOffset = CGSize(width: 5, height: 5)
-        //cardView.layer.shadowRadius = 2
-        //let path = UIBezierPath(rect: cardView.bounds)
-        
-        //cardView.layer.shadowPath = path.cgPath
-        //cardView.layer.shadowOpacity = 0.2
-    
     }
 
 }

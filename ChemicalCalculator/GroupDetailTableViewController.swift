@@ -44,9 +44,28 @@ class GroupDetailTableViewController: CoreDataTableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "solutionCell", for: indexPath) as! SolutionTableViewCell
+        
         if let ingredients = group?.ingredients {
-                            let ingredient = ingredients.object(at: indexPath.row) as! Solution
+            let ingredient = ingredients.object(at: indexPath.row) as! Solution
+            if ingredient.isDiluted {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "dilutionCell", for: indexPath) as! SolutionTableViewCell
+                cell.nameLabel.text = ingredient.solute?.name
+                cell.concentrationLabel.text = String(describing: ingredient.finalConcentration) + " "
+                cell.concentrationUnitLabel.text = ingredient.concentrationUnit
+                cell.volumeLabel.text = String(describing: ingredient.finalVolume) + " "
+                cell.volumeUnitLabel.text = ingredient.volumeUnit
+                cell.stockNeededVolumeLabel.text = String(describing: ingredient.stockNeededVolume) + " "
+                cell.stockNeededVolumeUnitLabel.text = ingredient.stockNeededVolumeUnit
+                cell.stockConcentrationLabel.text = ingredient.stockConcentration?.components(separatedBy: " ")[0]
+                cell.stockConcentrationUnitLabel.text = ingredient.stockConcentration?.components(separatedBy: " ")[1]
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM/dd/yyyy"
+                let result = dateFormatter.string(from:ingredient.createdDate! as Date)
+                cell.createdDateLabel.text = result
+                cell.countLabel.text = String(describing: indexPath.row + 1)
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "solutionCell", for: indexPath) as! SolutionTableViewCell
                 cell.nameLabel.text = ingredient.solute?.name
                 cell.massLabel.text = String(describing: ingredient.soluteMass)
                 cell.massUnitLabel.text = ingredient.massUnit
@@ -56,13 +75,13 @@ class GroupDetailTableViewController: CoreDataTableViewController {
                 cell.volumeUnitLabel.text = ingredient.volumeUnit
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "MM/dd/yyyy"
-                let result = dateFormatter.string(from: ingredient.createdDate as! Date)
+                let result = dateFormatter.string(from: ingredient.createdDate! as Date)
                 cell.createdDateLabel.text = result
                 cell.countLabel.text = String(describing: indexPath.row + 1)
-            
-            
+                return cell
+            }
         }
-        return cell
+        return UITableViewCell()
     }
     
     
