@@ -79,7 +79,6 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         {
             let volumeUnit = volumeUnits[volumeUnitPickerView.selectedRow(inComponent: 0)]
             let concUnit = concentrationUnits[concentrationUnitPickerView.selectedRow(inComponent: 0)]
-            let resultUnit = massUnits[resultUnitPickerView.selectedRow(inComponent: 0)]
             
             if let context = managedObjectContext {
                 context.performAndWait({
@@ -94,12 +93,12 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
                         case .weight:
                             newSolution.isDiluted = false
                             newSolution.soluteMass = result
-                            newSolution.massUnit = resultUnit
+                            newSolution.massUnit = self.massUnits[self.resultUnitPickerView.selectedRow(inComponent: 0)]
                             
                         case .dilution:
                             newSolution.isDiluted = true
                             newSolution.stockNeededVolume = result
-                            newSolution.stockNeededVolumeUnit = resultUnit
+                            newSolution.stockNeededVolumeUnit = self.volumeUnits[self.resultUnitPickerView.selectedRow(inComponent: 0)]
                             newSolution.stockConcentration = self.detailLabel.text
                         }
                     }
@@ -126,7 +125,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
             }
         case .dilution:
             title = "Dilution"
-            backItem.title = "Stock Solution"
+            backItem.title = "Saved Solution"
             resultTextField.placeholder = "Volume of Stock Solution"
             if let stockSolution = stockSolution {
                 nameLabel.text = stockSolution.solute?.name

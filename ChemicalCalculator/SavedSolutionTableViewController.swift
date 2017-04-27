@@ -197,13 +197,12 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         updateButtonsToMatchTableState()
     }
     
-    
+    /*
     override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        //if !tableView.isEditing {
-            //return false
-        //}
         return true
+
     }
+ */
  
 
     // Override to support editing the table view.
@@ -269,14 +268,19 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     }
     
     fileprivate func refreshPlaceholderText() {
-        let count = (UIApplication.shared.delegate as! AppDelegate).compoundCount
-        searchController.searchBar.placeholder = "Search from \(count) compounds"
+        searchController.searchBar.placeholder = "Search from \(solutionCount) saved solution"
     }
     
     
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+ 
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return !tableView.isEditing
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addToGroup" {
             let naVC = segue.destination as! UINavigationController
@@ -296,6 +300,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
             }
         }
     }
+ 
     
     @IBAction func unwindToSavedSolutionTVC(sender: UIStoryboardSegue) {
     }
