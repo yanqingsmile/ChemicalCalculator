@@ -66,6 +66,11 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         super.viewDidLoad()
         
         tableView.separatorStyle = .none
+        
+        // Set up tableview background view color
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor.grayWhite()
+        tableView.backgroundView = bgView
        
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -77,7 +82,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = "Search from \(solutionCount) saved solutions"
+        refreshPlaceholderText()
         
         // Allow bulk selection
         tableView.allowsMultipleSelectionDuringEditing = true
@@ -107,7 +112,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "solutionCell", for: indexPath) as! SolutionTableViewCell
+        
         var compound: Compound?
         var conc: Double?
         var concUnit: String?
@@ -116,6 +121,11 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         var mass: Double?
         var massUnit: String?
         var date: NSDate?
+        var isDiluted = false
+        var stockConcentrationText: String?
+        var stockNeededVolume: Double?
+        var stockNeededVolumeUnit: String?
+        
         if let context = managedObjectContext {
             context.performAndWait({
                 if let solution = self.fetchedResultsController?.object(at: indexPath) as? Solution {
@@ -127,25 +137,47 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
                     mass = solution.soluteMass
                     massUnit = solution.massUnit
                     date = solution.createdDate
+                    isDiluted = solution.isDiluted
+                    stockConcentrationText = solution.stockConcentration
+                    stockNeededVolume = solution.stockNeededVolume
+                    stockNeededVolumeUnit = solution.stockNeededVolumeUnit
                 }
             })
             
         }
-        cell.nameLabel.text = compound?.name
-        cell.concentrationLabel.text = String(describing: conc!) + " "
-        cell.concentrationUnitLabel.text = concUnit
-        cell.volumeLabel.text = String(describing: volume!) + " "
-        cell.volumeUnitLabel.text = volumeUnit
-        cell.massLabel.text = String(describing: mass!) + " "
-        cell.massUnitLabel.text = massUnit
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        let result = dateFormatter.string(from: date as! Date)
-        cell.createdDateLabel.text = result
-        
-        return cell
-        
-        
+
+        if isDiluted {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "dilutionCell", for: indexPath) as! SolutionTableViewCell
+            cell.nameLabel.text = compound?.name
+            cell.concentrationLabel.text = String(describing: conc!) + " "
+            cell.concentrationUnitLabel.text = concUnit
+            cell.volumeLabel.text = String(describing: volume!) + " "
+            cell.volumeUnitLabel.text = volumeUnit
+            cell.stockNeededVolumeLabel.text = String(describing: stockNeededVolume!) + " "
+            cell.stockNeededVolumeUnitLabel.text = stockNeededVolumeUnit
+            cell.stockConcentrationLabel.text = stockConcentrationText?.components(separatedBy: " ")[0]
+            cell.stockConcentrationUnitLabel.text = stockConcentrationText?.components(separatedBy: " ")[1]
+                        
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy"
+            let result = dateFormatter.string(from: date! as Date)
+            cell.createdDateLabel.text = result
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "solutionCell", for: indexPath) as! SolutionTableViewCell
+            cell.nameLabel.text = compound?.name
+            cell.concentrationLabel.text = String(describing: conc!) + " "
+            cell.concentrationUnitLabel.text = concUnit
+            cell.volumeLabel.text = String(describing: volume!) + " "
+            cell.volumeUnitLabel.text = volumeUnit
+            cell.massLabel.text = String(describing: mass!) + " "
+            cell.massUnitLabel.text = massUnit
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy"
+            let result = dateFormatter.string(from: date! as Date)
+            cell.createdDateLabel.text = result
+            return cell
+        }
     }
     
     
@@ -157,9 +189,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if !tableView.isEditing {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+
         updateButtonsToMatchTableState()
     }
     
@@ -167,6 +197,14 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         updateButtonsToMatchTableState()
     }
     
+    /*
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return true
+
+    }
+ */
+ 
+
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -189,6 +227,12 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return nil
     }
+    
+    override func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        super.controllerDidChangeContent(controller)
+        refreshPlaceholderText()
+    }
+    
     
     // MARK: - Methods
     func filterContentForSearchText(searchText: String?) {
@@ -223,10 +267,20 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         }
     }
     
+    fileprivate func refreshPlaceholderText() {
+        searchController.searchBar.placeholder = "Search from \(solutionCount) saved solution"
+    }
+    
     
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+ 
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return !tableView.isEditing
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addToGroup" {
             let naVC = segue.destination as! UINavigationController
@@ -235,8 +289,18 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
                 let selectedSolutions = selectedIndexPaths.map{fetchedResultsController?.object(at: $0) as! Solution}
                 addToTemporaryTVC.toAddSolutions = selectedSolutions
             }
+        } else if segue.identifier == "make a dilution" {
+            let calculatorVC = segue.destination as! CalculatorViewController
+            calculatorVC.style = .dilution
+            if let selectedCell = sender as? UITableViewCell {
+                let selectedIndexPath = tableView.indexPath(for: selectedCell)
+                let selectedSolution = fetchedResultsController?.object(at: selectedIndexPath!) as! Solution
+                calculatorVC.stockSolution = selectedSolution
+                calculatorVC.compound = selectedSolution.solute
+            }
         }
     }
+ 
     
     @IBAction func unwindToSavedSolutionTVC(sender: UIStoryboardSegue) {
     }

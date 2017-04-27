@@ -23,6 +23,8 @@
 		1968288D1E7291DF001F3FB6 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 1968288C1E7291DF001F3FB6 /* Fonts */; };
 		196828911E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */; };
 		196828931E7E4AF3001F3FB6 /* SolutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */; };
+		197270B31EB0817700843192 /* Solution+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197270B21EB0817700843192 /* Solution+CoreDataProperties.swift */; };
+		199F29F21EA932FC006E0F12 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F29F11EA932FB006E0F12 /* UIExtensions.swift */; };
 		19EC6CE81E8846DE001E3471 /* AddToTemporaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CE71E8846DE001E3471 /* AddToTemporaryTableViewController.swift */; };
 		19EC6CEA1E88489F001E3471 /* NewGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CE91E88489F001E3471 /* NewGroupTableViewCell.swift */; };
 		19EC6CEC1E8863FD001E3471 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */; };
@@ -30,7 +32,6 @@
 		19EC6CF21E8C69A1001E3471 /* GroupDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CF11E8C69A1001E3471 /* GroupDetailTableViewController.swift */; };
 		19EC6CF71E97608C001E3471 /* Compound+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CF41E97608C001E3471 /* Compound+CoreDataProperties.swift */; };
 		19EC6CF81E97608C001E3471 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CF51E97608C001E3471 /* Group+CoreDataProperties.swift */; };
-		19EC6CF91E97608C001E3471 /* Solution+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CF61E97608C001E3471 /* Solution+CoreDataProperties.swift */; };
 		AC807838E681B3C88E380EA5 /* Pods_ChemicalCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76227136BD3F53E8C7E25D49 /* Pods_ChemicalCalculator.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,8 @@
 		1968288C1E7291DF001F3FB6 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedSolutionTableViewController.swift; sourceTree = "<group>"; };
 		196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionTableViewCell.swift; sourceTree = "<group>"; };
+		197270B21EB0817700843192 /* Solution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solution+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		199F29F11EA932FB006E0F12 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		19EC6CE71E8846DE001E3471 /* AddToTemporaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToTemporaryTableViewController.swift; sourceTree = "<group>"; };
 		19EC6CE91E88489F001E3471 /* NewGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroupTableViewCell.swift; sourceTree = "<group>"; };
 		19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -60,7 +63,6 @@
 		19EC6CF11E8C69A1001E3471 /* GroupDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailTableViewController.swift; sourceTree = "<group>"; };
 		19EC6CF41E97608C001E3471 /* Compound+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Compound+CoreDataProperties.swift"; path = "../Compound+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		19EC6CF51E97608C001E3471 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Group+CoreDataProperties.swift"; path = "../Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		19EC6CF61E97608C001E3471 /* Solution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Solution+CoreDataProperties.swift"; path = "../Solution+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4F81E9B5B8DCDFF84B313FDA /* Pods-ChemicalCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChemicalCalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChemicalCalculator/Pods-ChemicalCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		5D55E12BB6C5BBEA746BCD16 /* Pods-ChemicalCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChemicalCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChemicalCalculator/Pods-ChemicalCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		76227136BD3F53E8C7E25D49 /* Pods_ChemicalCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChemicalCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,16 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				196828681E582954001F3FB6 /* Core Data */,
-				196828771E582CB7001F3FB6 /* HomeTableViewController.swift */,
-				196828861E6D3495001F3FB6 /* CalculatorViewController.swift */,
-				196828801E5BA53A001F3FB6 /* CompoundViewController.swift */,
-				196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */,
-				196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */,
-				19EC6CE71E8846DE001E3471 /* AddToTemporaryTableViewController.swift */,
-				19EC6CE91E88489F001E3471 /* NewGroupTableViewCell.swift */,
-				19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */,
-				19EC6CEF1E8C5AA7001E3471 /* GroupTableViewController.swift */,
-				19EC6CF11E8C69A1001E3471 /* GroupDetailTableViewController.swift */,
+				197270AA1EB07C0F00843192 /* View Controllers */,
+				197270AB1EB07C1E00843192 /* Table View Cells */,
+				199F29F11EA932FB006E0F12 /* UIExtensions.swift */,
 				1968283F1E58207F001F3FB6 /* Main.storyboard */,
 				196828791E582D42001F3FB6 /* Supporting Files */,
 			);
@@ -120,9 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				196828421E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld */,
+				197270B21EB0817700843192 /* Solution+CoreDataProperties.swift */,
 				19EC6CF41E97608C001E3471 /* Compound+CoreDataProperties.swift */,
 				19EC6CF51E97608C001E3471 /* Group+CoreDataProperties.swift */,
-				19EC6CF61E97608C001E3471 /* Solution+CoreDataProperties.swift */,
 				1968286B1E582A40001F3FB6 /* Compound+CoreDataClass.swift */,
 				196828691E582A40001F3FB6 /* Solution+CoreDataClass.swift */,
 				1968286D1E582A40001F3FB6 /* Group+CoreDataClass.swift */,
@@ -142,6 +137,30 @@
 				1968284A1E58207F001F3FB6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		197270AA1EB07C0F00843192 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				196828771E582CB7001F3FB6 /* HomeTableViewController.swift */,
+				196828861E6D3495001F3FB6 /* CalculatorViewController.swift */,
+				196828801E5BA53A001F3FB6 /* CompoundViewController.swift */,
+				196828901E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift */,
+				19EC6CE71E8846DE001E3471 /* AddToTemporaryTableViewController.swift */,
+				19EC6CEF1E8C5AA7001E3471 /* GroupTableViewController.swift */,
+				19EC6CF11E8C69A1001E3471 /* GroupDetailTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		197270AB1EB07C1E00843192 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				196828921E7E4AF3001F3FB6 /* SolutionTableViewCell.swift */,
+				19EC6CE91E88489F001E3471 /* NewGroupTableViewCell.swift */,
+				19EC6CEB1E8863FD001E3471 /* GroupTableViewCell.swift */,
+			);
+			name = "Table View Cells";
 			sourceTree = "<group>";
 		};
 		AD9FD160BFED46A841E24E64 /* Frameworks */ = {
@@ -290,10 +309,12 @@
 				19EC6CEA1E88489F001E3471 /* NewGroupTableViewCell.swift in Sources */,
 				19EC6CEC1E8863FD001E3471 /* GroupTableViewCell.swift in Sources */,
 				19EC6CE81E8846DE001E3471 /* AddToTemporaryTableViewController.swift in Sources */,
+				199F29F21EA932FC006E0F12 /* UIExtensions.swift in Sources */,
 				196828911E7E4A76001F3FB6 /* SavedSolutionTableViewController.swift in Sources */,
 				1968286F1E582A40001F3FB6 /* Solution+CoreDataClass.swift in Sources */,
 				196828811E5BA53A001F3FB6 /* CompoundViewController.swift in Sources */,
 				1968283C1E58207F001F3FB6 /* AppDelegate.swift in Sources */,
+				197270B31EB0817700843192 /* Solution+CoreDataProperties.swift in Sources */,
 				19EC6CF81E97608C001E3471 /* Group+CoreDataProperties.swift in Sources */,
 				19EC6CF21E8C69A1001E3471 /* GroupDetailTableViewController.swift in Sources */,
 				196828731E582A40001F3FB6 /* Group+CoreDataClass.swift in Sources */,
@@ -305,7 +326,6 @@
 				196828441E58207F001F3FB6 /* ChemicalCalculator.xcdatamodeld in Sources */,
 				19EC6CF71E97608C001E3471 /* Compound+CoreDataProperties.swift in Sources */,
 				19EC6CF01E8C5AA7001E3471 /* GroupTableViewController.swift in Sources */,
-				19EC6CF91E97608C001E3471 /* Solution+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

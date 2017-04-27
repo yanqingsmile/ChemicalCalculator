@@ -33,7 +33,15 @@ class SolutionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var countLabel: UILabel!
     
-   
+    @IBOutlet weak var stockNeededVolumeLabel: UILabel!
+    
+    @IBOutlet weak var stockNeededVolumeUnitLabel: UILabel!
+    
+    @IBOutlet weak var stockConcentrationLabel: UILabel!
+    
+    @IBOutlet weak var stockConcentrationUnitLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -52,13 +60,14 @@ class SolutionTableViewCell: UITableViewCell {
     }
     
     fileprivate func cardSetup() {
-        cardView.layer.masksToBounds = false
+        // cardView.layer.masksToBounds = false
         cardView.layer.cornerRadius = 10
-        cardView.layer.shadowOffset = CGSize(width: 5, height: 5)
-        cardView.layer.shadowRadius = 2
-        let path = UIBezierPath(rect: cardView.bounds)
-        cardView.layer.shadowPath = path.cgPath
-        cardView.layer.shadowOpacity = 0.2
+        //cardView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        //cardView.layer.shadowRadius = 2
+        //let path = UIBezierPath(rect: cardView.bounds)
+        
+        //cardView.layer.shadowPath = path.cgPath
+        //cardView.layer.shadowOpacity = 0.2
     
     }
 

@@ -53,12 +53,6 @@ class HomeTableViewController: CoreDataTableViewController {
         } else {
             fetchedResultsController = nil
         }
-
-
-        
-    
-    
-        
         
         
         // Set up searchController
@@ -70,13 +64,11 @@ class HomeTableViewController: CoreDataTableViewController {
         searchController.searchBar.delegate = self
         searchController.searchBar.scopeButtonTitles = ["name", "formula"]
         
+        // Set up tableview background view color
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor.grayWhite()
+        tableView.backgroundView = bgView
         
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     
@@ -165,6 +157,7 @@ class HomeTableViewController: CoreDataTableViewController {
         } else if segue.identifier == "calculate" {
             
             let calculatorVC = segue.destination as! CalculatorViewController
+            calculatorVC.style = .weight
             if let selectedCell = sender as? UITableViewCell {
                 let selectedIndexPath = tableView.indexPath(for: selectedCell)
                 let selectedCompound = fetchedResultsController?.object(at: selectedIndexPath!) as! Compound

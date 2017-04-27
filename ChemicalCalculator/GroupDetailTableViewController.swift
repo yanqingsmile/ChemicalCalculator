@@ -14,16 +14,20 @@ class GroupDetailTableViewController: CoreDataTableViewController {
     // MARK: - Properties
     var group: Group?
     
-    
-    
-    
     // MARK: - View life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.separatorStyle = .none
+        
+        
+        // Set up tableview background view color
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor.grayWhite()
+        tableView.backgroundView = bgView
+        
+        // hide empty cells
+        tableView.tableFooterView = UIView()
         
     }
-    
     
     
     // MARK: - Table view data source

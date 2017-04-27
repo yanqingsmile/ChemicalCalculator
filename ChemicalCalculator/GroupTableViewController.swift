@@ -15,20 +15,28 @@ class GroupTableViewController: CoreDataTableViewController {
         super.viewDidLoad()
         // Fetch data from database
         if let context = managedObjectContext {
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Group")
-            request.sortDescriptors = [NSSortDescriptor(key: "modifiedDate", ascending: false, selector: nil),NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))]
-            fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            context.performAndWait({ 
+                let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Group")
+                request.sortDescriptors = [NSSortDescriptor(key: "modifiedDate", ascending: false, selector: nil),NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))]
+                self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            })
         } else {
             fetchedResultsController = nil
         }
+        
+        // hide empty cells
+        tableView.tableFooterView = UIView()
+        
+        // Set up tableview background view color
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor.grayWhite()
+        tableView.backgroundView = bgView
     }
-
-
-    
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as! GroupTableViewCell
+        
         if let group = fetchedResultsController?.object(at: indexPath) as? Group {
             var title: String?
             var date: NSDate?
