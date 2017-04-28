@@ -134,17 +134,22 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
         
         navigationController?.navigationBar.topItem?.backBarButtonItem = backItem
+        
     
-
+        // Set up UIPickerView default row
         concentrationUnitPickerView.selectRow(3, inComponent: 0, animated: true)
         volumeUnitPickerView.selectRow(1, inComponent: 0, animated: true)
         resultUnitPickerView.selectRow(1, inComponent: 0, animated: true)
         
-        checkValidSolution()
-        
+        // remove selection indicator from picker view
         removeSelectionIndicator(in: concentrationUnitPickerView)
         removeSelectionIndicator(in: volumeUnitPickerView)
         removeSelectionIndicator(in: resultUnitPickerView)
+        
+        checkValidSolution()
+        
+        // add Done button to keyboard
+        addDoneButtonOnKeyboard()
     }
     
     // remove pickerView seperator line
@@ -292,6 +297,27 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         let conc = Double(finalConcTextField.text!)
         saveButton.isEnabled = (volume != nil && conc != nil)
     
+    }
+    
+    fileprivate func addDoneButtonOnKeyboard() {
+        let doneToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolBar.barStyle = .default
+        
+        let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+        var items = [UIBarButtonItem]()
+        items.append(done)
+        
+        doneToolBar.items = items
+        doneToolBar.sizeToFit()
+        
+        finalConcTextField.inputAccessoryView = doneToolBar
+        finalVolumeTextField.inputAccessoryView = doneToolBar
+        
+        
+    }
+    
+    @objc fileprivate func dismissKeyboard(){
+        view.endEditing(true)
     }
 
 
