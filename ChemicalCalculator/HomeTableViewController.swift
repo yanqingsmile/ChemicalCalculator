@@ -127,9 +127,9 @@ class HomeTableViewController: CoreDataTableViewController {
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Compound")
             if let searchText = searchText, searchText != "" {
                 if scope == "name" {
-                    request.predicate = NSPredicate(format: "any name contains[c] %@", searchText)
+                    request.predicate = NSPredicate(format: "name contains[c] %@", searchText)
                 } else if scope == "formula" {
-                    request.predicate = NSPredicate(format: "any formula contains[c] %@", searchText)
+                    request.predicate = NSPredicate(format: "formula contains[c] %@", searchText)
                 }
             }
             request.sortDescriptors = [NSSortDescriptor(
