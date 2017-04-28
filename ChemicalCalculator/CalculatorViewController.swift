@@ -145,6 +145,12 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         removeSelectionIndicator(in: concentrationUnitPickerView)
         removeSelectionIndicator(in: volumeUnitPickerView)
         removeSelectionIndicator(in: resultUnitPickerView)
+        
+        addTestMethod()
+    }
+    
+    fileprivate func addTestMethod() {
+        // do nothing
     }
     
     // remove pickerView seperator line
