@@ -47,8 +47,15 @@ class GroupTableViewController: CoreDataTableViewController {
             cell.groupNameLabel.text = title
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM/dd/yyyy"
-            let result = dateFormatter.string(from: date as! Date)
+            let result = dateFormatter.string(from: date! as Date)
             cell.modifiedDateLabel.text = result
+            
+            // set up custom disclosure indicator
+            let chevron = UIImage(named: "chevron_grey")?.withRenderingMode(.alwaysTemplate)
+            cell.accessoryType = .disclosureIndicator
+            cell.accessoryView = UIImageView(image: chevron!)
+            cell.accessoryView?.tintColor = UIColor.warmOrange()
+            
         }
         return cell
     }
