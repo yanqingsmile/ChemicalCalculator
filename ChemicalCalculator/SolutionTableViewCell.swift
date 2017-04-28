@@ -50,6 +50,16 @@ class SolutionTableViewCell: UITableViewCell {
         }
     }
     
+    @IBOutlet weak var dilutedIcon: UIImageView!{
+        didSet {
+            let image = UIImage(named: "diluted")?.withRenderingMode(.alwaysTemplate)
+            dilutedIcon.tintColor = UIColor.mintBlue()
+            dilutedIcon.image = image
+            
+        }
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
