@@ -423,7 +423,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zbg-xp-bgb" id="nlS-pc-cWU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="179.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="179.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron_grey" translatesAutoresizingMaskIntoConstraints="NO" id="vmd-Du-2T4" userLabel="chevron">
@@ -573,7 +573,7 @@
                                 <rect key="frame" x="0.0" y="208" width="414" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cVY-gf-lao" id="m5M-6D-NIn">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="179.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="179.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvX-fl-u8H" userLabel="Card View">
@@ -798,7 +798,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kwj-eb-bYU" id="Jst-sH-bz7">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjF-8X-wal">
@@ -818,7 +818,7 @@
                                 <rect key="frame" x="0.0" y="108" width="414" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0sI-Xe-5U7" id="Kj0-XN-zyH">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="67.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQF-pa-mfB">
@@ -964,7 +964,7 @@
             </objects>
             <point key="canvasLocation" x="1026.0869565217392" y="839.67391304347836"/>
         </scene>
-        <!--Group Table View Controller-->
+        <!--Group-->
         <scene sceneID="aBF-4M-inA">
             <objects>
                 <tableViewController id="J0y-yh-qPn" customClass="GroupTableViewController" customModule="ChemicalCalculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -977,7 +977,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uzX-rU-d54" id="h5z-Ms-Hdb">
-                                    <rect key="frame" x="0.0" y="0.0" width="381" height="79.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="79.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X6-2P-KjI">
@@ -1038,7 +1038,7 @@
                             <outlet property="delegate" destination="J0y-yh-qPn" id="ThQ-qI-qjs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6Hm-dv-fCf"/>
+                    <navigationItem key="navigationItem" title="Group" id="6Hm-dv-fCf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CS7-WL-wat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
