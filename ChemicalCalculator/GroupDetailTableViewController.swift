@@ -119,6 +119,15 @@ class GroupDetailTableViewController: CoreDataTableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let solution = group?.ingredients?[indexPath.row] as? Solution {
+            if solution.isDiluted {
+                return 200
+            }
+            return 180
+        }
+        return 200
+    }
     
     
 

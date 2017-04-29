@@ -197,12 +197,18 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         updateButtonsToMatchTableState()
     }
     
-    /*
-    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        return true
-
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let solution = fetchedResultsController?.object(at: indexPath) as? Solution {
+            if solution.isDiluted {
+                return 200
+            } else {
+                return 180
+            }
+        }
+        return 200
     }
- */
+    
+
  
 
     // Override to support editing the table view.
