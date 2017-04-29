@@ -18,6 +18,7 @@ class GroupDetailTableViewController: CoreDataTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = group?.title
         
         // Set up tableview background view color
         let bgView = UIView()
@@ -29,6 +30,9 @@ class GroupDetailTableViewController: CoreDataTableViewController {
         
         // disable row selections
         tableView.allowsSelection = false
+        
+        // set up table view top distance to navigation bar
+        tableView.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
         
     }
     

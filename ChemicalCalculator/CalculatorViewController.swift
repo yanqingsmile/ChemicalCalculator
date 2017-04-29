@@ -44,11 +44,23 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     @IBOutlet weak var detailLabel: UILabel!
     
-    @IBOutlet weak var finalConcTextField: ErrorTextField!
+    @IBOutlet weak var finalConcTextField: ErrorTextField! {
+        didSet {
+            finalConcTextField.font = Font.systemFont(ofSize: 20)
+        }
+    }
     
-    @IBOutlet weak var finalVolumeTextField: ErrorTextField!
+    @IBOutlet weak var finalVolumeTextField: ErrorTextField! {
+        didSet {
+            finalVolumeTextField.font = Font.systemFont(ofSize: 20)
+        }
+    }
     
-    @IBOutlet weak var resultTextField: TextField!
+    @IBOutlet weak var resultTextField: TextField! {
+        didSet {
+            resultTextField.font = Font.boldSystemFont(ofSize: 26)
+        }
+    }
     
     @IBOutlet weak var concentrationUnitPickerView: UIPickerView!
     
@@ -126,7 +138,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         case .dilution:
             title = "Dilution"
             backItem.title = "Saved Solution"
-            resultTextField.placeholder = "Volume of Stock Solution"
+            resultTextField.placeholder = "Stock needed"
             if let stockSolution = stockSolution {
                 nameLabel.text = stockSolution.solute?.name
                 detailLabel.text = String(describing: stockSolution.finalConcentration) + " " + String(describing: stockSolution.concentrationUnit!)
@@ -277,17 +289,18 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     // perform calculation
     fileprivate func performCalculation() {
         if let conc = convertToStandardConc(fromInputConc: finalConcTextField.text, withUnit: concentrationUnits[concentrationUnitPickerView.selectedRow(inComponent: 0)]), let volume = convertToStandardVolume(fromInputVolume: finalVolumeTextField.text, withUnit: volumeUnitPickerView) {
+            var calculatedResult: Double?
             switch style {
             case .weight:
                 let mass = conc * volume
-                result = convertToUserChoosedMassUnit(fromComputedMass: mass, toUnit: resultUnitPickerView)!
+                calculatedResult = convertToUserChoosedMassUnit(fromComputedMass: mass, toUnit: resultUnitPickerView)!
             case .dilution:
                 if let stockConcentration = convertToStandardConc(fromInputConc: String(describing:stockSolution!.finalConcentration), withUnit: stockSolution!.concentrationUnit!) {
                     let stockVolume = conc * volume / stockConcentration
-                    result = convertToUserChoosedVolumeUnit(fromComputedVolume: stockVolume, toUnit: resultUnitPickerView)!
+                    calculatedResult = convertToUserChoosedVolumeUnit(fromComputedVolume: stockVolume, toUnit: resultUnitPickerView)!
                 }
-                
             }
+            result = round(calculatedResult! * 1000000) / 1000000
         }
     }
         
