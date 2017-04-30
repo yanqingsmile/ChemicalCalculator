@@ -44,11 +44,23 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     @IBOutlet weak var detailLabel: UILabel!
     
-    @IBOutlet weak var finalConcTextField: ErrorTextField!
+    @IBOutlet weak var finalConcTextField: ErrorTextField! {
+        didSet {
+            finalConcTextField.font = Font.systemFont(ofSize: 20)
+        }
+    }
     
-    @IBOutlet weak var finalVolumeTextField: ErrorTextField!
+    @IBOutlet weak var finalVolumeTextField: ErrorTextField! {
+        didSet {
+            finalVolumeTextField.font = Font.systemFont(ofSize: 20)
+        }
+    }
     
-    @IBOutlet weak var resultTextField: TextField!
+    @IBOutlet weak var resultTextField: TextField! {
+        didSet {
+            resultTextField.font = Font.boldSystemFont(ofSize: 26)
+        }
+    }
     
     @IBOutlet weak var concentrationUnitPickerView: UIPickerView!
     
@@ -126,7 +138,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         case .dilution:
             title = "Dilution"
             backItem.title = "Saved Solution"
-            resultTextField.placeholder = "Volume of Stock Solution"
+            resultTextField.placeholder = "Stock needed"
             if let stockSolution = stockSolution {
                 nameLabel.text = stockSolution.solute?.name
                 detailLabel.text = String(describing: stockSolution.finalConcentration) + " " + String(describing: stockSolution.concentrationUnit!)
@@ -134,23 +146,22 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
         
         navigationController?.navigationBar.topItem?.backBarButtonItem = backItem
+        
     
-
+        // Set up UIPickerView default row
         concentrationUnitPickerView.selectRow(3, inComponent: 0, animated: true)
         volumeUnitPickerView.selectRow(1, inComponent: 0, animated: true)
         resultUnitPickerView.selectRow(1, inComponent: 0, animated: true)
         
-        checkValidSolution()
-        
+        // remove selection indicator from picker view
         removeSelectionIndicator(in: concentrationUnitPickerView)
         removeSelectionIndicator(in: volumeUnitPickerView)
         removeSelectionIndicator(in: resultUnitPickerView)
         
-        addTestMethod()
-    }
-    
-    fileprivate func addTestMethod() {
-        // do nothing
+        checkValidSolution()
+        
+        // add Done button to keyboard
+        addDoneButtonOnKeyboard()
     }
     
     // remove pickerView seperator line
@@ -278,17 +289,18 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     // perform calculation
     fileprivate func performCalculation() {
         if let conc = convertToStandardConc(fromInputConc: finalConcTextField.text, withUnit: concentrationUnits[concentrationUnitPickerView.selectedRow(inComponent: 0)]), let volume = convertToStandardVolume(fromInputVolume: finalVolumeTextField.text, withUnit: volumeUnitPickerView) {
+            var calculatedResult: Double?
             switch style {
             case .weight:
                 let mass = conc * volume
-                result = convertToUserChoosedMassUnit(fromComputedMass: mass, toUnit: resultUnitPickerView)!
+                calculatedResult = convertToUserChoosedMassUnit(fromComputedMass: mass, toUnit: resultUnitPickerView)!
             case .dilution:
                 if let stockConcentration = convertToStandardConc(fromInputConc: String(describing:stockSolution!.finalConcentration), withUnit: stockSolution!.concentrationUnit!) {
                     let stockVolume = conc * volume / stockConcentration
-                    result = convertToUserChoosedVolumeUnit(fromComputedVolume: stockVolume, toUnit: resultUnitPickerView)!
+                    calculatedResult = convertToUserChoosedVolumeUnit(fromComputedVolume: stockVolume, toUnit: resultUnitPickerView)!
                 }
-                
             }
+            result = round(calculatedResult! * 1000000) / 1000000
         }
     }
         
@@ -298,6 +310,27 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         let conc = Double(finalConcTextField.text!)
         saveButton.isEnabled = (volume != nil && conc != nil)
     
+    }
+    
+    fileprivate func addDoneButtonOnKeyboard() {
+        let doneToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolBar.barStyle = .default
+        
+        let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+        var items = [UIBarButtonItem]()
+        items.append(done)
+        
+        doneToolBar.items = items
+        doneToolBar.sizeToFit()
+        
+        finalConcTextField.inputAccessoryView = doneToolBar
+        finalVolumeTextField.inputAccessoryView = doneToolBar
+        
+        
+    }
+    
+    @objc fileprivate func dismissKeyboard(){
+        view.endEditing(true)
     }
 
 

@@ -71,7 +71,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         let bgView = UIView()
         bgView.backgroundColor = UIColor.grayWhite()
         tableView.backgroundView = bgView
-       
+        
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.selectButton
@@ -197,12 +197,18 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         updateButtonsToMatchTableState()
     }
     
-    /*
-    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        return true
-
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let solution = fetchedResultsController?.object(at: indexPath) as? Solution {
+            if solution.isDiluted {
+                return 200
+            } else {
+                return 180
+            }
+        }
+        return 200
     }
- */
+    
+
  
 
     // Override to support editing the table view.
