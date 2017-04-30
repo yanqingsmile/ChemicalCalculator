@@ -88,9 +88,6 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         tableView.allowsMultipleSelectionDuringEditing = true
         
         updateButtonsToMatchTableState()
-        
-        // Clear tab bar badge number
-        tabBarController?.tabBar.items![1].badgeValue = nil
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -109,6 +106,9 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         } else {
             fetchedResultsController = nil
         }
+        
+        // Clear tab bar badge number
+        tabBarController?.tabBar.items![1].badgeValue = nil
     }
     
     // MARK: - Table view data source

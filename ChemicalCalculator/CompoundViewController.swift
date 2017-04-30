@@ -104,12 +104,6 @@ class CompoundViewController: UIViewController {
             formula = formulaTextField.text
             molecularMass = Double(molecularMassTextField.text!)!
             purity = Double(purityTextField.text!)!
-            
-            // Increase tab bar badge number
-            let itemToBadge = (presentingViewController as? UITabBarController)?.tabBar.items?[1]
-            let currentTabValue = Int(itemToBadge?.badgeValue ?? "0") ?? 0
-            let newValue = currentTabValue + 1
-            itemToBadge?.badgeValue = String(newValue)
         }
     }
 
