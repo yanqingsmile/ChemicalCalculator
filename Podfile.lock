@@ -2,13 +2,16 @@ PODS:
   - Material (2.6.3):
     - Material/Core (= 2.6.3)
   - Material/Core (2.6.3)
+  - Mixpanel-swift (2.1.5)
 
 DEPENDENCIES:
   - Material (~> 2.0)
+  - Mixpanel-swift
 
 SPEC CHECKSUMS:
   Material: af607a7ec0e9978ef85cf189a3d8ceeeb650400f
+  Mixpanel-swift: bcf863981f72c3bb2a51549292da61f13043d944
 
-PODFILE CHECKSUM: 2e89ecc7ff84e9e686dd1fbe5d158f32416ed1fd
+PODFILE CHECKSUM: 9215990e1aa387fb3d7cf3d4ecb447f58b829e13
 
 COCOAPODS: 1.1.1

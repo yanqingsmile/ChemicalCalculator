@@ -161,7 +161,8 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         checkValidSolution()
         
         // add Done button to keyboard
-        addDoneButtonOnKeyboard()
+        self.addDoneButtonOnKeyboard(toTextField: finalConcTextField)
+        self.addDoneButtonOnKeyboard(toTextField: finalVolumeTextField)
     }
     
     // remove pickerView seperator line
@@ -312,27 +313,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     }
     
-    fileprivate func addDoneButtonOnKeyboard() {
-        let doneToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
-        doneToolBar.barStyle = .default
-        
-        let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
-        var items = [UIBarButtonItem]()
-        items.append(done)
-        
-        doneToolBar.items = items
-        doneToolBar.sizeToFit()
-        
-        finalConcTextField.inputAccessoryView = doneToolBar
-        finalVolumeTextField.inputAccessoryView = doneToolBar
-        
-        
-    }
     
-    @objc fileprivate func dismissKeyboard(){
-        view.endEditing(true)
-    }
-
 
     /*
     // MARK: - Navigation

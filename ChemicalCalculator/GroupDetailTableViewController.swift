@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Mixpanel
 
 class GroupDetailTableViewController: CoreDataTableViewController {
     
@@ -33,6 +34,8 @@ class GroupDetailTableViewController: CoreDataTableViewController {
         
         // set up table view top distance to navigation bar
         tableView.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
+        
+        Mixpanel.mainInstance().track(event: "View group detail")
         
     }
     
@@ -145,6 +148,9 @@ class GroupDetailTableViewController: CoreDataTableViewController {
     }
     
     @IBAction func unwindToGroupDetailTableViewController(sender: UIStoryboardSegue) {
+        
+        Mixpanel.mainInstance().track(event: "Add button in GroupDetail VC clicked")
+        
         if let sourceTVC = sender.source as? SavedSolutionTableViewController, let selectedIndexPaths = sourceTVC.tableView.indexPathsForSelectedRows {
             let selectedSolutions = selectedIndexPaths.map{sourceTVC.fetchedResultsController?.object(at: $0) as! Solution}
             group!.managedObjectContext?.performAndWait({

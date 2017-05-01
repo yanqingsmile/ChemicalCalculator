@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Mixpanel
 
 class SavedSolutionTableViewController: CoreDataTableViewController {
     
@@ -37,6 +38,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     // MARK: - IBActions
     
     @IBAction func selectButtonClicked(_ sender: UIBarButtonItem) {
+        Mixpanel.mainInstance().track(event: "Select button in SavedSolution TVC clicked")
         tableView.setEditing(true, animated: true)
         tableView.allowsSelectionDuringEditing = true
         updateButtonsToMatchTableState()
@@ -53,11 +55,15 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
     
     
     @IBAction func addToButtonClicked(_ sender: UIBarButtonItem) {
+        
         if presentingViewController == nil {
             performSegue(withIdentifier: "addToGroup", sender: self)
         } else {
             performSegue(withIdentifier: "addToSourceGroup", sender: self)
         }
+        
+        // Mixpanel tracking
+        Mixpanel.mainInstance().track(event: "Save to group")
     }
     
     
@@ -89,6 +95,9 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         
         updateButtonsToMatchTableState()
         
+        // Mixpanel
+        Mixpanel.mainInstance().track(event: "Saved solution loaded", properties: ["saved solution count": solutionCount])
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,6 +117,7 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
             fetchedResultsController = nil
         }
     }
+    
     
     // MARK: - Table view data source
     
@@ -296,6 +306,8 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
                 addToTemporaryTVC.toAddSolutions = selectedSolutions
             }
         } else if segue.identifier == "make a dilution" {
+            Mixpanel.mainInstance().track(event: "Make a dilution")
+            
             let calculatorVC = segue.destination as! CalculatorViewController
             calculatorVC.style = .dilution
             if let selectedCell = sender as? UITableViewCell {

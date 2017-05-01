@@ -8,4 +8,6 @@ target 'ChemicalCalculator' do
 
 pod 'Material', '~> 2.0'
 
+pod 'Mixpanel-swift'
+
 end

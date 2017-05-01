@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Mixpanel
 
 class HomeTableViewController: CoreDataTableViewController {
     
@@ -146,6 +147,7 @@ class HomeTableViewController: CoreDataTableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
+            Mixpanel.mainInstance().track(event: "View compound detail")
             let compoundVC = segue.destination as! CompoundViewController
             if let cellForTappedAccessory = sender as? UITableViewCell {
                 indexPathOfTappedAccessoryButton = tableView.indexPath(for: cellForTappedAccessory)
@@ -155,6 +157,7 @@ class HomeTableViewController: CoreDataTableViewController {
                 compoundVC.molecularMass = selectedCompound.molecularMass
             }
         } else if segue.identifier == "calculate" {
+            Mixpanel.mainInstance().track(event: "Mass calculator")
             
             let calculatorVC = segue.destination as! CalculatorViewController
             calculatorVC.style = .weight
@@ -165,6 +168,7 @@ class HomeTableViewController: CoreDataTableViewController {
             }
             
         } else if segue.identifier == "addNewCompound" {
+            Mixpanel.mainInstance().track(event: "Add New Compound")
         }
     }
 
