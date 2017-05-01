@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Mixpanel
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -43,8 +44,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UISearchBar.appearance().barTintColor = UIColor.grayWhite()
         UISearchBar.appearance().tintColor = UIColor.warmOrange()
         
-
+        //Initialize mixpanel library
+        Mixpanel.initialize(token: "1ee2dcdd71bcb235b3c3bd940d2e5e74")
         
+
+        Mixpanel.mainInstance().track(event: "App Open")
         
         return true
     }

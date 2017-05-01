@@ -23,3 +23,26 @@ extension UIColor {
         return UIColor(red: 251/255.0, green: 248/255.0, blue: 243/255.0, alpha: 1.0)
     }
 }
+
+extension UIViewController {
+     func addDoneButtonOnKeyboard(toTextField textField: UITextField) {
+        
+        let doneToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolBar.barStyle = .default
+        
+        let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+        var items = [UIBarButtonItem]()
+        items.append(done)
+        
+        doneToolBar.items = items
+        doneToolBar.sizeToFit()
+        
+        textField.inputAccessoryView = doneToolBar
+       
+    }
+    
+    @objc fileprivate func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+}

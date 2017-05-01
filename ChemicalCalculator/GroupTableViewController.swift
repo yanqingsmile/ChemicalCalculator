@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Mixpanel
 
 class GroupTableViewController: CoreDataTableViewController {
 
@@ -23,6 +24,8 @@ class GroupTableViewController: CoreDataTableViewController {
         } else {
             fetchedResultsController = nil
         }
+        
+        Mixpanel.mainInstance().track(event: "Group view controller loaded")
         
         // hide empty cells
         tableView.tableFooterView = UIView()

@@ -74,7 +74,10 @@ class CompoundViewController: UIViewController {
         
         // Enable the save button only when all the text fields have valid values.
         checkValidCompound()
-
+        
+        // Add Done button on keyboard
+        self.addDoneButtonOnKeyboard(toTextField: molecularMassTextField)
+        self.addDoneButtonOnKeyboard(toTextField: purityTextField)
     }
 
     
