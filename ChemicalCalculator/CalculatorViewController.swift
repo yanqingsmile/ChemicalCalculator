@@ -116,6 +116,12 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
                     }
                     try? context.save()
                 })
+                
+                // Increase tab bar badge number
+                let itemToBadge = tabBarController?.tabBar.items?[1]
+                let currentTabValue = Int(itemToBadge?.badgeValue ?? "0") ?? 0
+                let newValue = currentTabValue + 1
+                itemToBadge?.badgeValue = String(newValue)
             }
             saveButton.isEnabled = false
         }

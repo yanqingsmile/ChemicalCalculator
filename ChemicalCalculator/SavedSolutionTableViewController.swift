@@ -116,6 +116,9 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
         } else {
             fetchedResultsController = nil
         }
+        
+        // Clear tab bar badge number
+        tabBarController?.tabBar.items![1].badgeValue = nil
     }
     
     
