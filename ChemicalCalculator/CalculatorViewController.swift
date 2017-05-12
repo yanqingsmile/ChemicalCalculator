@@ -32,6 +32,8 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
     }
     
+    var shouldUseCustomAnimation = false
+    
     let concentrationUnits = ["nmol/L", "mmol/L", "mol/L", "g/L", "g/mL", "mg/L", "kg/L"]
     let volumeUnits = ["uL", "mL", "L"]
     let massUnits = ["mg", "g", "kg"]
@@ -124,6 +126,8 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 itemToBadge?.badgeValue = String(newValue)
             }
             saveButton.isEnabled = false
+            shouldUseCustomAnimation = true
+            self.navigationController?.popViewController(animated: true)
         }
         
     }
