@@ -33,6 +33,7 @@
 		19EC6CF21E8C69A1001E3471 /* GroupDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CF11E8C69A1001E3471 /* GroupDetailTableViewController.swift */; };
 		19EC6CF71E97608C001E3471 /* Compound+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CF41E97608C001E3471 /* Compound+CoreDataProperties.swift */; };
 		19EC6CF81E97608C001E3471 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC6CF51E97608C001E3471 /* Group+CoreDataProperties.swift */; };
+		19ECC9C71EC96E6800532165 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19ECC9C61EC96E6800532165 /* GoogleService-Info.plist */; };
 		AC807838E681B3C88E380EA5 /* Pods_ChemicalCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76227136BD3F53E8C7E25D49 /* Pods_ChemicalCalculator.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		19EC6CF11E8C69A1001E3471 /* GroupDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailTableViewController.swift; sourceTree = "<group>"; };
 		19EC6CF41E97608C001E3471 /* Compound+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Compound+CoreDataProperties.swift"; path = "../Compound+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		19EC6CF51E97608C001E3471 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Group+CoreDataProperties.swift"; path = "../Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		19ECC9C61EC96E6800532165 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F81E9B5B8DCDFF84B313FDA /* Pods-ChemicalCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChemicalCalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChemicalCalculator/Pods-ChemicalCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		5D55E12BB6C5BBEA746BCD16 /* Pods-ChemicalCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChemicalCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChemicalCalculator/Pods-ChemicalCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		76227136BD3F53E8C7E25D49 /* Pods_ChemicalCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChemicalCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 				196828751E582B18001F3FB6 /* compound.plist */,
 				196828471E58207F001F3FB6 /* LaunchScreen.storyboard */,
 				1968284A1E58207F001F3FB6 /* Info.plist */,
+				19ECC9C61EC96E6800532165 /* GoogleService-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				196828761E582B18001F3FB6 /* compound.plist in Resources */,
 				196828461E58207F001F3FB6 /* Assets.xcassets in Resources */,
 				196828411E58207F001F3FB6 /* Main.storyboard in Resources */,
+				19ECC9C71EC96E6800532165 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

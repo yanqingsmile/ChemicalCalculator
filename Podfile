@@ -10,4 +10,9 @@ pod 'Material', '~> 2.0'
 
 pod 'Mixpanel-swift'
 
+pod 'Firebase/Core'
+
+pod 'Firebase/AdMob'
+
 end
+

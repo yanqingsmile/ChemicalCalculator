@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Mixpanel
+import GoogleMobileAds
 
 class HomeTableViewController: CoreDataTableViewController {
     
@@ -69,6 +70,18 @@ class HomeTableViewController: CoreDataTableViewController {
         let bgView = UIView()
         bgView.backgroundColor = UIColor.grayWhite()
         tableView.backgroundView = bgView
+        
+        // Set ads banner
+        let origin = CGPoint(x: 0,
+                             y: self.view.frame.size.height - (self.tabBarController?.tabBar.frame.size.height)! - 50)
+        let bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait, origin: origin)
+        bannerView.adUnitID = "ca-app-pub-3264388918879738/2413962203"
+        bannerView.rootViewController = self
+        let request = GADRequest()
+        //request.testDevices = [kGADSimulatorID]
+        bannerView.load(request)
+        
+        self.tabBarController?.view.addSubview(bannerView)
         
     }
     

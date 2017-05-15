@@ -28,6 +28,13 @@ class CoreDataTableViewController: UITableViewController, NSFetchedResultsContro
         }
     }
     
+    //MARK: - View life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // set up table view bottom distance to tab bar
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
+    }
+    
     // MARK: UITableViewDataSource
     
     

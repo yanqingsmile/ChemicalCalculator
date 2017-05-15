@@ -20,6 +20,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Proxima Nova Bold.otf</string>
+		<string>Proxima Nova Sbold.otf</string>
+		<string>Proxima Nova Light.otf</string>
+		<string>Proxima Nova Reg.otf</string>
+		<string>Proxima Nova Thin.otf</string>
+		<string>Proxima Nova Light It.otf</string>
+		<string>Proxima Nova Thin It.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -31,18 +41,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Proxima Nova Bold.otf</string>
-		<string>Proxima Nova Sbold.otf</string>
-		<string>Proxima Nova Light.otf</string>
-		<string>Proxima Nova Reg.otf</string>
-		<string>Proxima Nova Thin.otf</string>
-		<string>Proxima Nova Light It.otf</string>
-		<string>Proxima Nova Thin It.otf</string>
 	</array>
 </dict>
 </plist>
