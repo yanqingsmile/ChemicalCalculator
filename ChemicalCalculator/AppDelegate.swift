@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import Mixpanel
+import GoogleMobileAds
+import FirebaseAnalytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -49,6 +51,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         Mixpanel.mainInstance().track(event: "App Open")
+        
+        // Initialize Google Mobile Ads SDK
+        // Use Firebase library to configure APIs
+        FIRApp.configure()
+        
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-3264388918879738~9937229008")
         
         return true
     }
