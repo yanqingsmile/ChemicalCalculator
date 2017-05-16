@@ -33,7 +33,7 @@ class GroupDetailTableViewController: CoreDataTableViewController {
         tableView.allowsSelection = false
         
         // set up table view top distance to navigation bar
-        tableView.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 50, right: 0)
         
         Mixpanel.mainInstance().track(event: "View group detail")
         

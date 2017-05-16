@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<dict>
-		<key>Compound name</key>
-		<string>Acetaldehyde</string>
-		<key>Molar mass</key>
-		<string>44.053</string>
-		<key>Molecular formula</key>
-		<string>C2H4O</string>
-		<key>No.</key>
-		<string>1</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
 	<dict>
 		<key>Compound name</key>
 		<string>Acetamide</string>
@@ -23,42 +11,6 @@
 		<string>C2H5NO</string>
 		<key>No.</key>
 		<string>2</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Acetic acid</string>
-		<key>Molar mass</key>
-		<string>60.052</string>
-		<key>Molecular formula</key>
-		<string>CH3COOH</string>
-		<key>No.</key>
-		<string>3</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Acetone</string>
-		<key>Molar mass</key>
-		<string>58.08</string>
-		<key>Molecular formula</key>
-		<string>C3H6O</string>
-		<key>No.</key>
-		<string>4</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Acetonitrile</string>
-		<key>Molar mass</key>
-		<string>41.053</string>
-		<key>Molecular formula</key>
-		<string>C2H3N</string>
-		<key>No.</key>
-		<string>5</string>
 		<key>Type</key>
 		<string>Solid</string>
 	</dict>
@@ -95,18 +47,6 @@
 		<string>Al2(SO4)3</string>
 		<key>No.</key>
 		<string>8</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Ammonia</string>
-		<key>Molar mass</key>
-		<string>17.031</string>
-		<key>Molecular formula</key>
-		<string>NH3</string>
-		<key>No.</key>
-		<string>9</string>
 		<key>Type</key>
 		<string>Solid</string>
 	</dict>
@@ -160,18 +100,6 @@
 	</dict>
 	<dict>
 		<key>Compound name</key>
-		<string>Ammonium hydroxide</string>
-		<key>Molar mass</key>
-		<string>35.046</string>
-		<key>Molecular formula</key>
-		<string>NH4OH</string>
-		<key>No.</key>
-		<string>14</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
 		<string>Ammonium nitrate</string>
 		<key>Molar mass</key>
 		<string>80.043</string>
@@ -215,18 +143,6 @@
 		<string>SbCl3</string>
 		<key>No.</key>
 		<string>18</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Antimony(V) chloride</string>
-		<key>Molar mass</key>
-		<string>299.01</string>
-		<key>Molecular formula</key>
-		<string>SbCl5</string>
-		<key>No.</key>
-		<string>19</string>
 		<key>Type</key>
 		<string>Solid</string>
 	</dict>
@@ -287,30 +203,6 @@
 		<string>Bi(NO3)3</string>
 		<key>No.</key>
 		<string>24</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Butan-1-ol</string>
-		<key>Molar mass</key>
-		<string>74.123</string>
-		<key>Molecular formula</key>
-		<string>C4H10O</string>
-		<key>No.</key>
-		<string>25</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Butyric acid</string>
-		<key>Molar mass</key>
-		<string>88.106</string>
-		<key>Molecular formula</key>
-		<string>C4H8O2</string>
-		<key>No.</key>
-		<string>26</string>
 		<key>Type</key>
 		<string>Solid</string>
 	</dict>
@@ -388,18 +280,6 @@
 	</dict>
 	<dict>
 		<key>Compound name</key>
-		<string>Carbon disulfide</string>
-		<key>Molar mass</key>
-		<string>76.13</string>
-		<key>Molecular formula</key>
-		<string>CS2</string>
-		<key>No.</key>
-		<string>33</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
 		<string>Chloroacetic acid</string>
 		<key>Molar mass</key>
 		<string>94.49</string>
@@ -419,18 +299,6 @@
 		<string>HAuCl4</string>
 		<key>No.</key>
 		<string>35</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Chloroform</string>
-		<key>Molar mass</key>
-		<string>119.37</string>
-		<key>Molecular formula</key>
-		<string>CHCl3</string>
-		<key>No.</key>
-		<string>36</string>
 		<key>Type</key>
 		<string>Solid</string>
 	</dict>
@@ -592,18 +460,6 @@
 	</dict>
 	<dict>
 		<key>Compound name</key>
-		<string>Diethyl ether</string>
-		<key>Molar mass</key>
-		<string>74.123</string>
-		<key>Molecular formula</key>
-		<string>(C2H5)2O</string>
-		<key>No.</key>
-		<string>50</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
 		<string>Dimethylglyoxime</string>
 		<key>Molar mass</key>
 		<string>116.12</string>
@@ -628,54 +484,6 @@
 	</dict>
 	<dict>
 		<key>Compound name</key>
-		<string>Ethanol</string>
-		<key>Molar mass</key>
-		<string>46.069</string>
-		<key>Molecular formula</key>
-		<string>C2H5OH</string>
-		<key>No.</key>
-		<string>53</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Ethylene glycol</string>
-		<key>Molar mass</key>
-		<string>62.068</string>
-		<key>Molecular formula</key>
-		<string>(CH2OH)2</string>
-		<key>No.</key>
-		<string>54</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Formaldehyde</string>
-		<key>Molar mass</key>
-		<string>30.026</string>
-		<key>Molecular formula</key>
-		<string>CH2O</string>
-		<key>No.</key>
-		<string>55</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Formic acid</string>
-		<key>Molar mass</key>
-		<string>46.025</string>
-		<key>Molecular formula</key>
-		<string>CH2O2</string>
-		<key>No.</key>
-		<string>56</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
 		<string>Fructose</string>
 		<key>Molar mass</key>
 		<string>180.156</string>
@@ -695,114 +503,6 @@
 		<string>C6H12O6</string>
 		<key>No.</key>
 		<string>58</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Glycerol</string>
-		<key>Molar mass</key>
-		<string>92.094</string>
-		<key>Molecular formula</key>
-		<string>C3H8O3</string>
-		<key>No.</key>
-		<string>59</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Hexafluorosilicic acid</string>
-		<key>Molar mass</key>
-		<string>144.089</string>
-		<key>Molecular formula</key>
-		<string>H2SiF6</string>
-		<key>No.</key>
-		<string>60</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Hydrazine</string>
-		<key>Molar mass</key>
-		<string>32.046</string>
-		<key>Molecular formula</key>
-		<string>N2H4</string>
-		<key>No.</key>
-		<string>61</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Hydrobromic acid</string>
-		<key>Molar mass</key>
-		<string>80.912</string>
-		<key>Molecular formula</key>
-		<string>HBr</string>
-		<key>No.</key>
-		<string>62</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Hydrochloric acid</string>
-		<key>Molar mass</key>
-		<string>36.46</string>
-		<key>Molecular formula</key>
-		<string>HCl</string>
-		<key>No.</key>
-		<string>63</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Hydrocyanic acid</string>
-		<key>Molar mass</key>
-		<string>27.026</string>
-		<key>Molecular formula</key>
-		<string>HCN</string>
-		<key>No.</key>
-		<string>64</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Hydrofluoric acid</string>
-		<key>Molar mass</key>
-		<string>20.006</string>
-		<key>Molecular formula</key>
-		<string>HF</string>
-		<key>No.</key>
-		<string>65</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Hydrogen peroxide</string>
-		<key>Molar mass</key>
-		<string>34.014</string>
-		<key>Molecular formula</key>
-		<string>H2O2</string>
-		<key>No.</key>
-		<string>66</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Hydroiodic acid</string>
-		<key>Molar mass</key>
-		<string>127.9</string>
-		<key>Molecular formula</key>
-		<string>HI</string>
-		<key>No.</key>
-		<string>67</string>
 		<key>Type</key>
 		<string>Solid</string>
 	</dict>
@@ -875,30 +575,6 @@
 		<string>Fe2(SO4)3</string>
 		<key>No.</key>
 		<string>73</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Isobutanol</string>
-		<key>Molar mass</key>
-		<string>74.123</string>
-		<key>Molecular formula</key>
-		<string>C4H10O</string>
-		<key>No.</key>
-		<string>74</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Lactic acid</string>
-		<key>Molar mass</key>
-		<string>90.078</string>
-		<key>Molecular formula</key>
-		<string>C3H6O3</string>
-		<key>No.</key>
-		<string>75</string>
 		<key>Type</key>
 		<string>Solid</string>
 	</dict>
@@ -1072,18 +748,6 @@
 	</dict>
 	<dict>
 		<key>Compound name</key>
-		<string>Mannitol</string>
-		<key>Molar mass</key>
-		<string>182.172</string>
-		<key>Molecular formula</key>
-		<string>C6H14O6</string>
-		<key>No.</key>
-		<string>90</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
 		<string>Mercury(II) chloride</string>
 		<key>Molar mass</key>
 		<string>271.49</string>
@@ -1115,30 +779,6 @@
 		<string>HgSO4</string>
 		<key>No.</key>
 		<string>93</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Methanol</string>
-		<key>Molar mass</key>
-		<string>32.042</string>
-		<key>Molecular formula</key>
-		<string>CH3OH</string>
-		<key>No.</key>
-		<string>94</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Methyl acetate</string>
-		<key>Molar mass</key>
-		<string>74.079</string>
-		<key>Molecular formula</key>
-		<string>C3H6O2</string>
-		<key>No.</key>
-		<string>95</string>
 		<key>Type</key>
 		<string>Solid</string>
 	</dict>
@@ -1180,30 +820,6 @@
 	</dict>
 	<dict>
 		<key>Compound name</key>
-		<string>Nicotine</string>
-		<key>Molar mass</key>
-		<string>162.236</string>
-		<key>Molecular formula</key>
-		<string>C10H14N2</string>
-		<key>No.</key>
-		<string>99</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Nitric acid</string>
-		<key>Molar mass</key>
-		<string>63.012</string>
-		<key>Molecular formula</key>
-		<string>HNO3</string>
-		<key>No.</key>
-		<string>100</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
 		<string>Oxalic acid</string>
 		<key>Molar mass</key>
 		<string>90.034</string>
@@ -1211,30 +827,6 @@
 		<string>H2C2O4</string>
 		<key>No.</key>
 		<string>101</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Pentan-1-ol</string>
-		<key>Molar mass</key>
-		<string>88.15</string>
-		<key>Molecular formula</key>
-		<string>C5H11OH</string>
-		<key>No.</key>
-		<string>102</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Perchloric acid</string>
-		<key>Molar mass</key>
-		<string>100.45</string>
-		<key>Molecular formula</key>
-		<string>HClO4</string>
-		<key>No.</key>
-		<string>103</string>
 		<key>Type</key>
 		<string>Solid</string>
 	</dict>
@@ -1535,42 +1127,6 @@
 		<string>KCNS</string>
 		<key>No.</key>
 		<string>128</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Propan-1-ol</string>
-		<key>Molar mass</key>
-		<string>60.096</string>
-		<key>Molecular formula</key>
-		<string>CH3CH2CH2OH</string>
-		<key>No.</key>
-		<string>129</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Propan-2-ol</string>
-		<key>Molar mass</key>
-		<string>60.096</string>
-		<key>Molecular formula</key>
-		<string>CH3CHOHCH3</string>
-		<key>No.</key>
-		<string>130</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Pyridine</string>
-		<key>Molar mass</key>
-		<string>79.102</string>
-		<key>Molecular formula</key>
-		<string>C5H5N</string>
-		<key>No.</key>
-		<string>131</string>
 		<key>Type</key>
 		<string>Solid</string>
 	</dict>
@@ -1943,30 +1499,6 @@
 		<string>SrSO4</string>
 		<key>No.</key>
 		<string>162</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Sulfuric acid</string>
-		<key>Molar mass</key>
-		<string>98.07</string>
-		<key>Molecular formula</key>
-		<string>H2SO4</string>
-		<key>No.</key>
-		<string>163</string>
-		<key>Type</key>
-		<string>Solid</string>
-	</dict>
-	<dict>
-		<key>Compound name</key>
-		<string>Sulfurous acid</string>
-		<key>Molar mass</key>
-		<string>82.07</string>
-		<key>Molecular formula</key>
-		<string>H2SO3</string>
-		<key>No.</key>
-		<string>164</string>
 		<key>Type</key>
 		<string>Solid</string>
 	</dict>
