@@ -33,6 +33,10 @@ class CompoundViewController: UIViewController {
     
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
+    fileprivate var textFields: [TextField] {
+        return [nameTextField, formulaTextField, molecularMassTextField, purityTextField]
+    }
+    
     // MARK: - IBActions
     
     @IBAction func cancelButtonClicked(_ sender: UIBarButtonItem) {
@@ -59,10 +63,11 @@ class CompoundViewController: UIViewController {
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTextField.delegate = self
-        formulaTextField.delegate = self
-        molecularMassTextField.delegate = self
-        purityTextField.delegate = self
+        
+        textFields.forEach({
+            $0.delegate = self
+            $0.dividerNormalColor = UIColor.warmOrange()
+        })
         
         // Set up views if editing an existing Compound
         self.title = name
@@ -96,9 +101,6 @@ class CompoundViewController: UIViewController {
         return (!textField.text!.isEmpty) && (Double(textField.text!) == nil)
     }
 
-    
-
-    
     // MARK: - Navigation
 
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -109,8 +111,6 @@ class CompoundViewController: UIViewController {
             purity = Double(purityTextField.text!)!
         }
     }
-
-
 }
 
 // MARK: - TextFieldDelegate
