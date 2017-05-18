@@ -241,6 +241,9 @@ class SavedSolutionTableViewController: CoreDataTableViewController {
             //tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
     
     // Override to remove section footer.
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
