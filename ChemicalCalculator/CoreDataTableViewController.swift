@@ -33,6 +33,7 @@ class CoreDataTableViewController: UITableViewController, NSFetchedResultsContro
         super.viewDidLoad()
         // set up table view bottom distance to tab bar
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
+        tableView.separatorColor = UIColor.warmOrange()
     }
     
     // MARK: UITableViewDataSource
