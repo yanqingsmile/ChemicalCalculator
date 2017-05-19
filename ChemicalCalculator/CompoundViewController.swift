@@ -21,6 +21,8 @@ class CompoundViewController: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var nameTextField: TextField!
     
     @IBOutlet weak var formulaTextField: TextField!
@@ -85,7 +87,45 @@ class CompoundViewController: UIViewController {
         self.addDoneButtonOnKeyboard(toTextField: purityTextField)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        registerKeyboardNotifications()
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        unregisterKeyboardNotifications()
+    }
+    
+    func registerKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(CompoundViewController.keyboardDidShow(notification:)),
+                                               name: NSNotification.Name.UIKeyboardDidShow,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(CompoundViewController.keyboardWillHide(notification:)),
+                                               name: NSNotification.Name.UIKeyboardWillHide,
+                                               object: nil)
+    }
+    
+    func unregisterKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    
+    func keyboardDidShow(notification: NSNotification) {
+        let userInfo: NSDictionary = notification.userInfo! as NSDictionary
+        let keyboardInfo = userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue
+        let keyboardSize = keyboardInfo.cgRectValue.size
+        let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        scrollView.contentInset = UIEdgeInsets.zero
+        scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
+    }
     
     
     // MARK: - Methods

@@ -81,7 +81,7 @@ class HomeTableViewController: CoreDataTableViewController {
         //request.testDevices = [kGADSimulatorID]
         bannerView.load(request)
         
-        self.tabBarController?.view.addSubview(bannerView)
+        //self.tabBarController?.view.addSubview(bannerView)
         
     }
     
