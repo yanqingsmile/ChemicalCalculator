@@ -87,6 +87,7 @@ class CompoundViewController: UIViewController {
         self.addDoneButtonOnKeyboard(toTextField: purityTextField)
     }
     
+    // Scroll the scroll view when keyboard appears
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         registerKeyboardNotifications()
@@ -117,14 +118,16 @@ class CompoundViewController: UIViewController {
         let userInfo: NSDictionary = notification.userInfo! as NSDictionary
         let keyboardInfo = userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue
         let keyboardSize = keyboardInfo.cgRectValue.size
-        let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+        let contentInsets = UIEdgeInsets(top: 10, left: 0, bottom: keyboardSize.height, right: 0)
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        scrollView.contentInset = UIEdgeInsets.zero
-        scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
+        let contentInsets = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+
     }
     
     
