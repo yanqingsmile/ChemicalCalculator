@@ -303,7 +303,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
             var calculatedResult: Double?
             switch style {
             case .weight:
-                let mass = conc * volume
+                let mass = conc * volume / compound!.purity
                 calculatedResult = convertToUserChoosedMassUnit(fromComputedMass: mass, toUnit: resultUnitPickerView)!
             case .dilution:
                 if let stockConcentration = convertToStandardConc(fromInputConc: String(describing:stockSolution!.finalConcentration), withUnit: stockSolution!.concentrationUnit!) {
@@ -311,7 +311,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
                     calculatedResult = convertToUserChoosedVolumeUnit(fromComputedVolume: stockVolume, toUnit: resultUnitPickerView)!
                 }
             }
-            result = round(calculatedResult! * 1000000) / 1000000
+            result = round(calculatedResult! * 1000) / 1000
         }
     }
         
