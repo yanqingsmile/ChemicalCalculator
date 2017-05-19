@@ -50,7 +50,7 @@ class AddToTemporaryTableViewController: CoreDataTableViewController {
                 cell.groupNameLabel.text = title
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "MM/dd/yyyy"
-                let result = dateFormatter.string(from: date as! Date)
+                let result = dateFormatter.string(from: date! as Date)
                 cell.modifiedDateLabel.text = result
             }
             return cell
