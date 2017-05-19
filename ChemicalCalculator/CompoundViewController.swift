@@ -151,7 +151,7 @@ class CompoundViewController: UIViewController {
             name = nameTextField.text ?? ""
             formula = formulaTextField.text
             molecularMass = Double(molecularMassTextField.text!)!
-            purity = Double(purityTextField.text!)!
+            purity = Double(purityTextField.text!)! / 100
         }
     }
 }
