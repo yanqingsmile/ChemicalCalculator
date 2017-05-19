@@ -91,98 +91,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qYb-cy-UHK">
-                                <rect key="frame" x="16" y="84" width="288" height="450"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o33-RT-qPv">
+                                <rect key="frame" x="16" y="64" width="288" height="372"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Vdk-ZQ-DAB" customClass="TextField" customModule="Material">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="75"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Name"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
-                                                <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="Hak-Ax-Maj"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kxD-3j-jtO" customClass="TextField" customModule="Material">
-                                        <rect key="frame" x="0.0" y="125" width="288" height="75"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Formula"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
-                                                <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="q6w-pm-6D4"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5sQ-i1-dLF" customClass="ErrorTextField" customModule="Material">
-                                        <rect key="frame" x="0.0" y="250" width="288" height="75"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Molecular Mass (g/mol)"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Invaild number"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
-                                                <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="Q18-j6-rk1"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Rtu-xf-49y" customClass="ErrorTextField" customModule="Material">
-                                        <rect key="frame" x="0.0" y="375" width="288" height="75"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Purity (%)"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Invalid number"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
-                                                <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="asG-nH-AR4"/>
-                                        </connections>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qYb-cy-UHK">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="450"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Vdk-ZQ-DAB" customClass="TextField" customModule="Material">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="75"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Name"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                        <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="Hak-Ax-Maj"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kxD-3j-jtO" customClass="TextField" customModule="Material">
+                                                <rect key="frame" x="0.0" y="125" width="288" height="75"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Formula"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                        <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="q6w-pm-6D4"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5sQ-i1-dLF" customClass="ErrorTextField" customModule="Material">
+                                                <rect key="frame" x="0.0" y="250" width="288" height="75"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Molecular Mass (g/mol)"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Invaild number"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                        <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="Q18-j6-rk1"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Rtu-xf-49y" customClass="ErrorTextField" customModule="Material">
+                                                <rect key="frame" x="0.0" y="375" width="288" height="75"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Purity (%)"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Invalid number"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                        <color key="value" red="0.93333333330000001" green="0.70588235290000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="textFieldDidChange:" destination="F9p-7I-JVd" eventType="editingChanged" id="asG-nH-AR4"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="5sQ-i1-dLF" firstAttribute="width" secondItem="qYb-cy-UHK" secondAttribute="width" id="5IE-3M-H4u"/>
+                                            <constraint firstItem="Rtu-xf-49y" firstAttribute="width" secondItem="qYb-cy-UHK" secondAttribute="width" id="DmU-mz-hHg"/>
+                                            <constraint firstItem="Vdk-ZQ-DAB" firstAttribute="width" secondItem="qYb-cy-UHK" secondAttribute="width" id="SOV-91-nvM"/>
+                                            <constraint firstItem="kxD-3j-jtO" firstAttribute="width" secondItem="qYb-cy-UHK" secondAttribute="width" id="Sj9-Cd-55m"/>
+                                            <constraint firstAttribute="height" constant="450" id="W15-jV-cFc"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="5sQ-i1-dLF" firstAttribute="width" secondItem="qYb-cy-UHK" secondAttribute="width" id="5IE-3M-H4u"/>
-                                    <constraint firstItem="Rtu-xf-49y" firstAttribute="width" secondItem="qYb-cy-UHK" secondAttribute="width" id="DmU-mz-hHg"/>
-                                    <constraint firstItem="Vdk-ZQ-DAB" firstAttribute="width" secondItem="qYb-cy-UHK" secondAttribute="width" id="SOV-91-nvM"/>
-                                    <constraint firstItem="kxD-3j-jtO" firstAttribute="width" secondItem="qYb-cy-UHK" secondAttribute="width" id="Sj9-Cd-55m"/>
-                                    <constraint firstAttribute="height" constant="450" id="aTv-Ze-DbH"/>
+                                    <constraint firstAttribute="bottom" secondItem="qYb-cy-UHK" secondAttribute="bottom" id="3ON-V9-cdf"/>
+                                    <constraint firstAttribute="trailing" secondItem="qYb-cy-UHK" secondAttribute="trailing" id="3kY-qZ-4p3"/>
+                                    <constraint firstItem="qYb-cy-UHK" firstAttribute="leading" secondItem="o33-RT-qPv" secondAttribute="leading" id="7yL-AZ-hyR"/>
+                                    <constraint firstItem="qYb-cy-UHK" firstAttribute="top" secondItem="o33-RT-qPv" secondAttribute="top" id="CVy-uW-RSX"/>
                                 </constraints>
-                            </stackView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qYb-cy-UHK" firstAttribute="top" secondItem="MF6-Q0-id4" secondAttribute="bottom" constant="20" id="dwU-It-TAW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qYb-cy-UHK" secondAttribute="trailing" id="hly-3R-FtY"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="qYb-cy-UHK" secondAttribute="leading" id="xLa-Lz-EwK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o33-RT-qPv" secondAttribute="trailing" id="7qK-Av-F2T"/>
+                            <constraint firstItem="o33-RT-qPv" firstAttribute="leading" secondItem="0we-QO-2SW" secondAttribute="leadingMargin" id="Jjk-dM-HNd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qYb-cy-UHK" secondAttribute="trailing" id="NcN-Nx-pUk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="qYb-cy-UHK" secondAttribute="leading" id="fiQ-YM-rRg"/>
+                            <constraint firstItem="o33-RT-qPv" firstAttribute="top" secondItem="MF6-Q0-id4" secondAttribute="bottom" id="hH7-5y-kEj"/>
+                            <constraint firstItem="EPF-X7-i4e" firstAttribute="top" secondItem="o33-RT-qPv" secondAttribute="bottom" id="idv-iD-oei"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -206,6 +220,7 @@
                         <outlet property="nameTextField" destination="Vdk-ZQ-DAB" id="2Rr-z5-nEG"/>
                         <outlet property="purityTextField" destination="Rtu-xf-49y" id="zfX-L6-Eql"/>
                         <outlet property="saveButton" destination="dZQ-jv-aOW" id="gqZ-SG-guv"/>
+                        <outlet property="scrollView" destination="o33-RT-qPv" id="547-1r-3QD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rge-n9-VqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
