@@ -86,7 +86,7 @@ class CompoundViewController: UIViewController {
         self.addDoneButtonOnKeyboard(toTextField: molecularMassTextField)
         self.addDoneButtonOnKeyboard(toTextField: purityTextField)
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         registerKeyboardNotifications()
